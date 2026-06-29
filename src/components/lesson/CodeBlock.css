@@ -1,0 +1,59 @@
+.code-block {
+  background: rgba(7, 5, 15, 0.9);
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-code);
+  font-size: 0.87rem;
+}
+
+.code-block-label {
+  padding: 6px 14px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background: rgba(124, 111, 255, 0.08);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.code-block-pre {
+  margin: 0;
+  padding: 14px 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-line {
+  display: flex;
+  align-items: baseline;
+  min-height: 1.6em;
+  padding: 0 2px;
+}
+
+.code-line:hover { background: rgba(124, 111, 255, 0.04); }
+
+.code-line-number {
+  width: 36px;
+  text-align: right;
+  padding-right: 16px;
+  color: var(--color-text-faint);
+  user-select: none;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+.code-line-content { padding-right: 20px; }
+
+/* ---- Token Colors ---- */
+.token-keyword      { color: #7c9fff; font-weight: 600; }
+.token-type         { color: #9ecbff; }
+.token-string       { color: #7eeaaa; }
+.token-comment      { color: #5a6075; font-style: italic; }
+.token-number       { color: #ffb86c; }
+.token-method       { color: var(--color-cyan); }
+.token-class-name   { color: #e2c87a; }
+.token-preprocessor { color: #b46eff; font-weight: 600; }
+.token-operator     { color: #ff6e9c; }

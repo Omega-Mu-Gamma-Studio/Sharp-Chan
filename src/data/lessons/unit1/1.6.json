@@ -1,0 +1,33 @@
+{
+  "id": "1.6",
+  "title": "Taking Input — the player types something",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string playerName;\n    int playerAge;\n    \n    // Ask for input\n    std::cout << \"Welcome, adventurer!\" << std::endl;\n    std::cout << \"What is your name? \";\n    std::cin >> playerName;\n    \n    std::cout << \"How old are you, \" << playerName << \"? \";\n    std::cin >> playerAge;\n    \n    std::cout << \"\\n=== Character Sheet ===\" << std::endl;\n    std::cout << \"Name: \" << playerName << std::endl;\n    std::cout << \"Age: \" << playerAge << std::endl;\n    \n    // Input with multiple words\n    std::cin.ignore();  // Clear the buffer\n    std::string fullName;\n    std::cout << \"Enter your full name (with spaces): \";\n    std::getline(std::cin, fullName);\n    std::cout << \"Full name: \" << fullName << std::endl;\n    \n    return 0;\n}",
+    "output": "Welcome, adventurer!\nWhat is your name? Hero\nHow old are you, Hero? 25\n\n=== Character Sheet ===\nName: Hero\nAge: 25\nEnter your full name (with spaces): Hero the Brave\nFull name: Hero the Brave",
+    "explanation": "🎮 **Input is how the player controls your game.**\n\n`std::cin` — Console input. It reads what the player types.\n\n**Reading different types:**\n| Type | How to read |\n|------|-------------|\n| `int` | `std::cin >> variable;` |\n| `double` | `std::cin >> variable;` |\n| `std::string` (no spaces) | `std::cin >> variable;` |\n| `std::string` (with spaces) | `std::getline(std::cin, variable);` |\n\n**Common issue (and fix):**\n- `std::cin >>` leaves a newline in the buffer\n- `std::cin.ignore()` clears the buffer before `getline()`\n\n**Game design note:**\nIn a real game, you'd use input for:\n- Character creation (name, class, stats)\n- Menu selections (\"Press 1 to attack\")\n- Saving/loading (\"Enter save name:\")\n\n**PlusPlus-chan says:**\n\"Java-chan has `Scanner`. I have `std::cin`. Same concept, but I don't hide the buffer management from you. You need to know why `getline()` behaves differently.\"",
+    "openingDialogue": "Now the player can talk back. This is when it gets real. 🎮💬"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n#include <string>\n\nint main() {\n    int age;\n    std::string name;\n    \n    std::cout << \"Enter your age: \";\n    std::cin >> age;\n    \n    std::cout << \"Enter your name: \";\n    std::getline(std::cin, name);  // Problem: this skips!\n    \n    std::cout << \"Name: \" << name << \", Age: \" << age << std::endl;\n    return 0;\n}",
+    "errorMessage": "Enter your age: 25\nEnter your name: Name: , Age: 25\n\n(No error — but the name input was SKIPPED!)",
+    "explanation": "This is the classic `cin` vs `getline()` trap.\n\n**What's happening:**\n1. `std::cin >> age` reads the number 25\n2. It leaves the newline character `\\n` in the buffer\n3. `std::getline()` reads that leftover newline as an empty string\n4. So `name` is empty, and the program skips the name input\n\n**The fix:**\n```cpp\nstd::cin >> age;\nstd::cin.ignore();  // ← This clears the buffer!\nstd::getline(std::cin, name);\n```\n\n**PlusPlus-chan says:**\n\"This is a rite of passage. Every C++ developer has been bitten by this. Now you know why.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Asks the player \"Enter your class (Warrior/Mage/Rogue): \" and stores it in a `std::string`\n2. Asks the player \"Enter your starting level: \" and stores it in an `int`\n3. Prints a character summary:\n```\n=== Character Created ===\nClass: [class]\nStarting Level: [level]\n```\n\nRequirements:\n- Use `std::cin` for the level (int)\n- Use `std::getline()` for the class (string with spaces allowed)\n- Handle the buffer issue correctly with `std::cin.ignore()`",
+    "validationPattern": {
+      "required": ["std::cin", "std::getline", "std::cin.ignore", "int", "std::string"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "std::cin\\s*>>\\s*\\w+\\s*;[\\s\\S]*std::cin\\.ignore\\s*\\([\\s\\S]*\\)[\\s\\S]*std::getline\\s*\\(\\s*std::cin\\s*,\\s*\\w+\\s*\\)"
+    },
+    "dialogueHints": [
+      "Read the level with `std::cin >> level`",
+      "Call `std::cin.ignore();` before `getline()`",
+      "Read the class with `std::getline(std::cin, characterClass)`",
+      "Print both values"
+    ],
+    "solution": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string characterClass;\n    int level;\n    \n    std::cout << \"Enter your class (Warrior/Mage/Rogue): \";\n    std::getline(std::cin, characterClass);\n    \n    std::cout << \"Enter your starting level: \";\n    std::cin >> level;\n    \n    std::cout << \"\\n=== Character Created ===\" << std::endl;\n    std::cout << \"Class: \" << characterClass << std::endl;\n    std::cout << \"Starting Level: \" << level << std::endl;\n    \n    return 0;\n}",
+    "openingDialogue": "Let the player build their character. Make it real. 🎭"
+  },
+  "xpReward": 10
+}

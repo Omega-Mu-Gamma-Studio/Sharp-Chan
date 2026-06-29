@@ -1,0 +1,33 @@
+{
+  "id": "3.2",
+  "title": "Pointers — what they are and why",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n\nint main() {\n    std::cout << \"=== Pointers Explained ===\" << std::endl;\n    \n    // 1. A variable stores a value\n    int health = 100;\n    std::cout << \"health: \" << health << std::endl;\n    std::cout << \"Address of health: \" << &health << std::endl;\n    \n    // 2. A pointer stores an address\n    int* healthPtr = &health;  // Pointer to health\n    std::cout << \"\\nhealthPtr: \" << healthPtr << std::endl;\n    std::cout << \"*healthPtr: \" << *healthPtr << std::endl;  // Dereference\n    \n    // 3. Null pointer\n    int* nullPtr = nullptr;\n    std::cout << \"\\nnullPtr: \" << nullPtr << std::endl;\n    \n    // 4. Pointer to pointer\n    int** doublePtr = &healthPtr;\n    std::cout << \"\\ndoublePtr: \" << doublePtr << std::endl;\n    std::cout << \"*doublePtr: \" << *doublePtr << std::endl;\n    std::cout << \"**doublePtr: \" << **doublePtr << std::endl;\n    \n    // 5. Modifying through pointer\n    std::cout << \"\\n=== Modifying through pointer ===\" << std::endl;\n    *healthPtr = 150;\n    std::cout << \"After *healthPtr = 150:\" << std::endl;\n    std::cout << \"health: \" << health << std::endl;\n    std::cout << \"*healthPtr: \" << *healthPtr << std::endl;\n    \n    // 6. Pointer arithmetic (dangerous!)\n    int arr[5] = {10, 20, 30, 40, 50};\n    int* arrPtr = arr;  // Points to first element\n    std::cout << \"\\n=== Pointer Arithmetic ===\" << std::endl;\n    std::cout << \"arr[0]: \" << *arrPtr << std::endl;\n    std::cout << \"arr[1]: \" << *(arrPtr + 1) << std::endl;\n    std::cout << \"arr[2]: \" << *(arrPtr + 2) << std::endl;\n    \n    return 0;\n}",
+    "output": "=== Pointers Explained ===\nhealth: 100\nAddress of health: 0x7ffffeeeee\n\nhealthPtr: 0x7ffffeeeee\n*healthPtr: 100\n\nnullPtr: 0\n\ndoublePtr: 0x7ffffffeed\n*doublePtr: 0x7ffffeeeee\n**doublePtr: 100\n\n=== Modifying through pointer ===\nAfter *healthPtr = 150:\nhealth: 150\n*healthPtr: 150\n\n=== Pointer Arithmetic ===\narr[0]: 10\narr[1]: 20\narr[2]: 30",
+    "explanation": "🎮 **A pointer is a variable that stores a memory address.**\n\n**Key concepts:**\n\n| Concept | Syntax | Meaning |\n|---------|--------|---------|\n| Declaration | `int* ptr` | Pointer to int |\n| Address-of | `&var` | Gets address of variable |\n| Dereference | `*ptr` | Gets value at address |\n| Null pointer | `nullptr` | Points to nothing (safe) |\n\n**Why use pointers in games:**\n\n| Use | Example |\n|-----|---------|\n| Dynamic allocation | `new Enemy()` returns a pointer |\n| Passing large objects | Pass pointer instead of copying |\n| Polymorphism | Base class pointers to derived objects |\n| Modifying variables | Change a variable from a function |\n\n**PlusPlus-chan says:**\n\"Pointers are the key to understanding C++. They're not scary — they're just addresses. Every variable lives somewhere in memory. Pointers tell you where.\"\n\n**⚠️ Important:**\n- Always initialize pointers\n- Use `nullptr` for null pointers\n- Don't dereference null pointers (crashes!)\n- Pointer arithmetic is powerful but dangerous",
+    "openingDialogue": "Pointers. Not scary. Just addresses. 🔗"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int* ptr = nullptr;\n    \n    // Dereferencing null pointer!\n    std::cout << *ptr << std::endl;\n    \n    return 0;\n}",
+    "errorMessage": "Segmentation fault (core dumped)\n\n(Program crashes! Dereferencing nullptr is undefined behavior.)",
+    "explanation": "You dereferenced a null pointer! This is one of the most common C++ crashes.\n\n**What's happening:**\n1. `ptr` is `nullptr` (points to nothing)\n2. `*ptr` tries to read the value at address 0\n3. The OS says \"That's not your memory!\"\n4. **CRASH!**\n\n**The fix:**\n```cpp\nint* ptr = nullptr;\nif (ptr != nullptr) {\n    std::cout << *ptr << std::endl;  // Safe\n} else {\n    std::cout << \"ptr is null!\" << std::endl;\n}\n```\n\n**PlusPlus-chan says:**\n\"Always check if a pointer is null before using it. This is the #1 C++ crash reason. Never trust a pointer.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Declares `int score = 50`\n2. Declares a pointer `int* scorePtr` that points to `score`\n3. Prints `score`, `scorePtr`, and `*scorePtr`\n4. Uses `scorePtr` to change `score` to 100\n5. Prints `score` again to show it changed\n6. Declares `nullptr` and checks if it's null (prints \"Pointer is null\")\n\nRequirements:\n- Use `#include <iostream>`\n- Use `&` to get address\n- Use `*` to dereference\n- Use `nullptr`",
+    "validationPattern": {
+      "required": ["int*", "&", "*", "nullptr", "std::cout"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "int\\s+\\w+\\s*=\\s*50[\\s\\S]*int\\s*\\*\\s*\\w+\\s*=\\s*&[\\s\\S]*\\*\\w+\\s*=\\s*100[\\s\\S]*nullptr[\\s\\S]*=="
+    },
+    "dialogueHints": [
+      "Declare score: `int score = 50;`",
+      "Pointer: `int* scorePtr = &score;`",
+      "Change: `*scorePtr = 100;`",
+      "Null check: `int* nullPtr = nullptr; if (nullPtr == nullptr)`"
+    ],
+    "solution": "#include <iostream>\n\nint main() {\n    int score = 50;\n    int* scorePtr = &score;\n    \n    std::cout << \"score: \" << score << std::endl;\n    std::cout << \"scorePtr: \" << scorePtr << std::endl;\n    std::cout << \"*scorePtr: \" << *scorePtr << std::endl;\n    \n    *scorePtr = 100;\n    std::cout << \"After *scorePtr = 100, score: \" << score << std::endl;\n    \n    int* nullPtr = nullptr;\n    if (nullPtr == nullptr) {\n        std::cout << \"Pointer is null\" << std::endl;\n    }\n    \n    return 0;\n}",
+    "openingDialogue": "Master pointers. Master C++. 🔗"
+  },
+  "xpReward": 10
+}

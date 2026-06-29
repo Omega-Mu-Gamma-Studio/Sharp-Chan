@@ -1,0 +1,89 @@
+.phase-indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 4px;
+}
+
+.phase-connectors {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  display: flex;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.phase-connector {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+  transition: background var(--transition-base);
+  margin: 0 44px;
+}
+
+.phase-connector--done {
+  background: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary-glow);
+}
+
+.phase-tab {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  flex: 1;
+}
+
+.phase-tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.phase-tab-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+}
+
+.phase-tab--active .phase-tab-icon {
+  border-color: var(--color-primary);
+  background: var(--color-primary-glow);
+  color: var(--color-primary-light);
+  box-shadow: 0 0 14px var(--color-primary-glow), 0 0 0 1px var(--color-primary-dark);
+}
+
+.phase-tab--done .phase-tab-icon {
+  border-color: var(--color-success);
+  background: var(--color-success-glow);
+  color: var(--color-success);
+}
+
+.phase-tab-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  font-family: var(--font-display);
+}
+
+.phase-tab--active .phase-tab-label { color: var(--color-primary-light); }
+.phase-tab--done .phase-tab-label   { color: var(--color-success); }

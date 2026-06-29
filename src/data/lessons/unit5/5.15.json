@@ -1,0 +1,30 @@
+{
+  "id": "5.15",
+  "title": "Unit 5 Review — Your game is complete",
+  "type": "conceptual",
+  "phase1": {
+    "code": "",
+    "output": "",
+    "explanation": "🎉 **CONGRATULATIONS! 🎉**\n\nYou've completed ALL 5 units of PlusPlus-chan's C++ Game Dev curriculum!\n\n--- Unit 5 Recap ---\n\n1. **Exceptions** — handle errors gracefully\n   • try, catch, throw\n   • Custom exception classes\n   • noexcept and exception safety\n\n2. **File I/O** — save and load game data\n   • fstream (ofstream, ifstream)\n   • Reading and writing files\n   • Binary file I/O\n\n3. **JSON Parsing** — structured data\n   • Manual parsing\n   • Reading configuration\n\n4. **Preprocessor** — control compilation\n   • Macros, #define, #ifdef\n   • Conditional compilation\n\n5. **Header Files** — organize code\n   • Header guards\n   • Declaration vs definition\n   • Multi-file projects\n\n6. **Namespaces** — prevent name conflicts\n   • Group related code\n   • Aliases and using declarations\n\n7. **Multithreading** — concurrent execution\n   • std::thread\n   • Mutexes and race conditions\n   • Thread safety\n\n--- The Complete Game Dev Journey ---\n\n**Unit 1: C++ Foundations**\nYou learned the basics — variables, loops, functions, strings.\n\n**Unit 2: Object Oriented C++**\nYou built the world — classes, inheritance, polymorphism.\n\n**Unit 3: Memory & Pointers**\nYou went under the hood — pointers, smart pointers, RAII.\n\n**Unit 4: STL & Templates**\nYou armed yourself — vectors, maps, algorithms, templates.\n\n**Unit 5: Error Handling & Shipping**\nYou shipped it — exceptions, file I/O, multithreading.\n\n--- The Game You Built ---\n\nThroughout this course, you've built a complete text RPG:\n• Player and enemy classes\n• Combat system\n• Inventory management\n• Save/load system\n• File I/O\n• Error handling\n\n--- What Comes Next? ---\n\n**Game Engines:**\n• Unreal Engine (C++)\n• Godot (C++ or GDScript)\n• Custom engine\n\n**Graphics Libraries:**\n• OpenGL\n• Vulkan\n• DirectX\n\n**Game Development:**\n• 2D games (SFML, SDL)\n• 3D games (Unreal, Unity)\n• Game design patterns\n\n**PlusPlus-chan says:**\n\"You started as a beginner. You're now a game developer. Go build something amazing.\"\n\n--- Final Milestone ---\n\n✅ You've completed 75 lessons\n✅ You've built a complete game\n✅ You're ready for game development\n\n**Go make your game. 🚀**",
+    "openingDialogue": "Unit 5 complete! You've shipped your game! 🎮🚀"
+  },
+  "phase2": {
+    "brokenCode": "",
+    "errorMessage": "",
+    "explanation": "Conceptual review — no broken code!\n\n**You've come so far.** From \"Hello, Player!\" to a complete, saveable, loadable game.\n\nRemember:\n• Every great game started with one line of code\n• Every bug is a learning opportunity\n• Every feature starts with a question\n\n**Go build your game.**\n\nPlusPlus-chan is proud of you. ❤️"
+  },
+  "phase3": {
+    "prompt": "You've completed the entire C++ game dev course! Which of these is the MOST important lesson for game development?\n\nA) Only use raw pointers\nB) Always use global variables\nC) Proper memory management and RAII\nD) Never use the STL\n\nSelect the CORRECT answer.",
+    "validationPattern": {
+      "mcqAnswer": "C"
+    },
+    "dialogueHints": [
+      "Think about what we learned in Unit 3...",
+      "What makes C++ games stable?",
+      "Memory management is critical."
+    ],
+    "solution": null,
+    "openingDialogue": "Final question! What's the most important lesson? 🤔"
+  },
+  "xpReward": 15
+}

@@ -1,0 +1,33 @@
+{
+  "id": "1.15",
+  "title": "Scope, namespaces & std::",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n#include <string>\n\n// Global variable (visible everywhere)\nint globalPlayerCount = 1;\n\n// Function demonstrating scope\nvoid displayGlobalCount() {\n    std::cout << \"Global count: \" << globalPlayerCount << std::endl;\n}\n\nint main() {\n    std::cout << \"=== Scope & Namespaces ===\" << std::endl;\n    \n    // 1. Namespace\n    std::cout << \"Using std::cout and std::endl\" << std::endl;\n    \n    // 2. Local vs Global\n    int localHealth = 100;  // Local variable\n    \n    std::cout << \"Local health: \" << localHealth << std::endl;\n    std::cout << \"Global count: \" << globalPlayerCount << std::endl;\n    \n    // 3. Scope inside blocks\n    {\n        int blockHealth = 50;  // Only visible inside this block\n        std::cout << \"Block health: \" << blockHealth << std::endl;\n        \n        // Can access outer variables\n        std::cout << \"Outer health: \" << localHealth << std::endl;\n    }\n    // blockHealth is NOT visible here!\n    // std::cout << blockHealth; // ERROR!\n    \n    // 4. Using 'using' (careful!)\n    // using namespace std; // Not recommended\n    \n    // 5. Namespace aliases\n    namespace io = std;\n    io::cout << \"Using alias: Hello!\" << io::endl;\n    \n    // 6. Scope with functions\n    displayGlobalCount();\n    \n    // 7. Shadowing (bad practice)\n    int globalPlayerCount = 99;  // Shadows the global variable!\n    std::cout << \"Local shadow: \" << globalPlayerCount << std::endl;\n    std::cout << \"Real global: \" << ::globalPlayerCount << std::endl;  // Use :: to access global\n    \n    return 0;\n}",
+    "output": "=== Scope & Namespaces ===\nUsing std::cout and std::endl\nLocal health: 100\nGlobal count: 1\nBlock health: 50\nOuter health: 100\nUsing alias: Hello!\nGlobal count: 1\nLocal shadow: 99\nReal global: 1",
+    "explanation": "🎮 **Scope and namespaces keep your code organized.**\n\n**Scope rules:**\n\n| Scope | Visibility |\n|-------|------------|\n| Global | Visible everywhere |\n| Local | Visible only in the function/block |\n| Block | Visible only inside `{ }` |\n\n**Namespaces:**\n- `std` is the Standard Library namespace\n- `std::cout`, `std::endl`, `std::string`\n- Prevents naming conflicts\n\n**The `using` keyword:**\n```cpp\n// NOT recommended (pollutes global namespace)\nusing namespace std;\n\n// Better (specific import)\nusing std::cout;\nusing std::endl;\n\n// Best (explicit)\nstd::cout << \"Hello\" << std::endl;\n```\n\n**Scope Resolution `::`:**\n- `::variable` → access global variable\n- `namespace::function` → access function in namespace\n\n**Game uses:**\n- Organizing game systems\n- Avoiding naming conflicts\n- Managing large projects\n\n**PlusPlus-chan says:**\n\"Java-chan has packages. I have namespaces. Same idea, different syntax. Keep your code organized.\"",
+    "openingDialogue": "Scope keeps your code clean. Namespaces keep it organized. 🧹"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nusing namespace std;  // This is NOT recommended!\n\nint main() {\n    // Without std::, everything is ambiguous\n    cout << \"Hello\" << endl;\n    \n    // If you have a function called 'cout', it conflicts!\n    return 0;\n}",
+    "errorMessage": "(No error — but this is a ticking time bomb! Potential naming conflicts.)",
+    "explanation": "`using namespace std;` imports the entire `std` namespace into the global scope.\n\n**Problems:**\n1. **Naming conflicts** — If you define `cout` or `endl`, it will conflict with `std::`\n2. **Ambiguity** — Which `cout`? Yours or `std`'s?\n3. **Readability** — Less clear where things come from\n\n**The fix:**\n```cpp\nstd::cout << \"Hello\" << std::endl;  // Explicit\n```\n\n**PlusPlus-chan says:**\n\"I won't stop you from using `using namespace std;` in small programs. But in large projects, it's asking for trouble. Be explicit.\"\n\n**Best practice:**\n- Avoid `using namespace std;` in headers\n- Use `std::` explicitly in most cases\n- Only use `using` for specific items you use often"
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Declares a global variable `int gameVersion = 1`\n2. In `main()`, declares a local variable `int gameVersion = 2`\n3. Prints the local version using the local variable\n4. Prints the global version using `::`\n5. Creates a block `{ }` and inside it, declares `int localVersion = 3`\n6. Prints the block variable inside the block\n7. All prints use `std::cout` and `std::endl` (no `using namespace`)\n\nRequirements:\n- Use `::` for global access\n- Use a block scope\n- No `using namespace std;`",
+    "validationPattern": {
+      "required": ["int gameVersion", "::gameVersion", "std::cout", "std::endl", "{"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "int\\s+gameVersion\\s*=\\s*1[\\s\\S]*int\\s+gameVersion\\s*=\\s*2[\\s\\S]*::gameVersion[\\s\\S]*std::cout[\\s\\S]*\\{[\\s\\S]*\\}"
+    },
+    "dialogueHints": [
+      "Global: `int gameVersion = 1;` outside main",
+      "Local: `int gameVersion = 2;` inside main",
+      "Global access: `::gameVersion`",
+      "Block: `{ int localVersion = 3; std::cout << ...; }`"
+    ],
+    "solution": "#include <iostream>\n\nint gameVersion = 1;  // Global\n\nint main() {\n    int gameVersion = 2;  // Local (shadows global)\n    \n    std::cout << \"Local version: \" << gameVersion << std::endl;\n    std::cout << \"Global version: \" << ::gameVersion << std::endl;\n    \n    {\n        int localVersion = 3;\n        std::cout << \"Block version: \" << localVersion << std::endl;\n    }\n    \n    // localVersion is not visible here\n    \n    return 0;\n}",
+    "openingDialogue": "Scope mastery. Clean code. Professional work. 🏗️"
+  },
+  "xpReward": 10
+}

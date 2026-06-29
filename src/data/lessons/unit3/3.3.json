@@ -1,0 +1,33 @@
+{
+  "id": "3.3",
+  "title": "Pointer arithmetic",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n\nint main() {\n    std::cout << \"=== Pointer Arithmetic ===\" << std::endl;\n    \n    // Array of integers\n    int numbers[5] = {10, 20, 30, 40, 50};\n    int* ptr = numbers;  // Points to first element\n    \n    std::cout << \"Array: \";\n    for (int i = 0; i < 5; i++) {\n        std::cout << numbers[i] << \" \";\n    }\n    std::cout << std::endl;\n    \n    std::cout << \"\\n=== Traversing with pointer arithmetic ===\" << std::endl;\n    for (int i = 0; i < 5; i++) {\n        std::cout << \"*(ptr + \" << i << \") = \" << *(ptr + i) << std::endl;\n    }\n    \n    std::cout << \"\\n=== Incrementing pointer ===\" << std::endl;\n    ptr = numbers;  // Reset\n    std::cout << \"*ptr: \" << *ptr << std::endl;\n    ptr++;  // Move to next element\n    std::cout << \"*ptr after ptr++: \" << *ptr << std::endl;\n    ptr++;\n    std::cout << \"*ptr after ptr++: \" << *ptr << std::endl;\n    \n    std::cout << \"\\n=== Pointer difference ===\" << std::endl;\n    int* begin = numbers;\n    int* end = numbers + 5;\n    std::cout << \"Number of elements: \" << (end - begin) << std::endl;\n    \n    std::cout << \"\\n=== Pointer arithmetic with char ===\" << std::endl;\n    char letters[] = {'A', 'B', 'C', 'D', 'E'};\n    char* charPtr = letters;\n    std::cout << \"char* size: \" << sizeof(char*) << \" bytes\" << std::endl;\n    std::cout << \"charPtr: \" << (void*)charPtr << std::endl;\n    charPtr++;\n    std::cout << \"charPtr after ++: \" << (void*)charPtr << std::endl;\n    \n    std::cout << \"\\n=== Pointer arithmetic with int ===\" << std::endl;\n    int* intPtr = numbers;\n    std::cout << \"int* size: \" << sizeof(int*) << \" bytes\" << std::endl;\n    std::cout << \"intPtr: \" << intPtr << std::endl;\n    intPtr++;\n    std::cout << \"intPtr after ++: \" << intPtr << std::endl;\n    \n    return 0;\n}",
+    "output": "=== Pointer Arithmetic ===\nArray: 10 20 30 40 50 \n\n=== Traversing with pointer arithmetic ===\n*(ptr + 0) = 10\n*(ptr + 1) = 20\n*(ptr + 2) = 30\n*(ptr + 3) = 40\n*(ptr + 4) = 50\n\n=== Incrementing pointer ===\n*ptr: 10\n*ptr after ptr++: 20\n*ptr after ptr++: 30\n\n=== Pointer difference ===\nNumber of elements: 5\n\n=== Pointer arithmetic with char ===\nchar* size: 8 bytes\ncharPtr: 0x7ffffeeeaa\ncharPtr after ++: 0x7ffffeeeab\n\n=== Pointer arithmetic with int ===\nint* size: 8 bytes\nintPtr: 0x7ffffeeeac\nintPtr after ++: 0x7ffffeeeb0",
+    "explanation": "🎮 **Pointer arithmetic is navigating memory.**\n\nWhen you add to a pointer, you move by the size of the type it points to.\n\n**Key rules:**\n\n| Operation | Meaning |\n|-----------|---------|\n| `ptr + n` | Move forward `n` elements |\n| `ptr - n` | Move backward `n` elements |\n| `ptr++` | Move to next element |\n| `ptr--` | Move to previous element |\n| `ptr1 - ptr2` | Number of elements between them |\n\n**Pointer arithmetic by type:**\n\n| Type | Size | `ptr + 1` moves by |\n|------|------|-------------------|\n| `int` | 4 bytes | 4 bytes |\n| `char` | 1 byte | 1 byte |\n| `double` | 8 bytes | 8 bytes |\n\n**Why this matters in games:**\n\n| Use | Example |\n|-----|---------|\n| **Array traversal** | Iterate through enemy array |\n| **Buffer processing** | Read/write chunks of data |\n| **Memory management** | Navigate custom allocators |\n| **Game engines** | Many engines use pointer arithmetic for speed |\n\n**PlusPlus-chan says:**\n\"Pointer arithmetic is how C++ accesses arrays efficiently. Java-chan hides this from you. I show you the machinery.\"\n\n**⚠️ Important:**\n- Pointer arithmetic is only valid within arrays\n- Going out of bounds is undefined behavior\n- Use `nullptr` to check if a pointer is valid",
+    "openingDialogue": "Pointer arithmetic: navigating memory like a pro. 🧭"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int arr[3] = {10, 20, 30};\n    int* ptr = arr;\n    \n    // Going out of bounds!\n    std::cout << *(ptr + 10) << std::endl;\n    \n    return 0;\n}",
+    "errorMessage": "Segmentation fault (core dumped)\n\n(Or prints garbage and crashes — undefined behavior!)",
+    "explanation": "You accessed memory beyond the array bounds!\n\n**What's happening:**\n1. `arr` has 3 elements (indices 0-2)\n2. `ptr + 10` points to memory 10 integers away\n3. That memory doesn't belong to your program\n4. **CRASH!**\n\n**The fix:**\n```cpp\n// Always check bounds\nint size = 3;\nfor (int i = 0; i < size; i++) {\n    std::cout << *(ptr + i) << std::endl;  // Safe\n}\n```\n\n**PlusPlus-chan says:**\n\"Pointer arithmetic is powerful but dangerous. Always know where your pointer is pointing. Never go out of bounds.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Creates an array `int scores[5] = {100, 90, 85, 95, 80}`\n2. Declares `int* ptr = scores`\n3. Uses pointer arithmetic to print all 5 scores\n4. Uses `ptr++` to move through the array, printing each value\n5. Calculates and prints the number of elements using `end - begin`\n\nRequirements:\n- Use `#include <iostream>`\n- Use pointer arithmetic `*(ptr + i)`\n- Use `ptr++` in a loop\n- Use pointer difference",
+    "validationPattern": {
+      "required": ["int*", "ptr + i", "ptr++", "ptr -", "std::cout"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "int\\s+\\w+\\[5\\]\\s*=\\s*\\{[^}]*\\}[\\s\\S]*int\\s*\\*\\s*\\w+\\s*=\\s*\\w+[\\s\\S]*\\*\\(\\w+\\s*\\+\\s*\\w+\\)[\\s\\S]*\\w+\\+\\+[\\s\\S]*\\w+\\s*\\-\\s*\\w+"
+    },
+    "dialogueHints": [
+      "Array: `int scores[5] = {100, 90, 85, 95, 80};`",
+      "Pointer: `int* ptr = scores;`",
+      "Loop: `for (int i = 0; i < 5; i++) { std::cout << *(ptr + i); }`",
+      "Difference: `int* begin = scores; int* end = scores + 5; int count = end - begin;`"
+    ],
+    "solution": "#include <iostream>\n\nint main() {\n    int scores[5] = {100, 90, 85, 95, 80};\n    int* ptr = scores;\n    \n    std::cout << \"=== Using pointer arithmetic ===\" << std::endl;\n    for (int i = 0; i < 5; i++) {\n        std::cout << \"*(ptr + \" << i << \") = \" << *(ptr + i) << std::endl;\n    }\n    \n    std::cout << \"\\n=== Using ptr++ ===\" << std::endl;\n    ptr = scores;  // Reset\n    for (int i = 0; i < 5; i++) {\n        std::cout << \"*ptr = \" << *ptr << std::endl;\n        ptr++;\n    }\n    \n    std::cout << \"\\n=== Pointer difference ===\" << std::endl;\n    int* begin = scores;\n    int* end = scores + 5;\n    std::cout << \"Number of elements: \" << (end - begin) << std::endl;\n    \n    return 0;\n}",
+    "openingDialogue": "Pointer arithmetic: navigate arrays like a pro. 🧭"
+  },
+  "xpReward": 10
+}

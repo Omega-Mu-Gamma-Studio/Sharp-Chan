@@ -1,0 +1,33 @@
+{
+  "id": "1.8",
+  "title": "switch — menus and choices",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n\nint main() {\n    int choice;\n    \n    std::cout << \"=== Adventure Menu ===\" << std::endl;\n    std::cout << \"1. Explore the forest\" << std::endl;\n    std::cout << \"2. Enter the dungeon\" << std::endl;\n    std::cout << \"3. Rest at the inn\" << std::endl;\n    std::cout << \"4. View inventory\" << std::endl;\n    std::cout << \"Enter your choice: \";\n    std::cin >> choice;\n    \n    // Switch statement for menu handling\n    switch (choice) {\n        case 1:\n            std::cout << \"You venture into the dark forest...\" << std::endl;\n            break;\n        case 2:\n            std::cout << \"You descend into the dungeon...\" << std::endl;\n            break;\n        case 3:\n            std::cout << \"You rest and recover health.\" << std::endl;\n            break;\n        case 4:\n            std::cout << \"Inventory: Sword, Shield, 3 Potions\" << std::endl;\n            break;\n        default:\n            std::cout << \"Invalid choice! Stay here.\" << std::endl;\n            break;\n    }\n    \n    // Multiple cases sharing the same code\n    std::cout << \"\\n=== Difficulty ===\" << std::endl;\n    std::cout << \"1. Easy\" << std::endl;\n    std::cout << \"2. Medium\" << std::endl;\n    std::cout << \"3. Hard\" << std::endl;\n    std::cout << \"4. Nightmare\" << std::endl;\n    std::cout << \"Choose difficulty: \";\n    std::cin >> choice;\n    \n    switch (choice) {\n        case 1:\n            std::cout << \"Easy mode. Enemies are weak.\" << std::endl;\n            break;\n        case 2:\n            std::cout << \"Medium mode. Balanced challenge.\" << std::endl;\n            break;\n        case 3:\n            std::cout << \"Hard mode. Good luck.\" << std::endl;\n            break;\n        case 4:\n            std::cout << \"Nightmare mode. You're insane.\" << std::endl;\n            break;\n        default:\n            std::cout << \"Invalid difficulty. Defaulting to Medium.\" << std::endl;\n            break;\n    }\n    \n    return 0;\n}",
+    "output": "=== Adventure Menu ===\n1. Explore the forest\n2. Enter the dungeon\n3. Rest at the inn\n4. View inventory\nEnter your choice: 2\nYou descend into the dungeon...\n\n=== Difficulty ===\n1. Easy\n2. Medium\n3. Hard\n4. Nightmare\nChoose difficulty: 3\nHard mode. Good luck.",
+    "explanation": "🎮 **Switch statements are your menu system.**\n\nWhen you have multiple choices based on a single value, `switch` is cleaner than `if-else`.\n\n**Syntax:**\n```cpp\nswitch (variable) {\n    case value1:\n        // Code for value1\n        break;\n    case value2:\n        // Code for value2\n        break;\n    default:\n        // Code for any other value\n        break;\n}\n```\n\n**Key rules:**\n- `break` exits the switch (without it, execution \"falls through\")\n- `default` handles any value not covered by cases\n- Cases must be constant values (int, char, enum)\n\n**Switch vs if-else:**\n| Aspect | Switch | If-Else |\n|--------|--------|---------|\n| Readability | Clean for many cases | Can get messy |\n| Performance | More efficient | Slightly slower for many cases |\n| Use case | Menu systems, state machines | Complex conditions |\n\n**Game use cases:**\n- Menu navigation\n- Combat actions (attack, defend, use item)\n- Dialog options\n- Game states (menu, playing, paused)",
+    "openingDialogue": "Menus. Every game has them. Let's build one. 📋🎮"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int choice = 1;\n    \n    switch (choice) {\n        case 1:\n            std::cout << \"Option 1\" << std::endl;\n        case 2:\n            std::cout << \"Option 2\" << std::endl;\n        default:\n            std::cout << \"Default\" << std::endl;\n    }\n    \n    return 0;\n}",
+    "errorMessage": "Option 1\nOption 2\nDefault\n\n(No error — but the code runs MULTIPLE cases! This is fallthrough.)",
+    "explanation": "You forgot `break`! Without `break`, execution continues to the next case.\n\n**What's happening:**\n1. `case 1` runs → prints \"Option 1\"\n2. No `break`, so it falls through to `case 2` → prints \"Option 2\"\n3. No `break`, so it falls through to `default` → prints \"Default\"\n\n**The fix:**\n```cpp\nswitch (choice) {\n    case 1:\n        std::cout << \"Option 1\" << std::endl;\n        break;  // ← This is required!\n    case 2:\n        std::cout << \"Option 2\" << std::endl;\n        break;  // ← This too!\n    default:\n        std::cout << \"Default\" << std::endl;\n        break;\n}\n```\n\n**PlusPlus-chan says:**\n\"Fallthrough is a feature, not a bug. But 90% of the time, you want `break`. Be intentional.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Asks the player: \"Choose your weapon: 1. Sword, 2. Axe, 3. Bow\"\n2. Reads the choice into an `int`\n3. Uses a `switch` statement to print:\n   - Case 1: \"You swing the sword!\"\n   - Case 2: \"You cleave with the axe!\"\n   - Case 3: \"You loose an arrow!\"\n   - Default: \"You punch wildly!\"\n4. Include `break` statements\n\nRequirements:\n- Use `std::cout` and `std::cin`\n- Use `switch` with `break` statements\n- Use `default` for invalid choices",
+    "validationPattern": {
+      "required": ["switch", "case", "break", "default", "std::cin"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "switch\\s*\\([\\s\\S]*\\)\\s*\\{[\\s\\S]*case\\s+\\d+[\\s\\S]*break[\\s\\S]*default[\\s\\S]*break"
+    },
+    "dialogueHints": [
+      "Ask the player for their choice with `std::cin`",
+      "Each case should have a specific message",
+      "Don't forget `break` after each case",
+      "`default` handles any invalid input"
+    ],
+    "solution": "#include <iostream>\n\nint main() {\n    int choice;\n    \n    std::cout << \"Choose your weapon:\" << std::endl;\n    std::cout << \"1. Sword\" << std::endl;\n    std::cout << \"2. Axe\" << std::endl;\n    std::cout << \"3. Bow\" << std::endl;\n    std::cout << \"Enter your choice: \";\n    std::cin >> choice;\n    \n    switch (choice) {\n        case 1:\n            std::cout << \"You swing the sword!\" << std::endl;\n            break;\n        case 2:\n            std::cout << \"You cleave with the axe!\" << std::endl;\n            break;\n        case 3:\n            std::cout << \"You loose an arrow!\" << std::endl;\n            break;\n        default:\n            std::cout << \"You punch wildly!\" << std::endl;\n            break;\n    }\n    \n    return 0;\n}",
+    "openingDialogue": "Weapon choice. Make it count. ⚔️🏹"
+  },
+  "xpReward": 10
+}

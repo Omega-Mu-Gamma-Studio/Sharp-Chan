@@ -1,0 +1,34 @@
+{
+  "id": "3.1",
+  "title": "Memory — stack vs heap, the basics",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n\nint globalVar = 42;  // Global (static storage)\n\nvoid stackExample() {\n    int localVar = 10;      // Stack\n    int anotherLocal = 20;  // Stack\n    std::cout << \"Stack variables:\" << std::endl;\n    std::cout << \"localVar: \" << localVar << \" (address: \" << &localVar << \")\" << std::endl;\n    std::cout << \"anotherLocal: \" << anotherLocal << \" (address: \" << &anotherLocal << \")\" << std::endl;\n}\n\nvoid heapExample() {\n    int* heapVar = new int(100);  // Heap!\n    std::cout << \"\\nHeap variable:\" << std::endl;\n    std::cout << \"*heapVar: \" << *heapVar << \" (address: \" << heapVar << \")\" << std::endl;\n    delete heapVar;  // Must free heap memory!\n}\n\nint main() {\n    std::cout << \"=== Stack vs Heap ===\" << std::endl;\n    std::cout << \"Global variable: \" << globalVar << \" (address: \" << &globalVar << \")\" << std::endl;\n    \n    stackExample();\n    heapExample();\n    \n    std::cout << \"\\n--- Key Differences ---\" << std::endl;\n    std::cout << \"Stack: automatic, fast, limited size\" << std::endl;\n    std::cout << \"Heap: manual, slower, larger size\" << std::endl;\n    \n    return 0;\n}",
+    "output": "=== Stack vs Heap ===\nGlobal variable: 42 (address: 0x100001000)\nStack variables:\nlocalVar: 10 (address: 0x7ffffeeeee)\nanotherLocal: 20 (address: 0x7ffffeeeea)\n\nHeap variable:\n*heapVar: 100 (address: 0x6000000000)\n\n--- Key Differences ---\nStack: automatic, fast, limited size\nHeap: manual, slower, larger size",
+    "explanation": "🎮 **Memory is where your game data lives.**\n\n**Stack:**\n• Automatic allocation (you don't delete it)\n• Fast (just moves a pointer)\n• Limited size (usually 1-8MB)\n• Variables are local to functions\n• Memory is freed when function returns\n\n**Heap:**\n• Manual allocation (`new` / `delete`)\n• Slower (more overhead)\n• Large size (can use most of RAM)\n• Memory persists until you `delete` it\n\n**Key differences:**\n\n| Aspect | Stack | Heap |\n|--------|-------|------|\n| Allocation | Automatic | Manual (`new`) |\n| Deallocation | Automatic (scope exit) | Manual (`delete`) |\n| Speed | Fast | Slower |\n| Size | Limited | Large |\n| Lifetime | Function scope | Until deleted |\n\n**Why this matters for games:**\n• Player objects → often on heap (persist across frames)\n• Temporary variables → stack (fast, short-lived)\n• Large assets (textures, models) → heap\n\n**PlusPlus-chan says:**\n\"Java-chan has a garbage collector. I have `new` and `delete`. You control memory. That's powerful — and dangerous. We'll learn to handle it.\"",
+    "openingDialogue": "Memory. This is where C++ separates from the rest. 🧠💾"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int* ptr = new int(42);\n    \n    // Forgot to delete!\n    // delete ptr;\n    \n    std::cout << *ptr << std::endl;\n    return 0;\n}",
+    "errorMessage": "42\n\n(No error — but memory is LEAKED! The heap allocation is never freed.)",
+    "explanation": "You allocated memory on the heap with `new` but never freed it with `delete`.\n\n**Memory leak!** The program ends, but the memory is still allocated. In a game, this would cause memory usage to grow over time.\n\n**The fix:**\n```cpp\nint* ptr = new int(42);\nstd::cout << *ptr << std::endl;\ndelete ptr;  // ← Always delete heap memory!\n```\n\n**PlusPlus-chan says:**\n\"Every `new` needs a `delete`. Every `new[]` needs a `delete[]`. This is the #1 rule of manual memory management.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Declares a local (stack) variable `stackVar` with value 5\n2. Declares a global variable `globalVar` with value 10\n3. Uses `new` to allocate an integer on the heap with value 15\n4. Prints all three values and their addresses using `&`\n5. Properly deletes the heap memory\n\nRequirements:\n- Use `#include <iostream>`\n- Use `new` and `delete`\n- Print addresses with `std::cout`",
+    "validationPattern": {
+      "required": ["int", "new", "delete", "std::cout", "&"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "int\\s+\\w+\\s*=\\s*5[\\s\\S]*int\\s+\\w+\\s*=\\s*10[\\s\\S]*new\\s+int[\\s\\S]*delete\\s+\\w+[\\s\\S]*std::cout.*&"
+    },
+    "dialogueHints": [
+      "Stack: `int stackVar = 5;` inside main",
+      "Global: `int globalVar = 10;` outside main",
+      "Heap: `int* heapVar = new int(15);`",
+      "Delete: `delete heapVar;`",
+      "Address: `&variable`"
+    ],
+    "solution": "#include <iostream>\n\nint globalVar = 10;\n\nint main() {\n    int stackVar = 5;\n    int* heapVar = new int(15);\n    \n    std::cout << \"Stack variable: \" << stackVar \n              << \" (address: \" << &stackVar << \")\" << std::endl;\n    std::cout << \"Global variable: \" << globalVar \n              << \" (address: \" << &globalVar << \")\" << std::endl;\n    std::cout << \"Heap variable: \" << *heapVar \n              << \" (address: \" << heapVar << \")\" << std::endl;\n    \n    delete heapVar;\n    \n    return 0;\n}",
+    "openingDialogue": "Memory basics: know where your data lives. 🧠"
+  },
+  "xpReward": 10
+}

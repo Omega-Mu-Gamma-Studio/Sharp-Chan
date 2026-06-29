@@ -1,0 +1,33 @@
+{
+  "id": "1.13",
+  "title": "Arrays — storing multiple values",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n#include <string>\n\nint main() {\n    std::cout << \"=== Player Inventory ===\" << std::endl;\n    \n    // Array of strings (inventory)\n    std::string inventory[5] = {\"Sword\", \"Shield\", \"Potion\", \"Key\", \"Gold Coin\"};\n    \n    // Accessing elements\n    std::cout << \"First item: \" << inventory[0] << std::endl;\n    std::cout << \"Third item: \" << inventory[2] << std::endl;\n    \n    // Looping through array\n    std::cout << \"\\nInventory:\" << std::endl;\n    for (int i = 0; i < 5; i++) {\n        std::cout << \"  \" << (i + 1) << \". \" << inventory[i] << std::endl;\n    }\n    \n    // Array of ints (player stats)\n    int playerStats[4] = {100, 15, 10, 25};  // health, attack, defense, speed\n    \n    std::cout << \"\\n=== Player Stats ===\" << std::endl;\n    std::cout << \"Health: \" << playerStats[0] << std::endl;\n    std::cout << \"Attack: \" << playerStats[1] << std::endl;\n    std::cout << \"Defense: \" << playerStats[2] << std::endl;\n    std::cout << \"Speed: \" << playerStats[3] << std::endl;\n    \n    // Modifying array elements\n    playerStats[0] = 120;  // Health increased!\n    std::cout << \"\\nHealth increased to: \" << playerStats[0] << std::endl;\n    \n    // Array of enemy health\n    int enemyHealth[3] = {30, 45, 20};\n    \n    std::cout << \"\\n=== Enemy Health ===\" << std::endl;\n    for (int i = 0; i < 3; i++) {\n        std::cout << \"Enemy \" << (i + 1) << \": \" << enemyHealth[i] << \" HP\" << std::endl;\n    }\n    \n    // Multi-dimensional array (grid)\n    int grid[3][3] = {\n        {1, 2, 3},\n        {4, 5, 6},\n        {7, 8, 9}\n    };\n    \n    std::cout << \"\\n=== Grid ===\" << std::endl;\n    for (int row = 0; row < 3; row++) {\n        for (int col = 0; col < 3; col++) {\n            std::cout << grid[row][col] << \" \";\n        }\n        std::cout << std::endl;\n    }\n    \n    return 0;\n}",
+    "output": "=== Player Inventory ===\nFirst item: Sword\nThird item: Potion\n\nInventory:\n  1. Sword\n  2. Shield\n  3. Potion\n  4. Key\n  5. Gold Coin\n\n=== Player Stats ===\nHealth: 100\nAttack: 15\nDefense: 10\nSpeed: 25\n\nHealth increased to: 120\n\n=== Enemy Health ===\nEnemy 1: 30 HP\nEnemy 2: 45 HP\nEnemy 3: 20 HP\n\n=== Grid ===\n1 2 3 \n4 5 6 \n7 8 9",
+    "explanation": "🎮 **Arrays store multiple values of the same type.**\n\n**Declaration:**\n```cpp\nstd::string inventory[5];           // 5 elements, uninitialized\nint stats[4] = {100, 15, 10, 25};  // 4 elements, initialized\nstd::string items[3] = {\"A\", \"B\", \"C\"}; // 3 strings\n```\n\n**Accessing elements:**\n- `inventory[0]` — first element\n- `inventory[4]` — last element\n- Indices go from **0** to **size - 1**\n\n**Common game uses:**\n| Use | Example |\n|-----|---------|\n| Inventory items | `std::string inventory[20]` |\n| Player stats | `int stats[5]` |\n| Enemy list | `Enemy enemies[10]` |\n| Grid/map | `int map[10][10]` |\n\n**2D arrays (grids):**\n```cpp\nint grid[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} };\n```\n- First index = row\n- Second index = column\n- Perfect for maps, boards, grids\n\n**⚠️ Important:**\n- Arrays are fixed size\n- Can't add or remove elements\n- Size must be known at compile time\n- Out-of-bounds access is dangerous",
+    "openingDialogue": "Arrays: store everything. Weapons, stats, enemies. 📦"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int health[3] = {100, 80, 60};\n    \n    // Accessing beyond the array bounds\n    for (int i = 0; i <= 3; i++) {\n        std::cout << health[i] << std::endl;\n    }\n    \n    return 0;\n}",
+    "errorMessage": "100\n80\n60\n32767\n\n(No error — but the last value is GARBAGE from memory!)",
+    "explanation": "You're accessing index 3, which doesn't exist!\n\nArray `health` has indices 0, 1, 2. Index 3 is out of bounds.\n\n**What's happening:**\n1. `i = 0, 1, 2` → prints 100, 80, 60 (correct)\n2. `i = 3` → out of bounds, prints random garbage from memory\n\n**The fix:**\n```cpp\nfor (int i = 0; i < 3; i++) {  // Use <, not <=\n    std::cout << health[i] << std::endl;\n}\n```\n\n**PlusPlus-chan says:**\n\"C++ doesn't check array bounds. It trusts you. Violate that trust, and you get garbage or crashes.\"\n\n**Alternative:**\nUse `std::array` or `std::vector` for safe bounds (we'll cover those later)."
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Creates an array of 5 enemy names: `{\"Goblin\", \"Orc\", \"Skeleton\", \"Dragon\", \"Golem\"}`\n2. Creates an array of 5 enemy health values: `{30, 50, 25, 200, 70}`\n3. Uses a `for` loop to print each enemy with its health:\n   \"Goblin: 30 HP\"\n   \"Orc: 50 HP\"\n   ...\n4. Reduces the health of the third enemy (Skeleton) by 10\n5. Prints the updated list\n\nRequirements:\n- Use two arrays of the same size\n- Use a `for` loop with `i < 5`\n- Modify one element",
+    "validationPattern": {
+      "required": ["std::string", "int", "[5]", "for", "std::cout"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "std::string\\s+\\w+\\[5\\]\\s*=\\s*\\{[\\s\\S]*\\}[\\s\\S]*int\\s+\\w+\\[5\\]\\s*=\\s*\\{[\\s\\S]*\\}[\\s\\S]*for\\s*\\(\\s*int\\s+\\w+\\s*=\\s*0\\s*;\\s*\\w+\\s*<\\s*5\\s*;\\s*\\w+\\+\\+\\)"
+    },
+    "dialogueHints": [
+      "Two arrays: enemyNames[5] and enemyHealth[5]",
+      "Loop through and print both arrays using the same index",
+      "Modify enemyHealth[2] -= 10",
+      "Print again after the modification"
+    ],
+    "solution": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string enemyNames[5] = {\"Goblin\", \"Orc\", \"Skeleton\", \"Dragon\", \"Golem\"};\n    int enemyHealth[5] = {30, 50, 25, 200, 70};\n    \n    std::cout << \"=== Enemy List ===\" << std::endl;\n    for (int i = 0; i < 5; i++) {\n        std::cout << enemyNames[i] << \": \" << enemyHealth[i] << \" HP\" << std::endl;\n    }\n    \n    // Damage Skeleton\n    std::cout << \"\\nSkeleton takes 10 damage!\" << std::endl;\n    enemyHealth[2] -= 10;\n    \n    std::cout << \"\\n=== Updated Enemy List ===\" << std::endl;\n    for (int i = 0; i < 5; i++) {\n        std::cout << enemyNames[i] << \": \" << enemyHealth[i] << \" HP\" << std::endl;\n    }\n    \n    return 0;\n}",
+    "openingDialogue": "Arrays = your game's database. Store everything. 🗂️"
+  },
+  "xpReward": 10
+}

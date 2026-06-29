@@ -1,0 +1,33 @@
+{
+  "id": "1.7",
+  "title": "if / else — branching decisions",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n#include <string>\n\nint main() {\n    int health = 75;\n    int gold = 30;\n    bool hasKey = false;\n    \n    // Simple if\n    std::cout << \"=== Health Check ===\" << std::endl;\n    if (health > 50) {\n        std::cout << \"You are healthy!\" << std::endl;\n    }\n    \n    // if-else\n    std::cout << \"\\n=== Gold Check ===\" << std::endl;\n    if (gold >= 50) {\n        std::cout << \"You have enough gold to buy the sword!\" << std::endl;\n    } else {\n        std::cout << \"You need \" << (50 - gold) << \" more gold for the sword.\" << std::endl;\n    }\n    \n    // if-else-if chain\n    std::cout << \"\\n=== Key Check ===\" << std::endl;\n    if (hasKey) {\n        std::cout << \"You open the door with the key!\" << std::endl;\n    } else {\n        std::cout << \"The door is locked. You need a key.\" << std::endl;\n    }\n    \n    // Nested if\n    std::cout << \"\\n=== Treasure Room ===\" << std::endl;\n    bool hasSword = false;\n    bool hasShield = false;\n    \n    if (hasSword) {\n        if (hasShield) {\n            std::cout << \"You have both! You are fully equipped.\" << std::endl;\n        } else {\n            std::cout << \"You have a sword but no shield.\" << std::endl;\n        }\n    } else {\n        if (hasShield) {\n            std::cout << \"You have a shield but no sword.\" << std::endl;\n        } else {\n            std::cout << \"You are completely unarmed!\" << std::endl;\n        }\n    }\n    \n    return 0;\n}",
+    "output": "=== Health Check ===\nYou are healthy!\n\n=== Gold Check ===\nYou need 20 more gold for the sword.\n\n=== Key Check ===\nThe door is locked. You need a key.\n\n=== Treasure Room ===\nYou are completely unarmed!",
+    "explanation": "🎮 **if/else is how games make decisions.**\n\nEvery game decision is an if statement:\n- \"If the player has enough health, they can fight\"\n- \"If the player has the key, they can open the door\"\n- \"If the player's level is high enough, they can equip the sword\"\n\n**Syntax:**\n```cpp\nif (condition) {\n    // Code runs if condition is true\n}\n\nif (condition) {\n    // Runs if true\n} else {\n    // Runs if false\n}\n\nif (condition1) {\n    // Runs if condition1 is true\n} else if (condition2) {\n    // Runs if condition1 is false AND condition2 is true\n} else {\n    // Runs if all conditions are false\n}\n```\n\n**Nested if:**\nWhen you need to check multiple conditions that depend on each other.\n\n**Common game uses:**\n- Combat outcomes\n- Quest completion checks\n- NPC dialogue branches\n- Level-up requirements",
+    "openingDialogue": "Decisions. This is where games get interesting. 🤔🎮"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n\nint main() {\n    int health = 30;\n    \n    // Missing semicolon after else\n    if (health > 50) {\n        std::cout << \"Healthy!\" << std::endl;\n    }\n    else \n        std::cout << \"Not healthy!\" << std::endl;\n    }\n    \n    return 0;\n}",
+    "errorMessage": "main.cpp:10:1: error: 'else' without a previous 'if'\n   10 | }\n      | ^\n1 error",
+    "explanation": "The `else` has no matching `if` because the structure is broken.\n\n**What went wrong:**\nThe `else` statement must be directly connected to an `if`. Here, the `if` block closed with `}`, and then `else` appears after it with a missing `{`.\n\n**The fix:**\n```cpp\nif (health > 50) {\n    std::cout << \"Healthy!\" << std::endl;\n} else {\n    std::cout << \"Not healthy!\" << std::endl;\n}\n```\n\n**PlusPlus-chan says:**\n\"Indentation matters for readability, but for the compiler, braces matter more. Always use `{}` even for single statements. It prevents this error.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program that:\n\n1. Declares `int playerHealth = 45` and `int playerGold = 80`\n2. If health is greater than 50: prints \"You are feeling strong!\"\n3. Else if health is between 20 and 50: prints \"You are wounded, but alive.\"\n4. Else: prints \"You are critically injured!\"\n5. If gold is greater than 50: prints \"You have enough money for the potion.\"\n6. Else: prints \"You're too poor for that potion.\"\n\nRequirements:\n- Use if-else-if for health\n- Use if-else for gold",
+    "validationPattern": {
+      "required": ["if", "else if", "else", ">", "<= 50", "std::cout"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "if\\s*\\([\\s\\S]*\\)\\s*\\{[\\s\\S]*\\}\\s*else\\s+if\\s*\\([\\s\\S]*\\)\\s*\\{[\\s\\S]*\\}\\s*else\\s*\\{[\\s\\S]*\\}"
+    },
+    "dialogueHints": [
+      "Health conditions: > 50, between 20 and 50, else",
+      "Between: `health >= 20 && health <= 50`",
+      "Gold: `if (gold > 50)` else",
+      "Use `std::cout` for each branch"
+    ],
+    "solution": "#include <iostream>\n\nint main() {\n    int playerHealth = 45;\n    int playerGold = 80;\n    \n    std::cout << \"=== Player Status ===\" << std::endl;\n    \n    if (playerHealth > 50) {\n        std::cout << \"You are feeling strong!\" << std::endl;\n    } else if (playerHealth >= 20 && playerHealth <= 50) {\n        std::cout << \"You are wounded, but alive.\" << std::endl;\n    } else {\n        std::cout << \"You are critically injured!\" << std::endl;\n    }\n    \n    if (playerGold > 50) {\n        std::cout << \"You have enough money for the potion.\" << std::endl;\n    } else {\n        std::cout << \"You're too poor for that potion.\" << std::endl;\n    }\n    \n    return 0;\n}",
+    "openingDialogue": "Branching time. Make the right choices. ⚔️"
+  },
+  "xpReward": 10
+}

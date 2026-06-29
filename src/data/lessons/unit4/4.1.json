@@ -1,0 +1,30 @@
+{
+  "id": "4.1",
+  "title": "What is the STL?",
+  "type": "conceptual",
+  "phase1": {
+    "code": "",
+    "output": "",
+    "explanation": "🎮 **The Standard Template Library (STL) is C++'s weapon arsenal.**\n\n**What is the STL?**\n\nThe STL is a collection of powerful, reusable components that handle common programming tasks. It's part of the C++ Standard Library.\n\nInstead of writing your own linked list, dynamic array, or sorting algorithm, you use STL containers and algorithms. They're fast, tested, and optimized.\n\n**The Four Pillars of STL:**\n\n| Pillar | What it does | Examples |\n|--------|--------------|----------|\n| **Containers** | Store data | `std::vector`, `std::map`, `std::set` |\n| **Algorithms** | Process data | `std::sort`, `std::find`, `std::copy` |\n| **Iterators** | Connect containers and algorithms | `begin()`, `end()`, `std::iterator` |\n| **Functors** | Callable objects | Function pointers, lambdas |\n\n**Why STL matters for games:**\n\n| Use | STL Component |\n|-----|---------------|\n| **Player inventory** | `std::vector<Item>` |\n| **Enemy roster** | `std::list<Enemy*>` |\n| **Item database** | `std::unordered_map<int, Item>` |\n| **High scores** | `std::set<int>` |\n| **Search/sort** | `std::find`, `std::sort` |\n\n**Benefits of using STL:**\n\n| Benefit | Why |\n|---------|-----|\n| **Performance** | Highly optimized |\n| **Reliability** | Well-tested |\n| **Portability** | Works on all platforms |\n| **Productivity** | Write less code |\n| **Readability** | Standard naming |\n\n**Common STL Containers:**\n\n| Container | Use |\n|-----------|-----|\n| `std::vector` | Dynamic array, fast random access |\n| `std::array` | Fixed-size array |\n| `std::list` | Doubly-linked list |\n| `std::map` | Key-value pairs (sorted) |\n| `std::unordered_map` | Key-value pairs (hash table) |\n| `std::set` | Unique elements (sorted) |\n| `std::unordered_set` | Unique elements (hash table) |\n| `std::queue` | FIFO queue |\n| `std::stack` | LIFO stack |\n| `std::deque` | Double-ended queue |\n\n**PlusPlus-chan says:**\n\"The STL is your toolbox. You could build everything from scratch — but why would you? Use the tools. Build your game, not the wheel.\"",
+    "openingDialogue": "The STL: your game dev toolkit. Ready to use. ⚔️"
+  },
+  "phase2": {
+    "brokenCode": "",
+    "errorMessage": "",
+    "explanation": "Conceptual lesson — no broken code here!\n\n**Common misconception:** \"STL is slow, I should write my own containers.\"\n\nActually: STL is highly optimized. Writing your own containers is rarely faster unless you have very specific needs. The STL has been refined over decades.\n\n**Another misconception:** \"STL is hard to learn.\"\n\nActually: STL containers work similarly. Once you learn `std::vector`, you can use most other containers easily. They share common interfaces.\n\n**PlusPlus-chan says:**\n\"Don't reinvent the wheel. The STL is your friend. Use it.\""
+  },
+  "phase3": {
+    "prompt": "Which statement about the STL is TRUE?\n\nA) The STL is an external library you need to download separately\nB) STL containers are not well-suited for game development\nC) STL provides containers, algorithms, and iterators\nD) `std::vector` is a fixed-size container\n\nSelect the CORRECT answer.",
+    "validationPattern": {
+      "mcqAnswer": "C"
+    },
+    "dialogueHints": [
+      "Think about what the STL actually includes.",
+      "The STL is part of the C++ Standard Library.",
+      "What are the four pillars of the STL?"
+    ],
+    "solution": null,
+    "openingDialogue": "Let's see if you understand the STL. 🤔"
+  },
+  "xpReward": 10
+}

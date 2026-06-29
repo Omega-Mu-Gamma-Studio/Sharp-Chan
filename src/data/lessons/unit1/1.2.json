@@ -1,0 +1,30 @@
+{
+  "id": "1.2",
+  "title": "Setting up your environment (g++, VS Code)",
+  "type": "conceptual",
+  "phase1": {
+    "code": "",
+    "output": "",
+    "explanation": "Before we write any code, let's get your environment set up.\n\n🔧 **What you need:**\n\n1. **A C++ Compiler (g++):**\n   - Windows: Install MinGW-w64 or use MSVC\n   - macOS: Install Xcode Command Line Tools (`xcode-select --install`)\n   - Linux: `sudo apt install g++` (Ubuntu/Debian)\n\n   Check it works: Open a terminal and type `g++ --version`\n\n2. **VS Code (or any editor):**\n   - Download from code.visualstudio.com\n   - Install the C/C++ extension by Microsoft\n\n3. **Your First Project:**\n   Create a folder called `cpp-game` — this is where your journey begins.\n\n💡 **Pro tip from PlusPlus-chan:**\n\nLearn to compile from the command line before using an IDE. That's how you learn what's really happening. An IDE hides the compile steps, but you need to know them:\n\n```bash\ng++ -o myprogram main.cpp\n./myprogram\n```\n\nJava-chan hides the compiler from you. I don't. You're going to see every step of the transformation from code to executable.\n\n**You're not just learning C++ — you're learning how computers actually work.** That's the part that matters.",
+    "openingDialogue": "No fancy IDEs hiding the truth. Terminal first. Always. 🖥️💀"
+  },
+  "phase2": {
+    "brokenCode": "",
+    "errorMessage": "",
+    "explanation": "Conceptual lesson — no broken code here!\n\nCommon issue: `g++: command not found`\n\nThis means the compiler isn't in your PATH. Don't panic. PlusPlus-chan has seen this before.\n\n**Fixes:**\n- Windows: Make sure MinGW/bin is in your PATH\n- macOS: Run `xcode-select --install`\n- Linux: `sudo apt install g++` (or your distro's equivalent)\n\n**Check your work:**\nOpen a terminal and type:\n```bash\ng++ --version\n```\nIf you see a version number, you're ready. If not... PlusPlus-chan is patient. She'll wait."
+  },
+  "phase3": {
+    "prompt": "What command do you use to compile a C++ file called `main.cpp` into an executable called `mygame`?\n\nA) `g++ main.cpp -o mygame`\nB) `g++ -o main.cpp mygame`\nC) `compile main.cpp mygame`\nD) `g++ main.cpp --exec mygame`\n\nSelect the CORRECT command.",
+    "validationPattern": {
+      "mcqAnswer": "A"
+    },
+    "dialogueHints": [
+      "The '-o' flag means 'output'.", 
+      "The source file comes first, then the output flag.", 
+      "Think about what order makes sense: source → output."
+    ],
+    "solution": null,
+    "openingDialogue": "Time to prove you can use the terminal. Don't worry, I'll help. 💻"
+  },
+  "xpReward": 10
+}

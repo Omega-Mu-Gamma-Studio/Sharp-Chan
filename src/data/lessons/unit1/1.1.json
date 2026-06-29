@@ -1,0 +1,30 @@
+{
+  "id": "1.1",
+  "title": "What is C++? Why game devs love it",
+  "type": "conceptual",
+  "phase1": {
+    "code": "",
+    "output": "",
+    "explanation": "C++ is a high-performance programming language created by Bjarne Stroustrup in 1985 as an extension of C. It's the language of choice for game development, game engines, and performance-critical systems.\n\n🎮 **Why game devs love C++:**\n\n1. **Performance** — C++ compiles directly to machine code. No interpreter, no virtual machine. You control every byte. When you need 60 frames per second, C++ delivers.\n\n2. **Memory Control** — You decide exactly when and where memory is allocated. This is both powerful and dangerous. It's why games can run on consoles with 8GB of RAM while some browsers use 4GB just for three tabs.\n\n3. **Hardware Access** — C++ can talk directly to the GPU, network cards, and other hardware. That's how game engines render millions of polygons per frame.\n\n4. **Game Engines** — Unreal Engine, Godot, CryEngine, and most AAA game studios use C++ for their core systems. If you want to work in games, C++ is a non-negotiable skill.\n\n5. **Control** — C++ doesn't hide the machine from you. You see what the computer is actually doing. That's scary at first, but it's what makes you a better programmer.\n\n**What Java-chan won't tell you:**\nJava-chan is warm and friendly. She holds your hand. She hides memory management behind a garbage collector. That's fine for business apps. But games? Games need raw power. Games need control. That's where PlusPlus-chan comes in.\n\n🔥 **She doesn't hold your hand. She builds your hands.**\n\nIn this course, you'll build a complete text-based RPG from scratch — not a toy, but a real, saveable game. Every lesson gets you closer to that goal.",
+    "openingDialogue": "Java-chan is nice. I'm not. Let's build something real. 🎮🔥"
+  },
+  "phase2": {
+    "brokenCode": "",
+    "errorMessage": "",
+    "explanation": "Conceptual lesson — no broken code yet. But here's a common misconception:\n\n❌ **'C++ is just C with classes.'**\n\nActually: Modern C++ is fundamentally different from C. Yes, you can write C-style code in C++, but that's like using a sports car to drive 5mph to the grocery store. Modern C++ has:\n• Smart pointers (no manual delete)\n• Move semantics (efficient resource transfer)\n• Lambdas and functional programming\n• Templates and generics\n• RAII (automatic resource management)\n\nPlusPlus-chan will teach you Modern C++ — the real way professionals write C++ today."
+  },
+  "phase3": {
+    "prompt": "Which statement is TRUE about C++ in game development?\n\nA) C++ is a purely object-oriented language with no support for low-level memory access\nB) C++ is commonly used in game engines because it offers high performance and direct hardware control\nC) C++ programs always run slower than Java programs\nD) C++ does not support manual memory management\n\nSelect the CORRECT answer.",
+    "validationPattern": {
+      "mcqAnswer": "B"
+    },
+    "dialogueHints": [
+      "Think about what makes C++ special compared to other languages.",
+      "Memory management is a key difference between C++ and Java.",
+      "Game engines need speed and control."
+    ],
+    "solution": null,
+    "openingDialogue": "Let's see if you were paying attention. 🤔💕"
+  },
+  "xpReward": 10
+}

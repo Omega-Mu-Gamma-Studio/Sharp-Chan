@@ -1,0 +1,33 @@
+{
+  "id": "1.4",
+  "title": "Variables, Data Types & Constants",
+  "type": "coding",
+  "phase1": {
+    "code": "#include <iostream>\n#include <string>\n\nint main() {\n    // Player stats — these are your game's core data\n    int playerLevel = 1;\n    int playerHealth = 100;\n    double playerGold = 25.50;\n    char playerRank = 'F';\n    std::string playerName = \"Hero\";\n    bool isAlive = true;\n    \n    // Constants — values that never change\n    const int MAX_HEALTH = 100;\n    const double TAX_RATE = 0.15;\n    const std::string GAME_TITLE = \"Dungeon Quest\";\n    \n    // Display everything\n    std::cout << \"=== \" << GAME_TITLE << \" ===\" << std::endl;\n    std::cout << \"Name: \" << playerName << std::endl;\n    std::cout << \"Level: \" << playerLevel << std::endl;\n    std::cout << \"Health: \" << playerHealth << \"/\" << MAX_HEALTH << std::endl;\n    std::cout << \"Gold: $\" << playerGold << std::endl;\n    std::cout << \"Rank: \" << playerRank << std::endl;\n    std::cout << \"Alive: \" << (isAlive ? \"Yes\" : \"No\") << std::endl;\n    \n    return 0;\n}",
+    "output": "=== Dungeon Quest ===\nName: Hero\nLevel: 1\nHealth: 100/100\nGold: $25.5\nRank: F\nAlive: Yes",
+    "explanation": "🎮 **Variables hold your game state.**\n\nLet's break down the basic types:\n\n| Type | Use | Example |\n|------|-----|---------|\n| `int` | Whole numbers | `playerLevel = 5` |\n| `double` | Decimal numbers | `playerGold = 25.50` |\n| `char` | Single character | `playerRank = 'A'` |\n| `bool` | True/False | `isAlive = true` |\n| `std::string` | Text (requires `#include <string>`) | `playerName = \"Hero\"` |\n\n**Constants (`const`):**\n- Marked with `const` — they can't change\n- Great for: max health, tax rates, game titles\n- Use `const` for values that should never be modified\n\n**Naming conventions:**\n- Variables: `camelCase` (`playerLevel`, `playerGold`)\n- Constants: `UPPER_CASE` (`MAX_HEALTH`, `GAME_TITLE`)\n\n🔥 **PlusPlus-chan's insight:**\nJava-chan has `String`. I have `std::string`. Same idea, but you need to `#include <string>` to use it. Java hides includes from you. I show you everything.\n\n**The Ternary Operator (`? :`):**\n`(isAlive ? \"Yes\" : \"No\")` means:\n- If `isAlive` is true → \"Yes\"\n- If `isAlive` is false → \"No\"\n\nIt's a compact if-else. You'll see it a lot.",
+    "openingDialogue": "Variables hold your game's data. Every stat is a variable. 🎮📊"
+  },
+  "phase2": {
+    "brokenCode": "#include <iostream>\n#include <string>\n\nint main() {\n    int playerHealth = 100;\n    const int MAX_HEALTH = 100;\n    \n    // Trying to modify a constant — this is illegal!\n    MAX_HEALTH = 150;\n    \n    std::cout << \"Health: \" << playerHealth << \"/\" << MAX_HEALTH << std::endl;\n    return 0;\n}",
+    "errorMessage": "main.cpp:9:5: error: assignment of read-only variable 'MAX_HEALTH'\n    9 |     MAX_HEALTH = 150;\n      |     ^~~~~~~~~~\n1 error",
+    "explanation": "You can't modify a `const` variable. That's the entire point.\n\n`MAX_HEALTH` is declared as `const`, which means \"this value will never change.\" The compiler enforces this.\n\n**The fix:**\nIf you need it to change, remove `const`:\n```cpp\nint MAX_HEALTH = 100;  // Now you can modify it\n```\n\n**Why this matters:**\nGame developers use `const` for things like:\n- Maximum health\n- Maximum level\n- Prices in the shop\n- Game rules\n\nThese values shouldn't change mid-game. `const` enforces that.\n\n**PlusPlus-chan says:**\n\"The compiler isn't being mean. It's protecting you from yourself. You'll thank it later.\""
+  },
+  "phase3": {
+    "prompt": "Create a C++ program that declares:\n\n1. A `const int` for `MAX_LEVEL` set to 99\n2. A `std::string` for `playerName` set to your name (or \"Hero\")\n3. An `int` for `playerLevel` set to 1\n4. A `double` for `playerXP` set to 0.0\n\nPrint them all in a clean format with labels.\n\nRequirements:\n- Use `#include <iostream>` and `#include <string>`\n- Use `const` for the level cap\n- Print every variable with its value",
+    "validationPattern": {
+      "required": ["const int", "std::string", "double", "std::cout"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "const\\s+int\\s+MAX_LEVEL\\s*=\\s*99\\s*;[\\s\\S]*std::string\\s+\\w+\\s*=\\s*\".*\"\\s*;[\\s\\S]*int\\s+\\w+\\s*=\\s*1\\s*;[\\s\\S]*double\\s+\\w+\\s*=\\s*0\\.0\\s*;[\\s\\S]*std::cout"
+    },
+    "dialogueHints": [
+      "MAX_LEVEL is a constant — use `const`",
+      "For your name, you need `std::string`",
+      "XP is a decimal — use `double`",
+      "Print with `std::cout << \"Label: \" << variable << std::endl;`"
+    ],
+    "solution": "#include <iostream>\n#include <string>\n\nint main() {\n    const int MAX_LEVEL = 99;\n    std::string playerName = \"Hero\";\n    int playerLevel = 1;\n    double playerXP = 0.0;\n    \n    std::cout << \"Player Name: \" << playerName << std::endl;\n    std::cout << \"Level: \" << playerLevel << \"/\" << MAX_LEVEL << std::endl;\n    std::cout << \"XP: \" << playerXP << std::endl;\n    \n    return 0;\n}",
+    "openingDialogue": "Time to track some stats. Make your character real. 🎯"
+  },
+  "xpReward": 10
+}

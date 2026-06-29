@@ -1,0 +1,32 @@
+{
+  "id": "5.10",
+  "title": "Header files & the compilation model",
+  "type": "coding",
+  "phase1": {
+    "code": "// --- game.h (Header file) ---\n#ifndef GAME_H\n#define GAME_H\n\n#include <string>\n#include <vector>\n\n// Constants\nconst int MAX_PLAYERS = 4;\nconst int MAX_LEVEL = 99;\n\n// Structure declaration\nstruct Player {\n    std::string name;\n    int health;\n    int attack;\n    int defense;\n    int level;\n};\n\n// Function declarations (prototypes)\nvoid initializeGame();\nvoid createPlayer(Player& player, const std::string& name);\nvoid displayPlayer(const Player& player);\nint calculateDamage(int attack, int defense);\n\n#endif // GAME_H\n\n// --- game.cpp (Implementation file) ---\n#include \"game.h\"\n#include <iostream>\n\nvoid initializeGame() {\n    std::cout << \"=== Game Initialized ===\" << std::endl;\n    std::cout << \"Max Players: \" << MAX_PLAYERS << std::endl;\n    std::cout << \"Max Level: \" << MAX_LEVEL << std::endl;\n}\n\nvoid createPlayer(Player& player, const std::string& name) {\n    player.name = name;\n    player.health = 100;\n    player.attack = 15;\n    player.defense = 10;\n    player.level = 1;\n    std::cout << \"Player \" << name << \" created!\" << std::endl;\n}\n\nvoid displayPlayer(const Player& player) {\n    std::cout << \"\\n=== Player: \" << player.name << \" ===\" << std::endl;\n    std::cout << \"Health: \" << player.health << std::endl;\n    std::cout << \"Attack: \" << player.attack << std::endl;\n    std::cout << \"Defense: \" << player.defense << std::endl;\n    std::cout << \"Level: \" << player.level << std::endl;\n}\n\nint calculateDamage(int attack, int defense) {\n    int damage = attack - (defense / 2);\n    return damage > 0 ? damage : 1;\n}\n\n// --- main.cpp (Main file) ---\n#include \"game.h\"\n#include <iostream>\n\nint main() {\n    initializeGame();\n    \n    Player hero;\n    createPlayer(hero, \"Hero\");\n    displayPlayer(hero);\n    \n    Player enemy;\n    createPlayer(enemy, \"Goblin\");\n    \n    int damage = calculateDamage(hero.attack, enemy.defense);\n    std::cout << \"\\nHero deals \" << damage << \" damage to Goblin!\" << std::endl;\n    \n    return 0;\n}",
+    "output": "=== Game Initialized ===\nMax Players: 4\nMax Level: 99\nPlayer Hero created!\n\n=== Player: Hero ===\nHealth: 100\nAttack: 15\nDefense: 10\nLevel: 1\nPlayer Goblin created!\n\nHero deals 12 damage to Goblin!",
+    "explanation": "🎮 **Header files separate declaration from implementation.**\n\n**Compilation model:**\n\n```\nHeader (.h) → Declarations (shared)\nImplementation (.cpp) → Definitions (compiled separately)\nMain (.cpp) → Uses everything\n```\n\n**Header guards:**\n```cpp\n#ifndef GAME_H\n#define GAME_H\n// Header content\n#endif\n```\n\n**Why header files:**\n\n| Reason | Why |\n|--------|-----|\n| **Separation** | Interface vs implementation |\n| **Reuse** | Share declarations |\n| **Compilation** | Faster incremental builds |\n| **Organization** | Clear structure |\n\n**What goes in headers:**\n\n| Item | In Header? |\n|------|------------|\n| **Class declarations** | Yes |\n| **Function prototypes** | Yes |\n| **Constants** | Yes (constexpr) |\n| **Function definitions** | No (unless inline) |\n| **Variable definitions** | No |\n\n**PlusPlus-chan says:**\n\"Header files keep your code organized. Declare in .h, define in .cpp.\"",
+    "openingDialogue": "Header files: organize your code. 📁"
+  },
+  "phase2": {
+    "brokenCode": "// --- player.h ---\n#ifndef PLAYER_H\n#define PLAYER_H\n\n#include <string>\n\nstruct Player {\n    std::string name;\n    int health;\n};\n\n// Forgot to include guard in another header!\n// --- game.h ---\n#include \"player.h\"\n\n#endif\n",
+    "errorMessage": "Error: Multiple inclusion of player.h → duplicate definitions!",
+    "explanation": "The header guard in `player.h` works, but `game.h` includes it without a guard, causing issues if included multiple times.\n\n**The fix:**\n```cpp\n// game.h\n#ifndef GAME_H\n#define GAME_H\n\n#include \"player.h\"\n// ...\n\n#endif\n```\n\n**PlusPlus-chan says:**\n\"Always include guards in every header. Always.\""
+  },
+  "phase3": {
+    "prompt": "Write a C++ program with:\n\n1. A header file \"enemy.h\" that declares:\n   - `struct Enemy` with name, health, attack\n   - Functions: `void createEnemy(Enemy& enemy, const std::string& name, int health, int attack)` and `void displayEnemy(const Enemy& enemy)`\n\n2. An implementation file \"enemy.cpp\" that defines the functions\n\n3. A main file \"main.cpp\" that includes \"enemy.h\" and uses it\n\n4. Create 2 enemies and display them\n\nNote: Since we're in a single file, we'll demonstrate the structure.",
+    "validationPattern": {
+      "required": ["#ifndef", "#define", "#endif", "struct", "function declarations", "function definitions"],
+      "forbidden": ["using namespace"],
+      "fullRegex": "#ifndef[\\s\\S]*#define[\\s\\S]*struct[\\s\\S]*function[\\s\\S]*#endif"
+    },
+    "dialogueHints": [
+      "Header: `#ifndef ENEMY_H`, `#define ENEMY_H`, struct Enemy, function prototypes, `#endif`",
+      "Implementation: `#include \"enemy.h\"`, define functions",
+      "Main: `#include \"enemy.h\"`, create and display enemies"
+    ],
+    "solution": "// --- enemy.h (Header) ---\n#ifndef ENEMY_H\n#define ENEMY_H\n\n#include <string>\n\nstruct Enemy {\n    std::string name;\n    int health;\n    int attack;\n};\n\nvoid createEnemy(Enemy& enemy, const std::string& name, int health, int attack);\nvoid displayEnemy(const Enemy& enemy);\n\n#endif\n\n// --- enemy.cpp (Implementation) ---\n#include \"enemy.h\"\n#include <iostream>\n\nvoid createEnemy(Enemy& enemy, const std::string& name, int health, int attack) {\n    enemy.name = name;\n    enemy.health = health;\n    enemy.attack = attack;\n    std::cout << \"Enemy \" << name << \" created!\" << std::endl;\n}\n\nvoid displayEnemy(const Enemy& enemy) {\n    std::cout << \"Enemy: \" << enemy.name \n              << \" (HP: \" << enemy.health \n              << \", ATK: \" << enemy.attack << \")\" << std::endl;\n}\n\n// --- main.cpp (Main) ---\n#include \"enemy.h\"\n#include <iostream>\n\nint main() {\n    std::cout << \"=== Header Files Demo ===\" << std::endl;\n    \n    Enemy goblin;\n    createEnemy(goblin, \"Goblin\", 30, 8);\n    displayEnemy(goblin);\n    \n    Enemy orc;\n    createEnemy(orc, \"Orc\", 50, 12);\n    displayEnemy(orc);\n    \n    return 0;\n}",
+    "openingDialogue": "Header files: organize your code. 📁"
+  },
+  "xpReward": 10
+}
