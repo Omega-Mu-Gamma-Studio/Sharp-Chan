@@ -1,30 +1,30 @@
 {
   "id": "1.1",
-  "title": "What is C++? Why game devs love it",
+  "title": "Why C# for Game Dev",
   "type": "conceptual",
   "phase1": {
     "code": "",
     "output": "",
-    "explanation": "C++ is a high-performance programming language created by Bjarne Stroustrup in 1985 as an extension of C. It's the language of choice for game development, game engines, and performance-critical systems.\n\n🎮 **Why game devs love C++:**\n\n1. **Performance** — C++ compiles directly to machine code. No interpreter, no virtual machine. You control every byte. When you need 60 frames per second, C++ delivers.\n\n2. **Memory Control** — You decide exactly when and where memory is allocated. This is both powerful and dangerous. It's why games can run on consoles with 8GB of RAM while some browsers use 4GB just for three tabs.\n\n3. **Hardware Access** — C++ can talk directly to the GPU, network cards, and other hardware. That's how game engines render millions of polygons per frame.\n\n4. **Game Engines** — Unreal Engine, Godot, CryEngine, and most AAA game studios use C++ for their core systems. If you want to work in games, C++ is a non-negotiable skill.\n\n5. **Control** — C++ doesn't hide the machine from you. You see what the computer is actually doing. That's scary at first, but it's what makes you a better programmer.\n\n**What Java-chan won't tell you:**\nJava-chan is warm and friendly. She holds your hand. She hides memory management behind a garbage collector. That's fine for business apps. But games? Games need raw power. Games need control. That's where PlusPlus-chan comes in.\n\n🔥 **She doesn't hold your hand. She builds your hands.**\n\nIn this course, you'll build a complete text-based RPG from scratch — not a toy, but a real, saveable game. Every lesson gets you closer to that goal.",
-    "openingDialogue": "Java-chan is nice. I'm not. Let's build something real. 🎮🔥"
+    "explanation": "🎮 **C# is the language of Unity — the world's most popular game engine.**\n\n**Why game devs love C#:**\n\n1. **Accessible yet powerful** — C# is easier to learn than C++, but it's still a serious, performant language. It handles memory for you (garbage collection), so you can focus on making games instead of debugging memory leaks.\n\n2. **Unity's native language** — Unity's entire API is built around C#. Every script you write in Unity is C#. You're not just learning a language; you're learning the language of the most widely used game engine.\n\n3. **Great for 2D and 3D** — C# powers everything from mobile 2D games to massive 3D open-world titles. It scales with your ambition.\n\n4. **Huge community** — Need help? Thousands of tutorials, forums, and assets exist. You're never stuck alone.\n\n5. **Modern features** — C# has evolved massively. It has LINQ, async/await, generics, and a vibrant ecosystem. It's a language that grows with you.\n\n**Sharp-chan says:**\n\"C++ is for building the engine. C# is for building the game. Both are valid. But if you want to actually *ship* something, C# in Unity is the fastest path.\"\n\n**What Unity does for you:**\n- Handles rendering, physics, audio, and input\n- Provides a visual editor for designing levels\n- Builds for PC, Mac, Linux, consoles, and mobile with one codebase\n- Gives you a massive asset store\n\n**In this course:** You'll learn C# by building actual Unity scripts. Every concept is tied to something you'll use in a real game — movement, health, enemies, saving, and more. By the end, you'll have shipped a complete 2D game.",
+    "openingDialogue": "C# is how you talk to Unity. Let's learn to speak its language. 🎮✨"
   },
   "phase2": {
     "brokenCode": "",
     "errorMessage": "",
-    "explanation": "Conceptual lesson — no broken code yet. But here's a common misconception:\n\n❌ **'C++ is just C with classes.'**\n\nActually: Modern C++ is fundamentally different from C. Yes, you can write C-style code in C++, but that's like using a sports car to drive 5mph to the grocery store. Modern C++ has:\n• Smart pointers (no manual delete)\n• Move semantics (efficient resource transfer)\n• Lambdas and functional programming\n• Templates and generics\n• RAII (automatic resource management)\n\nPlusPlus-chan will teach you Modern C++ — the real way professionals write C++ today."
+    "explanation": "Conceptual lesson — no code to break yet.\n\n**Common misconception:** \"C# is just a 'beginner' language.\"\n\nActually: C# is a professional, industrial-strength language. It powers:\n- Unity games (majority of indie and AA games)\n- Enterprise applications (Windows, web, cloud)\n- Mobile apps (Xamarin, MAUI)\n\nIt's also heavily influenced by Java and C++, so learning C# opens doors to other languages."
   },
   "phase3": {
-    "prompt": "Which statement is TRUE about C++ in game development?\n\nA) C++ is a purely object-oriented language with no support for low-level memory access\nB) C++ is commonly used in game engines because it offers high performance and direct hardware control\nC) C++ programs always run slower than Java programs\nD) C++ does not support manual memory management\n\nSelect the CORRECT answer.",
+    "prompt": "Which statement about C# in game development is TRUE?\n\nA) C# is only used for mobile games\nB) C# is the primary scripting language for Unity\nC) C# cannot be used for 3D games\nD) C# is slower than Python\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },
     "dialogueHints": [
-      "Think about what makes C++ special compared to other languages.",
-      "Memory management is a key difference between C++ and Java.",
-      "Game engines need speed and control."
+      "Think about which game engine is most associated with C#.",
+      "C# is used in 2D, 3D, and even enterprise apps.",
+      "C# is a compiled language, not interpreted."
     ],
     "solution": null,
-    "openingDialogue": "Let's see if you were paying attention. 🤔💕"
+    "openingDialogue": "Let's see if you're ready to build games. 🤔"
   },
   "xpReward": 10
 }

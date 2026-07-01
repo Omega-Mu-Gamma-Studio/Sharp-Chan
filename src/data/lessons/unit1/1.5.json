@@ -1,33 +1,30 @@
 {
   "id": "1.5",
-  "title": "Arithmetic & Logical Operators",
+  "title": "Your First C# Script",
   "type": "coding",
   "phase1": {
-    "code": "#include <iostream>\n\nint main() {\n    // Arithmetic operators\n    int health = 100;\n    int damage = 25;\n    int heal = 30;\n    \n    int newHealth = health - damage;\n    std::cout << \"After taking \" << damage << \" damage: \" << newHealth << std::endl;\n    \n    int healedHealth = newHealth + heal;\n    std::cout << \"After healing \" << heal << \" HP: \" << healedHealth << std::endl;\n    \n    // Shorthand operators\n    int gold = 50;\n    gold += 20;  // Add 20 gold\n    std::cout << \"Gold after pickup: \" << gold << std::endl;\n    \n    gold *= 2;   // Double gold\n    std::cout << \"Gold after doubling: \" << gold << std::endl;\n    \n    // Logical operators\n    int playerHealth = 75;\n    int playerLevel = 5;\n    bool hasPotion = true;\n    \n    // AND — both must be true\n    bool canFightBoss = (playerLevel >= 10 && playerHealth >= 80);\n    std::cout << \"Can fight boss? \" << (canFightBoss ? \"Yes\" : \"No\") << std::endl;\n    \n    // OR — at least one must be true\n    bool canHeal = (hasPotion || playerHealth < 30);\n    std::cout << \"Can heal? \" << (canHeal ? \"Yes\" : \"No\") << std::endl;\n    \n    // NOT — flips the value\n    bool isDead = false;\n    bool isAlive = !isDead;\n    std::cout << \"Is alive? \" << (isAlive ? \"Yes\" : \"No\") << std::endl;\n    \n    return 0;\n}",
-    "output": "After taking 25 damage: 75\nAfter healing 30 HP: 105\nGold after pickup: 70\nGold after doubling: 140\nCan fight boss? No\nCan heal? Yes\nIs alive? Yes",
-    "explanation": "🎮 **Operators are how you calculate everything in your game.**\n\n**Arithmetic Operators:**\n| Operator | Use | Example |\n|----------|-----|---------|\n| `+` | Addition | `health + heal` |\n| `-` | Subtraction | `health - damage` |\n| `*` | Multiplication | `gold * 2` |\n| `/` | Division | `gold / 2` |\n| `%` | Modulus (remainder) | `10 % 3 = 1` |\n\n**Shorthand Operators:**\n| Operator | Means | Use |\n|----------|-------|-----|\n| `+=` | Add and assign | `gold += 20` → `gold = gold + 20` |\n| `-=` | Subtract and assign | `health -= 10` |\n| `*=` | Multiply and assign | `gold *= 2` |\n| `/=` | Divide and assign | `gold /= 2` |\n\n**Logical Operators (for decisions):**\n| Operator | Use |\n|----------|-----|\n| `&&` | AND — both must be true |\n| `||` | OR — at least one must be true |\n| `!`  | NOT — flips true/false |\n\n**PlusPlus-chan's note:**\nThe shorthand operators (`+=`, `*=`) are faster to write and compile to the same machine code. Use them. They're how game devs write efficient code.\n\n**Logical operators are the foundation of game AI.**",
-    "openingDialogue": "Operators are your game's math engine. Let's calculate. 🔢"
+    "code": "using UnityEngine;\n\npublic class HelloWorld : MonoBehaviour\n{\n    void Start()\n    {\n        // This runs once when the script starts\n        Debug.Log(\"Hello, Unity!\");\n        Debug.Log(\"Sharp-chan is watching.\");\n    }\n    \n    void Update()\n    {\n        // This runs every frame (about 60 times per second)\n        // We'll make it do something soon!\n    }\n}",
+    "output": "Hello, Unity!\nSharp-chan is watching.",
+    "explanation": "🎮 **Your first C# script in Unity.**\n\n**Key parts of a Unity script:**\n\n| Part | What it does |\n|------|--------------|\n| `using UnityEngine;` | Access to Unity's API |\n| `public class HelloWorld : MonoBehaviour` | Inherit from MonoBehaviour to attach to GameObjects |\n| `void Start()` | Runs once when the GameObject is activated |\n| `void Update()` | Runs every frame (~60 times per second) |\n| `Debug.Log()` | Prints a message to the Unity Console |\n\n**MonoBehaviour — The Base Class:**\n- Every script you attach to a GameObject inherits from MonoBehaviour\n- It gives you access to lifecycle methods: `Start()`, `Update()`, `Awake()`, etc.\n\n**Sharp-chan says:**\n\"`Debug.Log()` is your best friend. It's how you know what's happening inside your game. Use it liberally when learning.\"\n\n**How to attach a script:**\n1. Select a GameObject in the Hierarchy\n2. In the Inspector, click **Add Component**\n3. Type the script name and press Enter\n4. The script is now attached!\n\n**Sharp-chan says:**\n\"A script does nothing until it's attached to a GameObject. That's the Unity way.\"",
+    "openingDialogue": "Your first C# script. Let's make Unity say something. 🖨️"
   },
   "phase2": {
-    "brokenCode": "#include <iostream>\n\nint main() {\n    int playerHealth = 50;\n    int damage = 30;\n    \n    // Mistake: assigning with = instead of comparing with ==\n    if (playerHealth = damage) {\n        std::cout << \"Player health equals damage\" << std::endl;\n    }\n    \n    return 0;\n}",
-    "errorMessage": "(No error — but the LOGIC is completely wrong! This compiles and runs with incorrect behavior.)",
-    "explanation": "This is the classic C++ trap: using `=` instead of `==` in a condition.\n\n`=` is assignment. It sets `playerHealth` to the value of `damage`.\n`==` is comparison. It checks if they're equal.\n\n**What's happening:**\n`if (playerHealth = damage)` — this assigns `30` to `playerHealth`, then checks if `30` is true (it is). So the condition always runs.\n\n**The fix:**\n```cpp\nif (playerHealth == damage) {  // Compare, don't assign\n    // ...\n}\n```\n\n**PlusPlus-chan says:**\n\"This is the most common mistake in C++. Java-chan would scold you gently. I'm going to show you this error until you never make it again.\""
+    "brokenCode": "using UnityEngine;\n\npublic class HelloWorld : MonoBehaviour\n{\n    void Start()\n    {\n        // Forgetting the semicolon!\n        Debug.Log(\"Hello, Unity!\")  // Missing ;\n    }\n}",
+    "errorMessage": "error CS1002: ; expected\nThere's a missing semicolon at the end of the Debug.Log line.",
+    "explanation": "In C#, every statement must end with a semicolon (`;`).\n\n**The fix:**\n```csharp\nDebug.Log(\"Hello, Unity!\");  // ← Semicolon here!\n```\n\n**Sharp-chan says:**\n\"Semicolons are like periods in sentences. Without them, the compiler doesn't know where your thought ends. C# is strict about this. You'll learn to add them automatically.\""
   },
   "phase3": {
-    "prompt": "Write a C++ program that:\n\n1. Declares `int health = 80`, `int armor = 20`\n2. Calculates `effectiveHealth = health + armor`\n3. Checks if `health > 50` (prints \"Healthy\" or \"Not healthy\")\n4. Checks if `health > 50 && armor > 10` (prints \"Tanky\" or \"Not tanky\")\n\nUse the ternary operator for the first check.\n\nPrint all results.",
+    "prompt": "Which Unity method runs ONCE when a script is first activated?\n\nA) Update()\nB) Start()\nC) FixedUpdate()\nD) Awake()\n\nSelect the CORRECT answer.",
     "validationPattern": {
-      "required": ["int", "=", "+", ">", "&&", "std::cout"],
-      "forbidden": ["using namespace"],
-      "fullRegex": "int\\s+\\w+\\s*=\\s*80\\s*;[\\s\\S]*int\\s+\\w+\\s*=\\s*20\\s*;[\\s\\S]*\\+\\s*\\w+[\\s\\S]*\\?[\\s\\S]*:"
+      "mcqAnswer": "B"
     },
     "dialogueHints": [
-      "Define health and armor first.",
-      "effectiveHealth = health + armor.",
-      "Ternary: `(condition) ? \"True\" : \"False\"`",
-      "Use `&&` for the AND check."
+      "Think about which method runs once at the beginning.",
+      "It's commonly used for initialization.",
+      "It runs after Awake()."
     ],
-    "solution": "#include <iostream>\n\nint main() {\n    int health = 80;\n    int armor = 20;\n    int effectiveHealth = health + armor;\n    \n    std::cout << \"Effective health: \" << effectiveHealth << std::endl;\n    \n    std::cout << \"Health status: \" \n              << (health > 50 ? \"Healthy\" : \"Not healthy\") \n              << std::endl;\n    \n    std::cout << \"Tanky status: \" \n              << (health > 50 && armor > 10 ? \"Tanky\" : \"Not tanky\") \n              << std::endl;\n    \n    return 0;\n}",
-    "openingDialogue": "Show me you know your operators. No mistakes. 😤"
+    "solution": null,
+    "openingDialogue": "Method check! Which one runs once? 🤔"
   },
   "xpReward": 10
 }

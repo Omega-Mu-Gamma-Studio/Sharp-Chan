@@ -5,11 +5,11 @@ import useLessonStore from '../store/lessonStore';
 import './Home.css';
 
 const UNITS = [
-  { id: 1, title: 'C++ Foundations',                   icon: '⬡', lessons: 15 },
-  { id: 2, title: 'Object Oriented C++',               icon: '⬡', lessons: 15 },
-  { id: 3, title: 'Memory & Pointers',                 icon: '⬡', lessons: 15 },
-  { id: 4, title: 'STL & Templates',                   icon: '⬡', lessons: 15 },
-  { id: 5, title: 'File I/O, Errors & Shipping',       icon: '⬡', lessons: 15 },
+  { id: 1, title: 'C# and Unity Foundations',                   icon: '⬡', lessons: 15 },
+  { id: 2, title: 'OOP and Unity Scripting',               icon: '⬡', lessons: 15 },
+  { id: 3, title: '2D Game Systems',                 icon: '⬡', lessons: 15 },
+  { id: 4, title: 'Polish and Advanced C#',                   icon: '⬡', lessons: 15 },
+  { id: 5, title: 'Final Game Project',       icon: '⬡', lessons: 15 },
 ];
 
 const Home = () => {

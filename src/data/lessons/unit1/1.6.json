@@ -1,33 +1,30 @@
 {
   "id": "1.6",
-  "title": "Taking Input — the player types something",
+  "title": "Variables and Data Types in C#",
   "type": "coding",
   "phase1": {
-    "code": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string playerName;\n    int playerAge;\n    \n    // Ask for input\n    std::cout << \"Welcome, adventurer!\" << std::endl;\n    std::cout << \"What is your name? \";\n    std::cin >> playerName;\n    \n    std::cout << \"How old are you, \" << playerName << \"? \";\n    std::cin >> playerAge;\n    \n    std::cout << \"\\n=== Character Sheet ===\" << std::endl;\n    std::cout << \"Name: \" << playerName << std::endl;\n    std::cout << \"Age: \" << playerAge << std::endl;\n    \n    // Input with multiple words\n    std::cin.ignore();  // Clear the buffer\n    std::string fullName;\n    std::cout << \"Enter your full name (with spaces): \";\n    std::getline(std::cin, fullName);\n    std::cout << \"Full name: \" << fullName << std::endl;\n    \n    return 0;\n}",
-    "output": "Welcome, adventurer!\nWhat is your name? Hero\nHow old are you, Hero? 25\n\n=== Character Sheet ===\nName: Hero\nAge: 25\nEnter your full name (with spaces): Hero the Brave\nFull name: Hero the Brave",
-    "explanation": "🎮 **Input is how the player controls your game.**\n\n`std::cin` — Console input. It reads what the player types.\n\n**Reading different types:**\n| Type | How to read |\n|------|-------------|\n| `int` | `std::cin >> variable;` |\n| `double` | `std::cin >> variable;` |\n| `std::string` (no spaces) | `std::cin >> variable;` |\n| `std::string` (with spaces) | `std::getline(std::cin, variable);` |\n\n**Common issue (and fix):**\n- `std::cin >>` leaves a newline in the buffer\n- `std::cin.ignore()` clears the buffer before `getline()`\n\n**Game design note:**\nIn a real game, you'd use input for:\n- Character creation (name, class, stats)\n- Menu selections (\"Press 1 to attack\")\n- Saving/loading (\"Enter save name:\")\n\n**PlusPlus-chan says:**\n\"Java-chan has `Scanner`. I have `std::cin`. Same concept, but I don't hide the buffer management from you. You need to know why `getline()` behaves differently.\"",
-    "openingDialogue": "Now the player can talk back. This is when it gets real. 🎮💬"
+    "code": "using UnityEngine;\n\npublic class Variables : MonoBehaviour\n{\n    void Start()\n    {\n        // Basic data types\n        int playerHealth = 100;\n        float playerSpeed = 5.5f;\n        bool isAlive = true;\n        string playerName = \"Hero\";\n        \n        // Unity-specific types\n        Vector3 playerPosition = new Vector3(0, 2, 0);\n        Color playerColor = Color.red;\n        \n        // Constants (values that never change)\n        const int MAX_PLAYERS = 4;\n        const float GRAVITY = -9.81f;\n        \n        // Print everything\n        Debug.Log(\"Name: \" + playerName);\n        Debug.Log(\"Health: \" + playerHealth);\n        Debug.Log(\"Speed: \" + playerSpeed);\n        Debug.Log(\"Alive: \" + isAlive);\n        Debug.Log(\"Position: \" + playerPosition);\n        Debug.Log(\"Color: \" + playerColor);\n        Debug.Log(\"Max Players: \" + MAX_PLAYERS);\n        Debug.Log(\"Gravity: \" + GRAVITY);\n    }\n}",
+    "output": "Name: Hero\nHealth: 100\nSpeed: 5.5\nAlive: True\nPosition: (0.0, 2.0, 0.0)\nColor: RGBA(1.000, 0.000, 0.000, 1.000)\nMax Players: 4\nGravity: -9.81",
+    "explanation": "🎮 **Variables store your game data.**\n\n**Basic C# types:**\n\n| Type | Use | Example |\n|------|-----|---------|\n| `int` | Whole numbers | `int health = 100;` |\n| `float` | Decimal numbers | `float speed = 5.5f;` |\n| `bool` | True/False | `bool isAlive = true;` |\n| `string` | Text | `string name = \"Hero\";` |\n\n**Unity-specific types:**\n\n| Type | Use | Example |\n|------|-----|---------|\n| `Vector3` | Position, direction | `Vector3 pos = new Vector3(0, 2, 0);` |\n| `Vector2` | 2D position | `Vector2 pos2D = new Vector2(5, 3);` |\n| `Color` | Colors | `Color red = Color.red;` |\n| `Quaternion` | Rotation | `Quaternion.identity;` |\n\n**Constants (`const`):**\n- Values that never change\n- Good for: max players, gravity, game rules\n\n**Sharp-chan says:**\n\"In C#, you declare a variable with a type. Unity's types (`Vector3`, `Color`) make game development much easier.\"\n\n**Naming conventions:**\n- Variables: `camelCase` (`playerHealth`, `playerSpeed`)\n- Constants: `UPPER_CASE` (`MAX_PLAYERS`, `GRAVITY`)\n- Classes: `PascalCase` (`PlayerController`, `EnemyAI`)",
+    "openingDialogue": "Variables hold your game data. Stats, names, positions. 📊"
   },
   "phase2": {
-    "brokenCode": "#include <iostream>\n#include <string>\n\nint main() {\n    int age;\n    std::string name;\n    \n    std::cout << \"Enter your age: \";\n    std::cin >> age;\n    \n    std::cout << \"Enter your name: \";\n    std::getline(std::cin, name);  // Problem: this skips!\n    \n    std::cout << \"Name: \" << name << \", Age: \" << age << std::endl;\n    return 0;\n}",
-    "errorMessage": "Enter your age: 25\nEnter your name: Name: , Age: 25\n\n(No error — but the name input was SKIPPED!)",
-    "explanation": "This is the classic `cin` vs `getline()` trap.\n\n**What's happening:**\n1. `std::cin >> age` reads the number 25\n2. It leaves the newline character `\\n` in the buffer\n3. `std::getline()` reads that leftover newline as an empty string\n4. So `name` is empty, and the program skips the name input\n\n**The fix:**\n```cpp\nstd::cin >> age;\nstd::cin.ignore();  // ← This clears the buffer!\nstd::getline(std::cin, name);\n```\n\n**PlusPlus-chan says:**\n\"This is a rite of passage. Every C++ developer has been bitten by this. Now you know why.\""
+    "brokenCode": "using UnityEngine;\n\npublic class VariablesError : MonoBehaviour\n{\n    void Start()\n    {\n        // Wrong type — cannot assign a float to an int\n        int health = 100.5f;\n        \n        // Missing 'f' on float\n        float speed = 5.5;  // Error: double to float conversion\n        \n        Debug.Log(\"Health: \" + health);\n        Debug.Log(\"Speed: \" + speed);\n    }\n}",
+    "errorMessage": "error CS0029: Cannot implicitly convert type 'float' to 'int'\nerror CS0266: Cannot implicitly convert type 'double' to 'float'",
+    "explanation": "C# is strongly typed — you can't assign a `float` to an `int` without casting.\n\n**The fix:**\n```csharp\nint health = 100;          // Correct (int)\nfloat speed = 5.5f;        // Correct (float with 'f' suffix)\n```\n\n**Sharp-chan says:**\n\"C# doesn't guess types. You have to be explicit. `5.5f` is a float. `5.5` is a double. Use the right one.\""
   },
   "phase3": {
-    "prompt": "Write a C++ program that:\n\n1. Asks the player \"Enter your class (Warrior/Mage/Rogue): \" and stores it in a `std::string`\n2. Asks the player \"Enter your starting level: \" and stores it in an `int`\n3. Prints a character summary:\n```\n=== Character Created ===\nClass: [class]\nStarting Level: [level]\n```\n\nRequirements:\n- Use `std::cin` for the level (int)\n- Use `std::getline()` for the class (string with spaces allowed)\n- Handle the buffer issue correctly with `std::cin.ignore()`",
+    "prompt": "Which data type would you use to store a player's health value (whole number)?\n\nA) float\nB) bool\nC) int\nD) string\n\nSelect the CORRECT answer.",
     "validationPattern": {
-      "required": ["std::cin", "std::getline", "std::cin.ignore", "int", "std::string"],
-      "forbidden": ["using namespace"],
-      "fullRegex": "std::cin\\s*>>\\s*\\w+\\s*;[\\s\\S]*std::cin\\.ignore\\s*\\([\\s\\S]*\\)[\\s\\S]*std::getline\\s*\\(\\s*std::cin\\s*,\\s*\\w+\\s*\\)"
+      "mcqAnswer": "C"
     },
     "dialogueHints": [
-      "Read the level with `std::cin >> level`",
-      "Call `std::cin.ignore();` before `getline()`",
-      "Read the class with `std::getline(std::cin, characterClass)`",
-      "Print both values"
+      "Health is usually a whole number.",
+      "It's not a decimal, so not float.",
+      "It's not text, so not string."
     ],
-    "solution": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string characterClass;\n    int level;\n    \n    std::cout << \"Enter your class (Warrior/Mage/Rogue): \";\n    std::getline(std::cin, characterClass);\n    \n    std::cout << \"Enter your starting level: \";\n    std::cin >> level;\n    \n    std::cout << \"\\n=== Character Created ===\" << std::endl;\n    std::cout << \"Class: \" << characterClass << std::endl;\n    std::cout << \"Starting Level: \" << level << std::endl;\n    \n    return 0;\n}",
-    "openingDialogue": "Let the player build their character. Make it real. 🎭"
+    "solution": null,
+    "openingDialogue": "Type check! Which one stores whole numbers? 🤔"
   },
   "xpReward": 10
 }

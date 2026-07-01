@@ -1,33 +1,30 @@
 {
   "id": "1.3",
-  "title": "Your first program — Hello, Player!",
+  "title": "The Unity Editor — Panels and Workflow",
   "type": "coding",
   "phase1": {
-    "code": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, Player!\" << std::endl;\n    std::cout << \"Welcome to your first C++ game.\" << std::endl;\n    return 0;\n}",
-    "output": "Hello, Player!\nWelcome to your first C++ game.",
-    "explanation": "🎮 **This is your first step into game development.**\n\nLet's break this down — every line matters:\n\n`#include <iostream>` — This is your input/output library. It's how you talk to the player. In game terms, it's your UI system.\n\n`int main()` — The entry point of every C++ program. This is where your game starts. Every game has a main loop — this is its origin.\n\n`std::cout` — Console output. In a real game, this would be rendering graphics. For now, you're rendering text to the terminal. Baby steps.\n\n`<<` — The stream operator. It pushes text to the console. Think of it like sending data to the display.\n\n`std::endl` — End line. Equivalent to pressing Enter after a line of text.\n\n`return 0;` — The program exits successfully. Zero means 'no error' — in game terms, you quit cleanly.\n\n🔥 **PlusPlus-chan's insight:**\n\nJava-chan would start with `System.out.println(\"Hello World\")` and call it a day. I'm starting with `#include`, `std::cout`, and `std::endl`. \n\nWhy? Because I'm showing you the **machinery** behind the output. You're not just printing — you're learning what printing actually is. That's the difference between learning to use a tool and learning to build one.",
-    "openingDialogue": "Your first program. It's small, but this is how every game starts. 🔥💻"
+    "code": "// No C# code yet — we're learning the editor workflow\n// But here's a quick peek at what's coming:\n\n// This is how you'll move a player in Unity:\nvoid Update() {\n    transform.position += Vector3.right * speed * Time.deltaTime;\n}\n\n// Everything in Unity starts with a GameObject.\n// Every script you write will be attached to one.\n// You're not just coding — you're composing objects.",
+    "output": "(Open Unity Editor to see panels in action.)",
+    "explanation": "🎮 **The Unity Editor workflow is all about context.**\n\n**Core Workflow — Create -> Select -> Modify:**\n\n1. **Create** — Right-click in Hierarchy → 2D Object → Sprite\n2. **Select** — Click the object in Hierarchy or Scene\n3. **Modify** — Use the Inspector to change properties\n\n**Editor Layout — You Can Customize It:**\n\n- **Default Layout**: Scene top-left, Game top-right, Hierarchy left, Inspector right\n- **Your Preference**: Drag tabs to rearrange. Save layouts via Layout dropdown\n\n**Keyboard Shortcuts (Learn These Early):**\n\n| Shortcut | What it does |\n|----------|--------------|\n| `Q` | Pan Tool |\n| `W` | Move Tool (translation) |\n| `E` | Rotate Tool |\n| `R` | Scale Tool |\n| `T` | Rect Tool (2D) |\n| `F` | Focus on selected object |\n| `Ctrl+S` | Save scene |\n| `Ctrl+Shift+S` | Save scene as |\n\n**Sharp-chan says:**\n\"You don't need to memorize all of these. But knowing W, E, R, and F will save you hours. They're your primary tools.\"\n\n**GameObject vs Prefab:**\n\n| Concept | What it is |\n|---------|------------|\n| **GameObject** | A single object in your scene (player, enemy, wall) |\n| **Prefab** | A template — saved GameObject you can reuse (enemy prefab, coin prefab) |\n\n**Sharp-chan says:**\n\"The editor is where you build the world. Code is how you bring it to life. You'll use both constantly. Don't neglect either.\"",
+    "openingDialogue": "The Editor is your canvas. Let's learn how to paint. 🎨"
   },
   "phase2": {
-    "brokenCode": "#include <iostream>\n\nint main() \n    std::cout << \"Hello, Player!\" << std::endl;\n    std::cout << \"Welcome to your first C++ game.\" << std::endl;\n    return 0;\n}",
-    "errorMessage": "main.cpp:5:1: error: expected ';' before 'return'\n    5 |     return 0;\n      |     ^~~~~~\nmain.cpp:4:5: error: expected '(' before 'return'\n    4 |     std::cout << \"Hello, Player!\" << std::endl;\n      |     ^~~~~~\nmain.cpp:6:1: error: expected unqualified-id before '}' token\n    6 | }\n      | ^",
-    "explanation": "See that? The `{` after `main()` is missing. \n\nIn C++, `main()` needs an opening `{` to start its code block. Without it, the compiler gets confused.\n\n🔍 **Error breakdown:**\n\n| Error | What Actually Means |\n|-------|---------------------|\n| `expected ';' before 'return'` | The compiler thinks something is missing before `return` (it's the missing `{`). |\n| `expected '(' before 'return'` | The compiler is trying to parse the function differently. |\n| `expected unqualified-id before '}'` | The compiler reached the end of the file and something was incomplete. |\n\n**The fix is simple:**\n```cpp\nint main() {    // ← This curly brace is the whole problem\n    std::cout << \"Hello, Player!\" << std::endl;\n    return 0;\n}\n```\n\n**Why this happens:**\nC++ is strict about syntax. One missing character can cascade into multiple errors. The compiler tries to recover but makes assumptions. That's why you get 3 errors for 1 missing brace.\n\n**PlusPlus-chan says:**\n\"Get used to this. It happens to everyone. The difference between a beginner and a pro is how quickly you spot the missing brace.\""
+    "brokenCode": "// There's no broken code here yet — but here's a common error when you start scripting:\n\nusing UnityEngine;\npublic class PlayerMove : MonoBehaviour {\n    void Start() {\n        Debug.log(\"Player spawned\");  // 'log' is lowercase L, should be 'Log'\n    }\n}",
+    "errorMessage": "error CS0117: 'Debug' does not contain a definition for 'log'\nThe name 'log' doesn't exist in the current context. Did you mean 'Log'?",
+    "explanation": "C# is case-sensitive! `Debug.Log()` is correct. `Debug.log()` is not.\n\n**Sharp-chan says:**\n\"This is the most common first error in Unity. Always check the case. C# is strict — one wrong capital letter and the compiler will complain loudly.\""
   },
   "phase3": {
-    "prompt": "Write a C++ program that prints:\n\n```\nWelcome to the Dungeon!\n```\n\nRequirements:\n- Use `#include <iostream>`\n- Use `std::cout`\n- Use `std::endl`\n- The program must compile and run",
+    "prompt": "What shortcut key do you use to select the Move Tool in Unity's editor?\n\nA) Q\nB) W\nC) E\nD) R\n\nSelect the CORRECT answer.",
     "validationPattern": {
-      "required": ["#include <iostream>", "int main", "std::cout", "Welcome to the Dungeon!", "std::endl"],
-      "forbidden": ["print", "System.out"],
-      "fullRegex": "#include\\s*<iostream>\\s*int\\s+main\\s*\\(\\s*\\)\\s*\\{[\\s\\S]*std::cout\\s*<<\\s*\"Welcome to the Dungeon!\"\\s*<<\\s*std::endl\\s*;[\\s\\S]*return\\s+0\\s*;[\\s\\S]*\\}"
+      "mcqAnswer": "B"
     },
     "dialogueHints": [
-      "Start with `#include <iostream>`",
-      "Your main function needs `int main()` and `{}`",
-      "`std::cout << \"Your text\" << std::endl;`",
-      "Don't forget `return 0;` at the end"
+      "Think about the order of the tool shortcuts — Pan, Move, Rotate, Scale.",
+      "The Move tool lets you reposition objects.",
+      "It's the second tool in the toolbar."
     ],
-    "solution": "#include <iostream>\n\nint main() {\n    std::cout << \"Welcome to the Dungeon!\" << std::endl;\n    return 0;\n}",
-    "openingDialogue": "Your turn! Show me you can make the game speak. 🎮"
+    "solution": null,
+    "openingDialogue": "Shortcut check! Which tool is which? 🤔"
   },
   "xpReward": 10
 }

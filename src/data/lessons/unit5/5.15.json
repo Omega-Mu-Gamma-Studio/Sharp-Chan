@@ -1,30 +1,30 @@
 {
   "id": "5.15",
-  "title": "Unit 5 Review — Your game is complete",
-  "type": "conceptual",
+  "title": "Project — Ship It",
+  "type": "coding",
   "phase1": {
-    "code": "",
-    "output": "",
-    "explanation": "🎉 **CONGRATULATIONS! 🎉**\n\nYou've completed ALL 5 units of PlusPlus-chan's C++ Game Dev curriculum!\n\n--- Unit 5 Recap ---\n\n1. **Exceptions** — handle errors gracefully\n   • try, catch, throw\n   • Custom exception classes\n   • noexcept and exception safety\n\n2. **File I/O** — save and load game data\n   • fstream (ofstream, ifstream)\n   • Reading and writing files\n   • Binary file I/O\n\n3. **JSON Parsing** — structured data\n   • Manual parsing\n   • Reading configuration\n\n4. **Preprocessor** — control compilation\n   • Macros, #define, #ifdef\n   • Conditional compilation\n\n5. **Header Files** — organize code\n   • Header guards\n   • Declaration vs definition\n   • Multi-file projects\n\n6. **Namespaces** — prevent name conflicts\n   • Group related code\n   • Aliases and using declarations\n\n7. **Multithreading** — concurrent execution\n   • std::thread\n   • Mutexes and race conditions\n   • Thread safety\n\n--- The Complete Game Dev Journey ---\n\n**Unit 1: C++ Foundations**\nYou learned the basics — variables, loops, functions, strings.\n\n**Unit 2: Object Oriented C++**\nYou built the world — classes, inheritance, polymorphism.\n\n**Unit 3: Memory & Pointers**\nYou went under the hood — pointers, smart pointers, RAII.\n\n**Unit 4: STL & Templates**\nYou armed yourself — vectors, maps, algorithms, templates.\n\n**Unit 5: Error Handling & Shipping**\nYou shipped it — exceptions, file I/O, multithreading.\n\n--- The Game You Built ---\n\nThroughout this course, you've built a complete text RPG:\n• Player and enemy classes\n• Combat system\n• Inventory management\n• Save/load system\n• File I/O\n• Error handling\n\n--- What Comes Next? ---\n\n**Game Engines:**\n• Unreal Engine (C++)\n• Godot (C++ or GDScript)\n• Custom engine\n\n**Graphics Libraries:**\n• OpenGL\n• Vulkan\n• DirectX\n\n**Game Development:**\n• 2D games (SFML, SDL)\n• 3D games (Unreal, Unity)\n• Game design patterns\n\n**PlusPlus-chan says:**\n\"You started as a beginner. You're now a game developer. Go build something amazing.\"\n\n--- Final Milestone ---\n\n✅ You've completed 75 lessons\n✅ You've built a complete game\n✅ You're ready for game development\n\n**Go make your game. 🚀**",
-    "openingDialogue": "Unit 5 complete! You've shipped your game! 🎮🚀"
+    "code": "using UnityEngine;\n\npublic class ProjectShipIt : MonoBehaviour\n{\n    [Header(\"Game Info\")]\n    public string gameName = \"My First Game\";\n    public string version = \"1.0.0\";\n    public string releaseDate = \"\";\n    \n    [Header(\"Credits\")]\n    public string[] developers;\n    public string[] artists;\n    public string[] musicians;\n    \n    void Start()\n    {\n        releaseDate = System.DateTime.Now.ToString(\"yyyy-MM-dd\");\n        \n        Debug.Log(\"=== 🎉 SHIP IT! 🎉 ===\");\n        Debug.Log(\"Game: \" + gameName);\n        Debug.Log(\"Version: \" + version);\n        Debug.Log(\"Release Date: \" + releaseDate);\n        \n        Debug.Log(\"\\n--- Ship Checklist ---\");\n        Debug.Log(\"✅ Full playthrough works\");\n        Debug.Log(\"✅ All levels playable\");\n        Debug.Log(\"✅ No major bugs\");\n        Debug.Log(\"✅ Polish pass complete\");\n        Debug.Log(\"✅ Build tested on target platform\");\n        Debug.Log(\"✅ Published to Itch.io\");\n        \n        Debug.Log(\"\\n--- You Did It! ---\");\n        Debug.Log(\"🎮 You made a game!\");\n        Debug.Log(\"📚 You learned: C#, Unity, game design\");\n        Debug.Log(\"🚀 You shipped!\");\n        \n        Debug.Log(\"\\n--- What's Next? ---\");\n        Debug.Log(\"1. Make another game\");\n        Debug.Log(\"2. Share your game with the world\");\n        Debug.Log(\"3. Keep learning!\");\n        \n        Debug.Log(\"\\n💙 Sharp-chan is proud of you!\");\n    }\n    \n    // Cheat to complete the game\n    void Update()\n    {\n        if (Input.GetKeyDown(KeyCode.End))\n        {\n            Debug.Log(\"🏆 Game completed! You win!\");\n        }\n    }\n}",
+    "output": "=== 🎉 SHIP IT! 🎉 ===\nGame: My First Game\nVersion: 1.0.0\nRelease Date: 2026-07-01\n\n--- Ship Checklist ---\n✅ Full playthrough works\n✅ All levels playable\n✅ No major bugs\n✅ Polish pass complete\n✅ Build tested on target platform\n✅ Published to Itch.io\n\n--- You Did It! ---\n🎮 You made a game!\n📚 You learned: C#, Unity, game design\n🚀 You shipped!\n\n--- What's Next? ---\n1. Make another game\n2. Share your game with the world\n3. Keep learning!\n\n💙 Sharp-chan is proud of you!",
+    "explanation": "🎮 **Project — Ship It!**\n\n**Congratulations! Your students have:**\n- Built a complete 2D game\n- Learned C# and Unity\n- Added polish and juice\n- Published to Itch.io\n\n**Sharp-chan says:**\n\"You started with nothing and built a game. That's incredible. Now go make the next one.\"",
+    "openingDialogue": "🎉 SHIP IT! You made a game! 🚀"
   },
   "phase2": {
     "brokenCode": "",
     "errorMessage": "",
-    "explanation": "Conceptual review — no broken code!\n\n**You've come so far.** From \"Hello, Player!\" to a complete, saveable, loadable game.\n\nRemember:\n• Every great game started with one line of code\n• Every bug is a learning opportunity\n• Every feature starts with a question\n\n**Go build your game.**\n\nPlusPlus-chan is proud of you. ❤️"
+    "explanation": "🎉 **Congratulations!**\n\nYou've completed all 75 lessons of Sharp-chan's C# and Unity course!\n\n**You built:**\n- A full 2D platformer\n- Player movement, jump, dash\n- Enemy AI\n- Collectibles and score\n- Health and lives\n- UI and HUD\n- Save and load\n- Polish with particles and sound\n- Published to Itch.io\n\n**Sharp-chan says:**\n\"You're a game developer now. Go build something amazing.\""
   },
   "phase3": {
-    "prompt": "You've completed the entire C++ game dev course! Which of these is the MOST important lesson for game development?\n\nA) Only use raw pointers\nB) Always use global variables\nC) Proper memory management and RAII\nD) Never use the STL\n\nSelect the CORRECT answer.",
+    "prompt": "What is the most important step in finishing a game?\n\nA) Adding more features\nB) Shipping it\nC) Polishing forever\nD) Starting over\n\nSelect the CORRECT answer.",
     "validationPattern": {
-      "mcqAnswer": "C"
+      "mcqAnswer": "B"
     },
     "dialogueHints": [
-      "Think about what we learned in Unit 3...",
-      "What makes C++ games stable?",
-      "Memory management is critical."
+      "Think about what makes a game done.",
+      "A finished game is better than a perfect game.",
+      "Ship it and move on."
     ],
     "solution": null,
-    "openingDialogue": "Final question! What's the most important lesson? 🤔"
+    "openingDialogue": "Ship check! What's most important? 🤔"
   },
   "xpReward": 15
 }

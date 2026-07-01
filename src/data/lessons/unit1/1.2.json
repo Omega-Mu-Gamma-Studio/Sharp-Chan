@@ -1,30 +1,30 @@
 {
   "id": "1.2",
-  "title": "Setting up your environment (g++, VS Code)",
+  "title": "Installing Unity and Android Studio Tour",
   "type": "conceptual",
   "phase1": {
     "code": "",
     "output": "",
-    "explanation": "Before we write any code, let's get your environment set up.\n\n🔧 **What you need:**\n\n1. **A C++ Compiler (g++):**\n   - Windows: Install MinGW-w64 or use MSVC\n   - macOS: Install Xcode Command Line Tools (`xcode-select --install`)\n   - Linux: `sudo apt install g++` (Ubuntu/Debian)\n\n   Check it works: Open a terminal and type `g++ --version`\n\n2. **VS Code (or any editor):**\n   - Download from code.visualstudio.com\n   - Install the C/C++ extension by Microsoft\n\n3. **Your First Project:**\n   Create a folder called `cpp-game` — this is where your journey begins.\n\n💡 **Pro tip from PlusPlus-chan:**\n\nLearn to compile from the command line before using an IDE. That's how you learn what's really happening. An IDE hides the compile steps, but you need to know them:\n\n```bash\ng++ -o myprogram main.cpp\n./myprogram\n```\n\nJava-chan hides the compiler from you. I don't. You're going to see every step of the transformation from code to executable.\n\n**You're not just learning C++ — you're learning how computers actually work.** That's the part that matters.",
-    "openingDialogue": "No fancy IDEs hiding the truth. Terminal first. Always. 🖥️💀"
+    "explanation": "🛠️ **Before you write code, you need the tools.**\n\n**1. Unity Hub**\n- Download from unity.com\n- Unity Hub manages different Unity versions and projects\n- For this course, install the latest **LTS (Long Term Support)** version\n- LTS versions are stable and recommended for production\n\n**2. Unity Editor**\n- Installs through Unity Hub\n- Choose the **Android Build Support** module when installing\n- This lets you build for Android (and later, iOS)\n\n**3. Android Studio** (optional but recommended)\n- Needed for Android-specific development\n- Contains the Android SDK, emulator, and tools\n- Not required for PC builds, but good to have\n\n**4. Visual Studio (Code) — Your IDE**\n- During Unity installation, check the Visual Studio option\n- This is where you'll write all your C# scripts\n- It has Unity-specific autocomplete and debugging\n\n**5. Project Setup**\n- Open Unity Hub → New Project\n- Choose **2D Core** template\n- Name it `SharpChanGame`\n- Wait for the editor to load (first time takes a while)\n\n**Sharp-chan says:**\n\"The first launch is slow. Be patient. The compiler is doing a lot of work behind the scenes. This is your workshop now. Treat it well.\"\n\n**Unity Editor Overview:**\n\n| Panel | What it does |\n|-------|--------------|\n| **Scene View** | Your 3D/2D world — where you build levels |\n| **Game View** | What the player sees — the camera's view |\n| **Hierarchy** | List of everything in your scene |\n| **Inspector** | Details of the selected object |\n| **Project Window** | All your files (scripts, sprites, scenes) |\n| **Console** | Where messages, warnings, and errors appear |\n\n**Sharp-chan says:**\n\"Don't memorize all the panels now. You'll learn them by using them. But the Console is your friend — it's where Unity tells you what went wrong.\"",
+    "openingDialogue": "Your workshop is ready. Let's set up the tools. 🔧"
   },
   "phase2": {
     "brokenCode": "",
     "errorMessage": "",
-    "explanation": "Conceptual lesson — no broken code here!\n\nCommon issue: `g++: command not found`\n\nThis means the compiler isn't in your PATH. Don't panic. PlusPlus-chan has seen this before.\n\n**Fixes:**\n- Windows: Make sure MinGW/bin is in your PATH\n- macOS: Run `xcode-select --install`\n- Linux: `sudo apt install g++` (or your distro's equivalent)\n\n**Check your work:**\nOpen a terminal and type:\n```bash\ng++ --version\n```\nIf you see a version number, you're ready. If not... PlusPlus-chan is patient. She'll wait."
+    "explanation": "Conceptual lesson — no code to break!\n\n**Common issue:** \"My Unity Editor won't open / is stuck.\"\n\n**Fixes:**\n1. Check your system meets the minimum requirements\n2. Update your graphics drivers\n3. Try a different Unity version (LTS 2022 or newer)\n4. Check your antivirus isn't blocking the editor\n\n**Sharp-chan says:**\n\"Unity can be temperamental. If it doesn't work on the first try, check your drivers. 90% of issues are driver-related.\""
   },
   "phase3": {
-    "prompt": "What command do you use to compile a C++ file called `main.cpp` into an executable called `mygame`?\n\nA) `g++ main.cpp -o mygame`\nB) `g++ -o main.cpp mygame`\nC) `compile main.cpp mygame`\nD) `g++ main.cpp --exec mygame`\n\nSelect the CORRECT command.",
+    "prompt": "Which panel in Unity shows you the list of all objects in your current scene?\n\nA) Project Window\nB) Inspector\nC) Hierarchy\nD) Console\n\nSelect the CORRECT answer.",
     "validationPattern": {
-      "mcqAnswer": "A"
+      "mcqAnswer": "C"
     },
     "dialogueHints": [
-      "The '-o' flag means 'output'.", 
-      "The source file comes first, then the output flag.", 
-      "Think about what order makes sense: source → output."
+      "Think about which panel organizes objects in a tree structure.",
+      "It's where you select objects to view in the Inspector.",
+      "It's named after the structure it displays."
     ],
     "solution": null,
-    "openingDialogue": "Time to prove you can use the terminal. Don't worry, I'll help. 💻"
+    "openingDialogue": "Tool check! Which panel does what? 🤔"
   },
   "xpReward": 10
 }
