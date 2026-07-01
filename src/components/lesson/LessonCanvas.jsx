@@ -216,7 +216,7 @@ const LessonCanvas = ({ onComplete }) => {
                 className="code-editor"
                 value={userCode}
                 onChange={e => setUserCode(e.target.value)}
-                placeholder="// Write your C++ code here..."
+                placeholder="// Write your C# code here..."
                 spellCheck={false}
                 autoCorrect="off"
                 autoCapitalize="off"

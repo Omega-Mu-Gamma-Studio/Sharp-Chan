@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../ui/Sidebar';
 import BottomBar from '../ui/BottomBar';
-import PlusPlusChan from '../character/PlusPlusChan';
+import SharpChan from '../character/SharpChan';
 import AnimatedBg from './AnimatedBg';
 import { useProgress } from '../../hooks/useProgress';
 import { getShopItem } from '../../data/shopItems';
@@ -44,7 +44,7 @@ const AppLayout = () => {
         </button>
         <span className="topbar-title">
           <span className="topbar-title-main">C</span>
-          <span className="topbar-title-plus">++</span>
+          <span className="topbar-title-plus">#</span>
           <span className="topbar-title-accent">chan</span>
         </span>
         <div className="topbar-spacer" />
@@ -55,7 +55,7 @@ const AppLayout = () => {
       </main>
 
       <BottomBar />
-      <PlusPlusChan />
+      <SharpChan />
     </div>
   );
 };

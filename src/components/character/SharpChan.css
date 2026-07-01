@@ -1,13 +1,13 @@
 /* ══════════════════════════════════════════
-   PlusPlus-Chan CHARACTER — WIDGET & DOMAIN
+   Sharp-Chan CHARACTER — WIDGET & DOMAIN
    ══════════════════════════════════════════ */
 
 /* ── Widget container ── */
-.pluspluschan-widget {
+.sharpchan-widget {
   position: fixed;
   bottom: calc(var(--bottombar-height) + 8px);
   right: 8px;
-  width: var(--pluspluschan-width);        /* 180px from globals */
+  width: var(--sharpchan-width);        /* 180px from globals */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,9 +17,9 @@
 }
 
 /* ── Sprite wrapper (handles bob animation) ── */
-.pluspluschan-sprite-wrap {
-  width: var(--pluspluschan-width);
-  height: var(--pluspluschan-height);
+.sharpchan-sprite-wrap {
+  width: var(--sharpchan-width);
+  height: var(--sharpchan-height);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 /* ── Actual sprite image ── */
-.pluspluschan-sprite-img {
+.sharpchan-sprite-img {
   width: 100%;
   height: 100%;
   object-fit: contain;

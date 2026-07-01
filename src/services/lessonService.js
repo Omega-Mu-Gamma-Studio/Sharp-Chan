@@ -24,7 +24,7 @@ const UNIT_DATA = {
 };
 
 const LESSON_DATA = {
-  // Unit 1 — C++ Foundations 
+  // Unit 1 — C# Foundations 
   '1.1':  () => import('../data/lessons/unit1/1.1.json'),
   '1.2':  () => import('../data/lessons/unit1/1.2.json'),
   '1.3':  () => import('../data/lessons/unit1/1.3.json'),
@@ -41,7 +41,7 @@ const LESSON_DATA = {
   '1.14': () => import('../data/lessons/unit1/1.14.json'),
   '1.15': () => import('../data/lessons/unit1/1.15.json'),
 
-  // Unit 2 — Object Oriented C++
+  // Unit 2 — Object Oriented C#
   '2.1':  () => import('../data/lessons/unit2/2.1.json'),
   '2.2':  () => import('../data/lessons/unit2/2.2.json'),
   '2.3':  () => import('../data/lessons/unit2/2.3.json'),

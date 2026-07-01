@@ -1,5 +1,5 @@
 /* ============================================
-   PlusPlus-Chan DESIGN SYSTEM — Dark Fantasy
+   Sharp-Chan DESIGN SYSTEM — Dark Fantasy
    All CSS variables live here. Never hardcode
    colors or spacing anywhere else.
    ============================================ */
@@ -15,7 +15,7 @@
   --color-border:        rgba(124, 111, 255, 0.1);
   --color-border-accent: rgba(124, 111, 255, 0.28);
 
-  /* --- PlusPlus-Chan Brand Colors (electric blue/violet) --- */
+  /* --- Sharp-Chan Brand Colors (electric blue/violet) --- */
   --color-primary:        #7c6fff;
   --color-primary-light:  #a99fff;
   --color-primary-dark:   #5a4fd6;
@@ -50,8 +50,8 @@
   /* --- Sizing --- */
   --sidebar-width:        280px;
   --bottombar-height:     64px;
-  --pluspluschan-width:   240px;
-  --pluspluschan-height:  320px;
+  --sharpchan-width:   240px;
+  --sharpchan-height:  320px;
   --topbar-height:        56px;
 
   /* --- Radii --- */

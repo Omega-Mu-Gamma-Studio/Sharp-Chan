@@ -2,7 +2,7 @@
 
 ## Omega Mu Gamma Studio
 
-PlusPlus-Chan is a project by **Omega Mu Gamma Studio** — a student-built open-source studio from St. Xavier's Catholic College of Engineering, Tamil Nadu, India.
+Sharp-Chan is a project by **Omega Mu Gamma Studio** — a student-built open-source studio from St. Xavier's Catholic College of Engineering, Tamil Nadu, India.
 
 ---
 
@@ -10,7 +10,7 @@ PlusPlus-Chan is a project by **Omega Mu Gamma Studio** — a student-built open
 
 ### Alberto Felix
 **Founder & Lead Developer — Omega Mu Gamma Studio**
-Project architect, lead developer, and character art curator for PlusPlus-Chan.
+Project architect, lead developer, and character art curator for Sharp-Chan.
 Responsible for the full application architecture, lesson content, XP/progression system, shop system, and sprite integration.
 
 - GitHub: [@albertofelix08](https://github.com/albertofelix08)
@@ -20,7 +20,7 @@ Responsible for the full application architecture, lesson content, XP/progressio
 ## Acknowledgements
 
 **Character Art**
-PlusPlus-Chan's sprites were generated using AI tools and hand-curated for expression consistency by Alberto Felix. All character designs are proprietary to Omega Mu Gamma Studio.
+Sharp-Chan's sprites were generated using AI tools and hand-curated for expression consistency by Alberto Felix. All character designs are proprietary to Omega Mu Gamma Studio.
 
 ---
 

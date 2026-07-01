@@ -56,4 +56,5 @@
 .token-method       { color: var(--color-cyan); }
 .token-class-name   { color: #e2c87a; }
 .token-preprocessor { color: #b46eff; font-weight: 600; }
+.token-attribute    { color: #c9a0ff; font-style: italic; }
 .token-operator     { color: #ff6e9c; }

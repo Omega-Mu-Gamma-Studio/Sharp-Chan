@@ -108,7 +108,7 @@
   overflow-x: hidden;
   position: relative;
   z-index: 1;
-  padding-right: calc(var(--pluspluschan-width) + 16px);
+  padding-right: calc(var(--sharpchan-width) + 16px);
 }
 
 /* ---- Sidebar backdrop ---- */

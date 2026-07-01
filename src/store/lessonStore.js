@@ -17,7 +17,7 @@ const useLessonStore = create((set, get) => ({
   currentPhase: 1,            // 1 | 2 | 3
   userCode: '',               // student's current code input
   lastValidationResult: null, // { passed: bool, message: string }
-  pluspluschanExpression: 'idle', // 'idle' | 'happy' | 'sad' | 'thinking' | 'surprised' | 'domain'
+  sharpchanExpression: 'idle', // 'idle' | 'happy' | 'sad' | 'thinking' | 'surprised' | 'domain'
   currentDialogue: null,      // string currently shown in dialogue bubble
   dialogueQueue: [],          // queued dialogue lines
 
@@ -28,7 +28,7 @@ const useLessonStore = create((set, get) => ({
     currentPhase: 1,
     userCode: '',
     lastValidationResult: null,
-    pluspluschanExpression: 'idle',
+    sharpchanExpression: 'idle',
     currentDialogue: lessonData?.phase1?.openingDialogue || null,
     dialogueQueue: [],
   }),
@@ -43,7 +43,7 @@ const useLessonStore = create((set, get) => ({
 
   setValidationResult: (result) => set({ lastValidationResult: result }),
 
-  setExpression: (expression) => set({ pluspluschanExpression: expression }),
+  setExpression: (expression) => set({ sharpchanExpression: expression }),
 
   setDialogue: (text) => set({ currentDialogue: text }),
 
@@ -76,7 +76,7 @@ const useLessonStore = create((set, get) => ({
     currentPhase: 1,
     userCode: '',
     lastValidationResult: null,
-    pluspluschanExpression: 'idle',
+    sharpchanExpression: 'idle',
     currentDialogue: null,
     dialogueQueue: [],
   }),

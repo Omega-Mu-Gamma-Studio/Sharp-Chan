@@ -143,7 +143,7 @@ const useProgressStore = create(
       }),
     }),
     {
-      name: 'pluspluschan-progress', // localStorage key
+      name: 'sharpchan-progress', // localStorage key
       // Phase 2: replace this with a custom storage adapter pointing to your API
     }
   )

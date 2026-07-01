@@ -8,7 +8,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green)](https://github.com/Omega-Mu-Gamma-Studio/Sharp-Chan/blob/main/LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-sharp--chan.vercel.app-7c6fff?logo=vercel&logoColor=white)](https://sharp-chan.vercel.app)
 
-Built by [Omega Mu Gamma Studio](https://github.com/Omega-Mu-Gamma-Studio) · the team behind [SeeDS](https://see-ds.vercel.app), [KMapX](https://kmapx.vercel.app), [EG Suite](https://eg-suite.vercel.app), [GateLab](https://gatelab.vercel.app), [Java-chan](https://java-chan.vercel.app), and [PlusPlus-chan](https://plusplus-chan.vercel.app).
+Built by [Omega Mu Gamma Studio](https://github.com/Omega-Mu-Gamma-Studio) · the team behind [SeeDS](https://see-ds.vercel.app), [KMapX](https://kmapx.vercel.app), [EG Suite](https://eg-suite.vercel.app), [GateLab](https://gatelab.vercel.app), [Java-chan](https://java-chan.vercel.app), and [Sharp-chan](https://sharp-chan.vercel.app).
 
 ---
 
@@ -363,7 +363,7 @@ Sharp-chan is part of a student-built suite of open-source engineering and CS ed
 | [EG Suite](https://eg-suite.vercel.app) | 3D Engineering Graphics simulator for ME22201 |
 | [GateLab](https://gatelab.vercel.app) | 2D digital logic schematic playground (CS22303) |
 | [Java-chan](https://java-chan.vercel.app) | Anime-guided Java tutor for CS22301 |
-| [PlusPlus-chan](https://plusplus-chan.vercel.app) | Anime-guided C++ tutor for aspiring game developers |
+| [Sharp-chan](https://sharp-chan.vercel.app) | Anime-guided C# tutor for aspiring game developers |
 | **Sharp-chan** | Anime-guided C# and Unity tutor for game developers — *this repo* |
 
 ---
