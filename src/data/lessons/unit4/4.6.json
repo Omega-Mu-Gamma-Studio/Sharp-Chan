@@ -14,7 +14,7 @@
     "explanation": "Post-processing requires:\n1. Camera with `allowHDR = true`\n2. Volume with Profile\n3. Post-processing enabled in the camera component\n\n**The fix:**\n```csharp\nvar camera = GetComponent<Camera>();\ncamera.allowHDR = true;\n\n// In the camera component, ensure Post Processing is checked\n```\n\n**Sharp-chan says:**\n\"Post-processing requires the correct camera setup. Check the camera's Post Processing checkbox.\""
   },
   "phase3": {
-    "prompt": "Which post-processing effect creates a glow around bright areas?\n\nA) Bloom\nB) Vignette\nC) Chromatic Aberration\nD) Depth of Field\n\nSelect the CORRECT answer.",
+    "prompt": "Which post-processing effect creates a glow around bright areas?\n\nA) Bloom  \nB) Vignette  \nC) Chromatic Aberration  \nD) Depth of Field\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "A"
     },

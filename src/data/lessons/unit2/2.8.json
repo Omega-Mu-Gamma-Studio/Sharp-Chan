@@ -14,7 +14,7 @@
     "explanation": "You didn't check if an instance already exists. This can cause duplicate singletons.\n\n**The fix:**\n```csharp\nvoid Awake()\n{\n    if (instance == null)\n    {\n        instance = this;\n        DontDestroyOnLoad(gameObject);\n    }\n    else if (instance != this)\n    {\n        Destroy(gameObject);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if an instance already exists. Otherwise, you'll end up with duplicates and unexpected behavior.\""
   },
   "phase3": {
-    "prompt": "What is the main purpose of the Singleton Pattern?\n\nA) To create multiple instances of a class\nB) To ensure a class has only one instance and provide global access to it\nC) To prevent inheritance\nD) To improve performance\n\nSelect the CORRECT answer.",
+    "prompt": "What is the main purpose of the Singleton Pattern?\n\nA) To create multiple instances of a class  \nB) To ensure a class has only one instance and provide global access to it  \nC) To prevent inheritance  \nD) To improve performance\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

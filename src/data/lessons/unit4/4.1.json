@@ -14,7 +14,7 @@
     "explanation": "You're trying to use an AudioSource that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (audioSource != null)\n    {\n        audioSource.Play();\n    }\n    else\n    {\n        Debug.LogError(\"AudioSource is not assigned!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if AudioSource is assigned before using it.\""
   },
   "phase3": {
-    "prompt": "Which method would you use to play a sound effect without interrupting other sounds?\n\nA) Play()\nB) PlayOneShot()\nC) PlayClipAtPoint()\nD) PlayDelayed()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method would you use to play a sound effect without interrupting other sounds?\n\nA) Play()  \nB) PlayOneShot()  \nC) PlayClipAtPoint()  \nD) PlayDelayed()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

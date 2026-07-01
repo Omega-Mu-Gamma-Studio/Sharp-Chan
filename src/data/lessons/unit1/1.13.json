@@ -14,7 +14,7 @@
     "explanation": "Without `Time.deltaTime`, movement speed depends on frame rate.\n\n**The fix:**\n```csharp\ntransform.Translate(Vector3.right * speed * Time.deltaTime);\n```\n\n**Why this matters:**\n- With `Time.deltaTime`: movement is consistent across all computers\n- Without `Time.deltaTime`: faster computers move faster (bad!)\n\n**Sharp-chan says:**\n\"Always multiply by `Time.deltaTime` for movement. It's one of the most important Unity rules.\""
   },
   "phase3": {
-    "prompt": "Which component is needed for physics-based movement in a 2D game?\n\nA) BoxCollider2D\nB) Transform\nC) Rigidbody2D\nD) SpriteRenderer\n\nSelect the CORRECT answer.",
+    "prompt": "Which component is needed for physics-based movement in a 2D game?\n\nA) BoxCollider2D  \nB) Transform  \nC) Rigidbody2D  \nD) SpriteRenderer\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

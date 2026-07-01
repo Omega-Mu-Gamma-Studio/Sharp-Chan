@@ -14,7 +14,7 @@
     "explanation": "You're trying to use a Rigidbody2D that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    rb = GetComponent<Rigidbody2D>();\n    if (rb == null)\n    {\n        Debug.LogError(\"Rigidbody2D is required!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always assign your references in Start() or Awake().\""
   },
   "phase3": {
-    "prompt": "Which method should you use for physics-based movement in Unity?\n\nA) Update()\nB) FixedUpdate()\nC) LateUpdate()\nD) Start()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method should you use for physics-based movement in Unity?\n\nA) Update()  \nB) FixedUpdate()  \nC) LateUpdate()  \nD) Start()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

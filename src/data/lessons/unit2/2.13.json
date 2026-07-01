@@ -14,7 +14,7 @@
     "explanation": "Collision events only work if both objects have colliders.\n\n**The fix:**\n- Add a Collider2D component\n- Make sure it's not a trigger\n- Add a Rigidbody2D if needed\n\n**Sharp-chan says:**\n\"Collision events need a collider. Without it, nothing happens.\""
   },
   "phase3": {
-    "prompt": "What's the difference between a Collider and a Trigger?\n\nA) Trigger objects are invisible\nB) Colliders block movement, Triggers detect overlap\nC) Triggers block movement, Colliders detect overlap\nD) They are the same thing\n\nSelect the CORRECT answer.",
+    "prompt": "What's the difference between a Collider and a Trigger?\n\nA) Trigger objects are invisible  \nB) Colliders block movement, Triggers detect overlap  \nC) Triggers block movement, Colliders detect overlap  \nD) They are the same thing\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

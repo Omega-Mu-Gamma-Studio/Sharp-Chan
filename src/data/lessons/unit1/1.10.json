@@ -14,7 +14,7 @@
     "explanation": "Every method in C# must have a return type — even if it's `void`.\n\n**The fix:**\n```csharp\nint Add(int a, int b)  // ← Add return type!\n{\n    return a + b;\n}\n```\n\n**Sharp-chan says:**\n\"In C#, you always declare the return type. If it returns nothing, use `void`. If it returns something, specify what.\""
   },
   "phase3": {
-    "prompt": "Which keyword is used when a method returns NO value?\n\nA) int\nB) float\nC) string\nD) void\n\nSelect the CORRECT answer.",
+    "prompt": "Which keyword is used when a method returns NO value?\n\nA) int  \nB) float  \nC) string  \nD) void\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "D"
     },

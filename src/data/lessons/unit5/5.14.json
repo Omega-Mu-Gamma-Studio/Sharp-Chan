@@ -14,7 +14,7 @@
     "explanation": "Test all levels, not just the first one.\n\n**The fix:**\n```csharp\n// Test every level\n// Test transitions\n// Test game over from every level\n// Test win from every level\n```\n\n**Sharp-chan says:**\n\"Test all levels, not just the first one.\""
   },
   "phase3": {
-    "prompt": "What should you test before declaring your game complete?\n\nA) Only the first level\nB) A full playthrough from start to finish\nC) Only the menu\nD) Only the boss fight\n\nSelect the CORRECT answer.",
+    "prompt": "What should you test before declaring your game complete?\n\nA) Only the first level  \nB) A full playthrough from start to finish  \nC) Only the menu  \nD) Only the boss fight\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

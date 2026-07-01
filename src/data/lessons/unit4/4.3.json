@@ -14,7 +14,7 @@
     "explanation": "`PlayClipAtPoint` plays a clip once, not looping. Use an AudioSource for looping music.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    AudioSource source = GetComponent<AudioSource>();\n    if (source == null)\n    {\n        source = gameObject.AddComponent<AudioSource>();\n    }\n    \n    source.clip = music;\n    source.loop = true;\n    source.Play();\n}\n```\n\n**Sharp-chan says:**\n\"For looping music, use an AudioSource with `loop = true`.\""
   },
   "phase3": {
-    "prompt": "Which property should you set to make music play continuously?\n\nA) audioSource.playOnAwake\nB) audioSource.loop\nC) audioSource.mute\nD) audioSource.pitch\n\nSelect the CORRECT answer.",
+    "prompt": "Which property should you set to make music play continuously?\n\nA) audioSource.playOnAwake  \nB) audioSource.loop  \nC) audioSource.mute  \nD) audioSource.pitch\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "Finding objects and getting components in Update is expensive.\n\n**The fix:**\n```csharp\n// Cache references in Start\nprivate GameObject player;\nprivate Rigidbody rb;\n\nvoid Start()\n{\n    player = GameObject.Find(\"Player\");\n    rb = GetComponent<Rigidbody>();\n}\n```\n\n**Sharp-chan says:**\n\"Cache references in Start. Don't find or get components every frame.\""
   },
   "phase3": {
-    "prompt": "What is the most important performance metric for games?\n\nA) File size\nB) Frame rate (FPS)\nC) Number of levels\nD) Resolution\n\nSelect the CORRECT answer.",
+    "prompt": "What is the most important performance metric for games?\n\nA) File size  \nB) Frame rate (FPS)  \nC) Number of levels  \nD) Resolution\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "`Time.deltaTime` is 0 in `Start()` because there hasn't been a frame yet.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    // Don't use Time.deltaTime in Start()\n    // Use a fixed value or don't calculate movement here\n    float distance = speed * 0.016f;  // Approximate 60 FPS\n}\n```\n\n**Sharp-chan says:**\n\"`Time.deltaTime` only has meaning inside `Update()`. In `Start()`, it's zero. Use it correctly.\""
   },
   "phase3": {
-    "prompt": "What does Time.deltaTime represent?\n\nA) The total time since the game started\nB) The time between the current and previous frame\nC) The time since the last FixedUpdate\nD) The game's frame rate\n\nSelect the CORRECT answer.",
+    "prompt": "What does Time.deltaTime represent?\n\nA) The total time since the game started  \nB) The time between the current and previous frame  \nC) The time since the last FixedUpdate  \nD) The game's frame rate\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

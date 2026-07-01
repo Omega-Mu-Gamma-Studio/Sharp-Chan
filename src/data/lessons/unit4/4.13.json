@@ -14,7 +14,7 @@
     "explanation": "You need to use `StartCoroutine()` to start a coroutine.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    StartCoroutine(CountdownCoroutine(5));\n}\n```\n\n**Sharp-chan says:**\n\"Coroutines must be started with `StartCoroutine()`.\""
   },
   "phase3": {
-    "prompt": "Which yield instruction waits for 2 seconds?\n\nA) yield return null\nB) yield return new WaitForSeconds(2f)\nC) yield return new WaitForEndOfFrame()\nD) yield return new WaitUntil(() => condition)\n\nSelect the CORRECT answer.",
+    "prompt": "Which yield instruction waits for 2 seconds?\n\nA) yield return null  \nB) yield return new WaitForSeconds(2f)  \nC) yield return new WaitForEndOfFrame()  \nD) yield return new WaitUntil(() => condition)\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

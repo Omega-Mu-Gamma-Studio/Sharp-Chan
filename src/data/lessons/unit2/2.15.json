@@ -14,7 +14,7 @@
     "explanation": "Without checking tags, the trigger destroys anything that enters it — including the player.\n\n**The fix:**\n```csharp\nvoid OnTriggerEnter2D(Collider2D other)\n{\n    if (other.CompareTag(\"Coin\"))\n    {\n        Destroy(other.gameObject);\n    }\n    // Player is safe!\n}\n```\n\n**Sharp-chan says:**\n\"Always check tags before destroying objects. Otherwise, you'll destroy things you didn't mean to.\""
   },
   "phase3": {
-    "prompt": "What should you check before destroying an object in OnTriggerEnter2D?\n\nA) The object's name\nB) The object's tag\nC) The object's position\nD) The object's color\n\nSelect the CORRECT answer.",
+    "prompt": "What should you check before destroying an object in OnTriggerEnter2D?\n\nA) The object's name  \nB) The object's tag  \nC) The object's position  \nD) The object's color\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

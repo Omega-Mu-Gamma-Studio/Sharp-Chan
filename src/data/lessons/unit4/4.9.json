@@ -14,7 +14,7 @@
     "explanation": "Without `[System.Serializable]`, Unity can't serialize the class.\n\n**The fix:**\n```csharp\n[System.Serializable]  // ← Add this!\nclass PlayerData\n{\n    public string name;\n    public int health;\n}\n```\n\n**Sharp-chan says:**\n\"Always mark classes with `[System.Serializable]` for JSON serialization.\""
   },
   "phase3": {
-    "prompt": "What do you need to add to a class to make it serializable for JSON in Unity?\n\nA) [SerializeField]\nB) [System.Serializable]\nC) [Serializable]\nD) [JsonObject]\n\nSelect the CORRECT answer.",
+    "prompt": "What do you need to add to a class to make it serializable for JSON in Unity?\n\nA) [SerializeField]  \nB) [System.Serializable]  \nC) [Serializable]  \nD) [JsonObject]\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "Introducing too many mechanics at once overwhelms players.\n\n**The fix:**\n- Level 1: Just movement and jump\n- Level 2: Add collectibles\n- Level 3: Add enemies\n- Level 4: Combine mechanics\n\n**Sharp-chan says:**\n\"Introduce mechanics one at a time. Let players master each before adding the next.\""
   },
   "phase3": {
-    "prompt": "What is the most important principle of level design?\n\nA) Make levels as long as possible\nB) Introduce mechanics gradually\nC) Fill levels with enemies\nD) Make levels visually complex\n\nSelect the CORRECT answer.",
+    "prompt": "What is the most important principle of level design?\n\nA) Make levels as long as possible  \nB) Introduce mechanics gradually  \nC) Fill levels with enemies  \nD) Make levels visually complex\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

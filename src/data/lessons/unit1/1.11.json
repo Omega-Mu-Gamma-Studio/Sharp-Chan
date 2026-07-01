@@ -14,7 +14,7 @@
     "explanation": "`Awake()` runs as soon as the GameObject is created. If a field isn't assigned in the Inspector yet, it might be `null`.\n\n**The fix:**\n- Assign the target in the Inspector\n- Or check for `null` before using it\n\n```csharp\nvoid Awake()\n{\n    if (target != null)\n    {\n        Debug.Log(target.name);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"`Awake()` is for your own initialization. Don't rely on other objects being ready yet. Use `Start()` for that.\""
   },
   "phase3": {
-    "prompt": "Which method runs ONCE before the first frame?\n\nA) Awake()\nB) Update()\nC) Start()\nD) FixedUpdate()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method runs ONCE before the first frame?\n\nA) Awake()  \nB) Update()  \nC) Start()  \nD) FixedUpdate()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

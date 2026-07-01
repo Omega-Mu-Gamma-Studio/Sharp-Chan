@@ -14,7 +14,7 @@
     "explanation": "You're trying to access a collider that doesn't exist because the ray didn't hit anything.\n\n**The fix:**\n```csharp\nRaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 10f);\nif (hit.collider != null)\n{\n    Debug.Log(hit.collider.gameObject.name);\n}\n```\n\n**Sharp-chan says:**\n\"Always check if the ray hit something before using the result.\""
   },
   "phase3": {
-    "prompt": "What does a RaycastHit2D return if nothing was hit?\n\nA) An empty RaycastHit2D\nB) A RaycastHit2D with collider = null\nC) null\nD) An exception\n\nSelect the CORRECT answer.",
+    "prompt": "What does a RaycastHit2D return if nothing was hit?\n\nA) An empty RaycastHit2D  \nB) A RaycastHit2D with collider = null  \nC) null  \nD) An exception\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

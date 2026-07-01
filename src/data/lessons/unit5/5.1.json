@@ -14,7 +14,7 @@
     "explanation": "Conceptual lesson — no code to break!\n\n**Common mistake:** Writing a 50-page GDD and never making the game.\n\n**Sharp-chan says:**\n\"A GDD should be short enough that you can actually use it. 1-2 pages is enough for a small game.\"\n\n**Common mistake:** Not updating the GDD as the game evolves.\n\n**Sharp-chan says:**\n\"The GDD is a living document. Update it as your game changes.\""
   },
   "phase3": {
-    "prompt": "What is the primary purpose of a Game Design Document?\n\nA) To sell the game to publishers\nB) To plan and guide development\nC) To market the game\nD) To replace the game itself\n\nSelect the CORRECT answer.",
+    "prompt": "What is the primary purpose of a Game Design Document?\n\nA) To sell the game to publishers  \nB) To plan and guide development  \nC) To market the game  \nD) To replace the game itself\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

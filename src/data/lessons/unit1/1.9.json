@@ -14,7 +14,7 @@
     "explanation": "Without changing `i`, the condition `i < 10` is always true. The loop never ends.\n\n**The fix:**\n```csharp\nint i = 0;\nwhile (i < 10)\n{\n    Debug.Log(\"Looping...\");\n    i++;  // ← Increment is required!\n}\n```\n\n**Sharp-chan says:**\n\"Always check: 'What changes in this loop?' If nothing changes, it's an infinite loop. Unity will freeze. Always test your loops.\""
   },
   "phase3": {
-    "prompt": "Which loop would you use to iterate over all items in a collection (like an array)?\n\nA) for loop\nB) while loop\nC) foreach loop\nD) do-while loop\n\nSelect the CORRECT answer.",
+    "prompt": "Which loop would you use to iterate over all items in a collection (like an array)?\n\nA) for loop  \nB) while loop  \nC) foreach loop  \nD) do-while loop\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

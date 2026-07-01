@@ -14,7 +14,7 @@
     "explanation": "You didn't add a listener to the button, so nothing happens when it's clicked.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (myButton != null)\n    {\n        myButton.onClick.AddListener(OnButtonClick);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Buttons need listeners. Without them, they do nothing.\""
   },
   "phase3": {
-    "prompt": "Which method do you use to add a function to a button click event?\n\nA) button.onClick.AddListener(() => Function())\nB) button.AddListener(() => Function())\nC) button.onClick.Add(() => Function())\nD) button.AddClick(() => Function())\n\nSelect the CORRECT answer.",
+    "prompt": "Which method do you use to add a function to a button click event?\n\nA) button.onClick.AddListener(() => Function())  \nB) button.AddListener(() => Function())  \nC) button.onClick.Add(() => Function())  \nD) button.AddClick(() => Function())\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "A"
     },

@@ -14,7 +14,7 @@
     "explanation": "In C#, every statement must end with a semicolon (`;`).\n\n**The fix:**\n```csharp\nDebug.Log(\"Hello, Unity!\");  // ← Semicolon here!\n```\n\n**Sharp-chan says:**\n\"Semicolons are like periods in sentences. Without them, the compiler doesn't know where your thought ends. C# is strict about this. You'll learn to add them automatically.\""
   },
   "phase3": {
-    "prompt": "Which Unity method runs ONCE when a script is first activated?\n\nA) Update()\nB) Start()\nC) FixedUpdate()\nD) Awake()\n\nSelect the CORRECT answer.",
+    "prompt": "Which Unity method runs ONCE when a script is first activated?\n\nA) Update()  \nB) Start()  \nC) FixedUpdate()  \nD) Awake()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

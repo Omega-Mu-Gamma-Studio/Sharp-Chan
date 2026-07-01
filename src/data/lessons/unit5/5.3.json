@@ -14,7 +14,7 @@
     "explanation": "Using `transform.Translate` on a Rigidbody bypasses physics. Use `rb.velocity` instead.\n\n**The fix:**\n```csharp\nvoid FixedUpdate()\n{\n    rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);\n}\n```\n\n**Sharp-chan says:**\n\"Use Rigidbody for physics objects. Use Transform for direct control.\""
   },
   "phase3": {
-    "prompt": "Which method should you use to move a Rigidbody2D?\n\nA) transform.Translate()\nB) rb.MovePosition()\nC) rb.velocity\nD) Both B and C\n\nSelect the CORRECT answer.",
+    "prompt": "Which method should you use to move a Rigidbody2D?\n\nA) transform.Translate()  \nB) rb.MovePosition()  \nC) rb.velocity  \nD) Both B and C\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "D"
     },

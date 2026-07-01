@@ -14,7 +14,7 @@
     "explanation": "This script has multiple issues:\n\n1. **No `Time.deltaTime`** → movement is frame-rate dependent\n2. **No clamping** → cube goes off screen\n3. **No reset** → can't restart\n\n**The fix:**\n- Add `* Time.deltaTime` to movement\n- Add `Mathf.Clamp` for position\n- Add `Input.GetKeyDown(KeyCode.R)` for reset\n\n**Sharp-chan says:**\n\"A complete challenge solution handles all edge cases. Test your script thoroughly.\""
   },
   "phase3": {
-    "prompt": "Which input method returns a value between -1 and 1 for smooth movement with arrow keys?\n\nA) Input.GetKey(KeyCode.UpArrow)\nB) Input.GetAxis(\"Horizontal\")\nC) Input.GetButton(\"Jump\")\nD) Input.GetMouseButton(0)\n\nSelect the CORRECT answer.",
+    "prompt": "Which input method returns a value between -1 and 1 for smooth movement with arrow keys?\n\nA) Input.GetKey(KeyCode.UpArrow)  \nB) Input.GetAxis(\"Horizontal\")  \nC) Input.GetButton(\"Jump\")  \nD) Input.GetMouseButton(0)\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

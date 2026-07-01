@@ -14,7 +14,7 @@
     "explanation": "The compiler can't infer the type because you're using it incorrectly.\n\n**The fix:**\n```csharp\nint result = FindMax<int>(10, 20);  // Specify the type\n```\n\n**Or make it static:**\n```csharp\npublic static T FindMax<T>(T a, T b) where T : System.IComparable<T>\n{\n    return a.CompareTo(b) > 0 ? a : b;\n}\n\n// Usage\nint result = Utility.FindMax(10, 20);\n```\n\n**Sharp-chan says:**\n\"Generic methods need type inference or explicit type arguments.\""
   },
   "phase3": {
-    "prompt": "What is the benefit of using generics over object?\n\nA) Generics are faster\nB) Generics are type-safe and avoid boxing\nC) Generics are easier to write\nD) Generics work with all types\n\nSelect the CORRECT answer.",
+    "prompt": "What is the benefit of using generics over object?\n\nA) Generics are faster  \nB) Generics are type-safe and avoid boxing  \nC) Generics are easier to write  \nD) Generics work with all types\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

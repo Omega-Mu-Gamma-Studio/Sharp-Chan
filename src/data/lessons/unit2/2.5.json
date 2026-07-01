@@ -14,7 +14,7 @@
     "explanation": "`SetHealth` is `private` by default (since no access modifier was specified), so you can't call it from `AccessError`.\n\n**The fix:**\n```csharp\npublic void SetHealth(int value)  // ← Add public!\n{\n    health = value;\n}\n```\n\n**Sharp-chan says:**\n\"If you want something to be accessible from outside, make it `public`. Otherwise, it stays `private` — and inaccessible.\""
   },
   "phase3": {
-    "prompt": "Which access modifier makes a field or method accessible ONLY within the same class?\n\nA) public\nB) private\nC) protected\nD) internal\n\nSelect the CORRECT answer.",
+    "prompt": "Which access modifier makes a field or method accessible ONLY within the same class?\n\nA) public  \nB) private  \nC) protected  \nD) internal\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

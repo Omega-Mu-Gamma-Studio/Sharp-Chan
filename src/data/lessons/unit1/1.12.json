@@ -14,7 +14,7 @@
     "explanation": "You used a variable in `Update()` that was never initialized.\n\n**The fix:**\n```csharp\nprivate Rigidbody rb;\n\nvoid Start()\n{\n    rb = GetComponent<Rigidbody>();  // ← Initialize here!\n}\n\nvoid Update()\n{\n    if (rb != null)\n    {\n        rb.AddForce(Vector3.up * 10);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if your references are set before using them. `Start()` is the perfect place to set them up.\""
   },
   "phase3": {
-    "prompt": "Which method is called EVERY frame in Unity?\n\nA) Start()\nB) Update()\nC) Awake()\nD) OnEnable()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method is called EVERY frame in Unity?\n\nA) Start()  \nB) Update()  \nC) Awake()  \nD) OnEnable()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

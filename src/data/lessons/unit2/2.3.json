@@ -14,7 +14,7 @@
     "explanation": "When a base class has a constructor with parameters, you must call it from the derived class.\n\n**The fix:**\n```csharp\npublic Warrior(string n) : base(n, 120)  // ← Call base constructor\n{\n    // Additional setup for Warrior\n}\n```\n\n**Sharp-chan says:**\n\"If the base class has a constructor with parameters, you must call it. It's required.\""
   },
   "phase3": {
-    "prompt": "Which keyword is used to call the base class constructor from a derived class in C#?\n\nA) super\nB) this\nC) base\nD) parent\n\nSelect the CORRECT answer.",
+    "prompt": "Which keyword is used to call the base class constructor from a derived class in C#?\n\nA) super  \nB) this  \nC) base  \nD) parent\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

@@ -14,7 +14,7 @@
     "explanation": "Without braces, only the first statement after `else` belongs to the `else` block.\n\n**The fix:**\n```csharp\nif (health > 50)\n{\n    Debug.Log(\"Healthy!\");\n}\nelse\n{\n    Debug.Log(\"Not healthy!\");\n    Debug.Log(\"This line is now inside the else block.\");\n}\n```\n\n**Sharp-chan says:**\n\"Always use braces `{}` with if and else, even for single lines. It prevents this exact bug.\""
   },
   "phase3": {
-    "prompt": "Which of these is a correct if-else statement in C#?\n\nA) `if (health > 50) { } else { }`\nB) `if health > 50 { } else { }`\nC) `if (health > 50) { } else`\nD) `if health > 50 else { }`\n\nSelect the CORRECT answer.",
+    "prompt": "Which of these is a correct if-else statement in C#?\n\nA) `if (health > 50) { } else { }`  \nB) `if health > 50 { } else { }`  \nC) `if (health > 50) { } else`  \nD) `if health > 50 else { }`\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "A"
     },

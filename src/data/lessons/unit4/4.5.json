@@ -14,7 +14,7 @@
     "explanation": "You're trying to use ScreenShake without checking if it exists.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (ScreenShake.Instance != null)\n    {\n        ScreenShake.Instance.Shake(0.5f, 0.1f);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if ScreenShake exists before using it.\""
   },
   "phase3": {
-    "prompt": "Which of these is NOT a game feel technique?\n\nA) Screen shake\nB) Particle effects\nC) Sound effects\nD) Increasing game difficulty\n\nSelect the CORRECT answer.",
+    "prompt": "Which of these is NOT a game feel technique?\n\nA) Screen shake  \nB) Particle effects  \nC) Sound effects  \nD) Increasing game difficulty\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "D"
     },

@@ -14,7 +14,7 @@
     "explanation": "You're trying to use a Text component that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (scoreText != null)\n    {\n        scoreText.text = \"Score: 0\";\n    }\n    else\n    {\n        Debug.LogError(\"scoreText is not assigned!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if UI references are assigned before using them.\""
   },
   "phase3": {
-    "prompt": "Which UI component would you use to display a player's health?\n\nA) Text\nB) Image (as a health bar)\nC) Button\nD) InputField\n\nSelect the CORRECT answer.",
+    "prompt": "Which UI component would you use to display a player's health?\n\nA) Text  \nB) Image (as a health bar)  \nC) Button  \nD) InputField\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

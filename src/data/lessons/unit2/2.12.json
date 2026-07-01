@@ -14,7 +14,7 @@
     "explanation": "Modifying `transform.position` on a Rigidbody bypasses the physics system.\n\n**The fix:**\n```csharp\nvoid FixedUpdate()\n{\n    // Use Rigidbody for physics objects\n    rb.MovePosition(rb.position + Vector2.right * 5f * Time.fixedDeltaTime);\n}\n```\n\n**Sharp-chan says:**\n\"Don't modify Transform on physics objects. Use Rigidbody methods instead.\""
   },
   "phase3": {
-    "prompt": "Which method should you use to apply an instant force (like a jump) to a Rigidbody2D?\n\nA) rb.AddForce(force, ForceMode2D.Force)\nB) rb.AddForce(force, ForceMode2D.Impulse)\nC) rb.velocity = force\nD) rb.AddTorque(force)\n\nSelect the CORRECT answer.",
+    "prompt": "Which method should you use to apply an instant force (like a jump) to a Rigidbody2D?\n\nA) rb.AddForce(force, ForceMode2D.Force)  \nB) rb.AddForce(force, ForceMode2D.Impulse)  \nC) rb.velocity = force  \nD) rb.AddTorque(force)\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

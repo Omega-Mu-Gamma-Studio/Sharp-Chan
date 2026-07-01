@@ -14,7 +14,7 @@
     "explanation": "You're trying to use an Animator that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    animator = GetComponent<Animator>();\n}\n\nvoid Update()\n{\n    if (animator != null)\n    {\n        animator.SetFloat(\"Speed\", 1f);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always get the Animator component before using it.\""
   },
   "phase3": {
-    "prompt": "Which method would you use to connect a specific frame of an animation to code?\n\nA) Update()\nB) Animation Events\nC) Coroutines\nD) Invoke\n\nSelect the CORRECT answer.",
+    "prompt": "Which method would you use to connect a specific frame of an animation to code?\n\nA) Update()  \nB) Animation Events  \nC) Coroutines  \nD) Invoke\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "You need to check if audio clips and particle systems exist before using them.\n\n**The fix:**\n```csharp\nif (jumpSound != null)\n    audioSource.PlayOneShot(jumpSound);\n    \nif (particleSystem != null)\n    particleSystem.Play();\n```\n\n**Sharp-chan says:**\n\"Always check if assets exist before using them.\""
   },
   "phase3": {
-    "prompt": "What is the purpose of a polish pass?\n\nA) To fix bugs\nB) To add sound, particles, and feedback\nC) To add more levels\nD) To increase difficulty\n\nSelect the CORRECT answer.",
+    "prompt": "What is the purpose of a polish pass?\n\nA) To fix bugs  \nB) To add sound, particles, and feedback  \nC) To add more levels  \nD) To increase difficulty\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "`=` is assignment, `==` is comparison.\n\n**The fix:**\n```csharp\nif (health == 100)  // Compare, don't assign\n{\n    Debug.Log(\"Full health!\");\n}\n```\n\n**Sharp-chan says:**\n\"This is a classic mistake. `=` sets a value. `==` checks if two values are equal. They are not interchangeable.\""
   },
   "phase3": {
-    "prompt": "Which operator checks if two values are equal?\n\nA) =\nB) ==\nC) !=\nD) &&\n\nSelect the CORRECT answer.",
+    "prompt": "Which operator checks if two values are equal?\n\nA) =  \nB) ==  \nC) !=  \nD) &&\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

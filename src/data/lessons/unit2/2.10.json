@@ -14,7 +14,7 @@
     "explanation": "You forgot to set the Instance field in Awake.\n\n**The fix:**\n```csharp\nvoid Awake()\n{\n    if (Instance == null)\n    {\n        Instance = this;\n        DontDestroyOnLoad(gameObject);\n    }\n    else if (Instance != this)\n    {\n        Destroy(gameObject);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always set the Instance in Awake. Without it, nothing works.\""
   },
   "phase3": {
-    "prompt": "Which method should you use to make a GameManager persist across scene loads in Unity?\n\nA) DontDestroyOnLoad()\nB) KeepAlive()\nC) PersistAcrossScenes()\nD) DontDestroy(this)\n\nSelect the CORRECT answer.",
+    "prompt": "Which method should you use to make a GameManager persist across scene loads in Unity?\n\nA) DontDestroyOnLoad()  \nB) KeepAlive()  \nC) PersistAcrossScenes()  \nD) DontDestroy(this)\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "A"
     },

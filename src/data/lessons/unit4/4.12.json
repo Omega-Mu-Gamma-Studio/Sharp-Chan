@@ -14,7 +14,7 @@
     "explanation": "You're invoking an event with no subscribers.\n\n**The fix:**\n```csharp\nMyEvent?.Invoke();  // Safe invoke\n```\n\n**Sharp-chan says:**\n\"Always use `?.Invoke()` when invoking events.\""
   },
   "phase3": {
-    "prompt": "What's the difference between a delegate and an event?\n\nA) Nothing, they're the same\nB) Events are delegates with restrictions\nC) Delegates are events with restrictions\nD) They're unrelated\n\nSelect the CORRECT answer.",
+    "prompt": "What's the difference between a delegate and an event?\n\nA) Nothing, they're the same  \nB) Events are delegates with restrictions  \nC) Delegates are events with restrictions  \nD) They're unrelated\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

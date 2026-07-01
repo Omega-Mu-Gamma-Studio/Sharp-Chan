@@ -14,7 +14,7 @@
     "explanation": "Putting everything in one class violates the Single Responsibility Principle.\n\n**The fix:**\nSplit into components:\n- `HealthComponent` — handles health\n- `MovementComponent` — handles movement\n- `AttackComponent` — handles attacking\n- `AnimationComponent` — handles animations\n\n**Sharp-chan says:**\n\"One class, one job. That's the component pattern. It's much easier to maintain.\""
   },
   "phase3": {
-    "prompt": "Which of these describes the Component Pattern in Unity?\n\nA) Everything in one large class\nB) Breaking functionality into separate, reusable pieces attached to GameObjects\nC) Using only static methods\nD) Avoiding inheritance entirely\n\nSelect the CORRECT answer.",
+    "prompt": "Which of these describes the Component Pattern in Unity?\n\nA) Everything in one large class  \nB) Breaking functionality into separate, reusable pieces attached to GameObjects  \nC) Using only static methods  \nD) Avoiding inheritance entirely\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

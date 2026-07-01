@@ -14,7 +14,7 @@
     "explanation": "Shader.Find might return null if the shader name is wrong.\n\n**The fix:**\n```csharp\nShader shader = Shader.Find(\"Unlit/Color\");\nif (shader != null)\n{\n    GetComponent<SpriteRenderer>().material.shader = shader;\n}\n```\n\n**Sharp-chan says:**\n\"Always check if Shader.Find returns a valid shader.\""
   },
   "phase3": {
-    "prompt": "What do shaders primarily control in Unity?\n\nA) Physics\nB) Rendering appearance\nC) Audio\nD) Input\n\nSelect the CORRECT answer.",
+    "prompt": "What do shaders primarily control in Unity?\n\nA) Physics  \nB) Rendering appearance  \nC) Audio  \nD) Input\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "You're trying to use a SpriteRenderer that either isn't assigned or the GameObject doesn't have one.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    SpriteRenderer sr = GetComponent<SpriteRenderer>();\n    if (sr != null)\n    {\n        sr.color = Color.red;\n    }\n    else\n    {\n        Debug.LogError(\"No SpriteRenderer found!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if a component exists before using it. It's the safe way.\""
   },
   "phase3": {
-    "prompt": "Which component is used to display a 2D image in Unity?\n\nA) MeshRenderer\nB) SpriteRenderer\nC) CanvasRenderer\nD) ImageRenderer\n\nSelect the CORRECT answer.",
+    "prompt": "Which component is used to display a 2D image in Unity?\n\nA) MeshRenderer  \nB) SpriteRenderer  \nC) CanvasRenderer  \nD) ImageRenderer\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

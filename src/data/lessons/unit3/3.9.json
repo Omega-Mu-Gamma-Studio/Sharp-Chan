@@ -14,7 +14,7 @@
     "explanation": "Setting a trigger every frame causes the animation to trigger repeatedly.\n\n**The fix:**\n```csharp\nif (Input.GetButtonDown(\"Fire1\"))  // Only when button is pressed\n{\n    animator.SetTrigger(\"Attack\");\n}\n```\n\n**Sharp-chan says:**\n\"Triggers are for one-time events. Only set them when the event happens.\""
   },
   "phase3": {
-    "prompt": "Which parameter type should you use for a one-time event like a jump?\n\nA) Float\nB) Bool\nC) Trigger\nD) Int\n\nSelect the CORRECT answer.",
+    "prompt": "Which parameter type should you use for a one-time event like a jump?\n\nA) Float  \nB) Bool  \nC) Trigger  \nD) Int\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

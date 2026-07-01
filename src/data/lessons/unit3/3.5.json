@@ -14,7 +14,7 @@
     "explanation": "Using `Update` for camera follow can cause jitter because the player might not have moved yet.\n\n**The fix:**\n```csharp\nvoid LateUpdate()  // ← Use LateUpdate for camera\n{\n    transform.position = target.position + offset;\n}\n```\n\n**Sharp-chan says:**\n\"Use `LateUpdate` for camera follow. It runs after the player moves.\""
   },
   "phase3": {
-    "prompt": "Which method should you use for camera follow to prevent jitter?\n\nA) Update()\nB) FixedUpdate()\nC) LateUpdate()\nD) Start()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method should you use for camera follow to prevent jitter?\n\nA) Update()  \nB) FixedUpdate()  \nC) LateUpdate()  \nD) Start()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

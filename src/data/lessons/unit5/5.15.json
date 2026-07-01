@@ -14,7 +14,7 @@
     "explanation": "🎉 **Congratulations!**\n\nYou've completed all 75 lessons of Sharp-chan's C# and Unity course!\n\n**You built:**\n- A full 2D platformer\n- Player movement, jump, dash\n- Enemy AI\n- Collectibles and score\n- Health and lives\n- UI and HUD\n- Save and load\n- Polish with particles and sound\n- Published to Itch.io\n\n**Sharp-chan says:**\n\"You're a game developer now. Go build something amazing.\""
   },
   "phase3": {
-    "prompt": "What is the most important step in finishing a game?\n\nA) Adding more features\nB) Shipping it\nC) Polishing forever\nD) Starting over\n\nSelect the CORRECT answer.",
+    "prompt": "What is the most important step in finishing a game?\n\nA) Adding more features  \nB) Shipping it  \nC) Polishing forever  \nD) Starting over\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

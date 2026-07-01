@@ -14,7 +14,7 @@
     "explanation": "Playtest feedback is valuable. Ignoring it leads to a worse game.\n\n**The fix:**\n```csharp\n// Listen to feedback\n// If multiple players say the same thing, it's probably true\n// Make changes based on feedback\n```\n\n**Sharp-chan says:**\n\"Listen to your playtesters. They're not always right, but they're often right.\""
   },
   "phase3": {
-    "prompt": "What should you do during a playtest?\n\nA) Explain the controls\nB) Watch silently and take notes\nC) Play along with them\nD) Tell them what to do\n\nSelect the CORRECT answer.",
+    "prompt": "What should you do during a playtest?\n\nA) Explain the controls  \nB) Watch silently and take notes  \nC) Play along with them  \nD) Tell them what to do\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

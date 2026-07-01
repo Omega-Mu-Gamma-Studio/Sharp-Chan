@@ -14,7 +14,7 @@
     "explanation": "Always test builds on the target platform before releasing.\n\n**The fix:**\n```csharp\n// Test every build\n// Use platform-specific testing\n// Check performance and functionality\n```\n\n**Sharp-chan says:**\n\"Build early, test often. Don't wait until the end.\""
   },
   "phase3": {
-    "prompt": "What should you do before building your game for release?\n\nA) Add more levels\nB) Test on the target platform\nC) Increase difficulty\nD) Remove all sounds\n\nSelect the CORRECT answer.",
+    "prompt": "What should you do before building your game for release?\n\nA) Add more levels  \nB) Test on the target platform  \nC) Increase difficulty  \nD) Remove all sounds\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "Invalid or empty JSON results in null. You need to check for null before using the data.\n\n**The fix:**\n```csharp\nif (data != null)\n{\n    Debug.Log(data.score);\n}\nelse\n{\n    Debug.LogError(\"Failed to load data!\");\n}\n```\n\n**Sharp-chan says:**\n\"Always check if deserialized data is null before using it.\""
   },
   "phase3": {
-    "prompt": "What should you check before using loaded save data?\n\nA) That the file exists\nB) That the data is not null\nC) That the data is valid JSON\nD) All of the above\n\nSelect the CORRECT answer.",
+    "prompt": "What should you check before using loaded save data?\n\nA) That the file exists  \nB) That the data is not null  \nC) That the data is valid JSON  \nD) All of the above\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "D"
     },

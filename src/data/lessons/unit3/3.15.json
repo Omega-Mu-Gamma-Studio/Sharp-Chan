@@ -14,7 +14,7 @@
     "explanation": "Without checking the tag, the collision destroys any object it touches — including the player.\n\n**The fix:**\n```csharp\nvoid OnCollisionEnter2D(Collision2D collision)\n{\n    if (collision.gameObject.CompareTag(\"Enemy\"))\n    {\n        Destroy(collision.gameObject);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check tags before destroying objects. Otherwise, you'll destroy things you didn't mean to.\""
   },
   "phase3": {
-    "prompt": "What should you check before destroying an object in collision?\n\nA) The object's name\nB) The object's tag\nC) The object's position\nD) The object's color\n\nSelect the CORRECT answer.",
+    "prompt": "What should you check before destroying an object in collision?\n\nA) The object's name  \nB) The object's tag  \nC) The object's position  \nD) The object's color\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

@@ -14,7 +14,7 @@
     "explanation": "Prototypes should focus on the core loop. Add features later.\n\n**The fix:**\n```csharp\n// Keep it simple\n// Just movement, jump, one collectible, one enemy, one goal\n// Everything else can wait\n```\n\n**Sharp-chan says:**\n\"Prototype only what you need to test the fun. Add features later.\""
   },
   "phase3": {
-    "prompt": "What is the main goal of prototyping?\n\nA) To make a polished game\nB) To test the core loop and find fun\nC) To market the game\nD) To write documentation\n\nSelect the CORRECT answer.",
+    "prompt": "What is the main goal of prototyping?\n\nA) To make a polished game  \nB) To test the core loop and find fun  \nC) To market the game  \nD) To write documentation\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

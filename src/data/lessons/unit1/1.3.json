@@ -14,7 +14,7 @@
     "explanation": "C# is case-sensitive! `Debug.Log()` is correct. `Debug.log()` is not.\n\n**Sharp-chan says:**\n\"This is the most common first error in Unity. Always check the case. C# is strict — one wrong capital letter and the compiler will complain loudly.\""
   },
   "phase3": {
-    "prompt": "What shortcut key do you use to select the Move Tool in Unity's editor?\n\nA) Q\nB) W\nC) E\nD) R\n\nSelect the CORRECT answer.",
+    "prompt": "What shortcut key do you use to select the Move Tool in Unity's editor?\n\nA) Q  \nB) W  \nC) E  \nD) R\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

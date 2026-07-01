@@ -14,7 +14,7 @@
     "explanation": "Trying to load data that doesn't exist results in `null`.\n\n**The fix:**\n```csharp\nif (PlayerPrefs.HasKey(\"GameSave\"))\n{\n    string json = PlayerPrefs.GetString(\"GameSave\");\n    GameState state = JsonUtility.FromJson<GameState>(json);\n    if (state != null)\n    {\n        Debug.Log(\"Loaded!\");\n    }\n}\nelse\n{\n    Debug.Log(\"No save data found!\");\n}\n```\n\n**Sharp-chan says:**\n\"Always check if data exists before loading.\""
   },
   "phase3": {
-    "prompt": "What is the purpose of a Game State in a save system?\n\nA) To store graphics settings\nB) To store all game progress data in one place\nC) To store audio settings\nD) To store debug information\n\nSelect the CORRECT answer.",
+    "prompt": "What is the purpose of a Game State in a save system?\n\nA) To store graphics settings  \nB) To store all game progress data in one place  \nC) To store audio settings  \nD) To store debug information\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

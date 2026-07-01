@@ -14,7 +14,7 @@
     "explanation": "This GameObject doesn't have a Rigidbody component, so `GetComponent<Rigidbody>()` returns `null`.\n\n**The fix:**\n```csharp\nRigidbody rb = GetComponent<Rigidbody>();\nif (rb != null)\n{\n    rb.AddForce(Vector3.up * 10);\n}\n```\n\n**Sharp-chan says:**\n\"Always check if a component exists before using it. It's a common beginner mistake, and it's easy to fix. Get used to using `if` checks.\""
   },
   "phase3": {
-    "prompt": "Which component is REQUIRED for every GameObject in Unity?\n\nA) Rigidbody\nB) Transform\nC) SpriteRenderer\nD) Collider\n\nSelect the CORRECT answer.",
+    "prompt": "Which component is REQUIRED for every GameObject in Unity?\n\nA) Rigidbody  \nB) Transform  \nC) SpriteRenderer  \nD) Collider\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

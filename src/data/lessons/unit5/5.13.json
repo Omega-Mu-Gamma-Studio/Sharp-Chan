@@ -14,7 +14,7 @@
     "explanation": "Always complete the core loop before adding extra features.\n\n**The fix:**\n```csharp\n// Core loop first\n// Polish second\n// Extra features third\n```\n\n**Sharp-chan says:**\n\"Core loop first. Everything else second.\""
   },
   "phase3": {
-    "prompt": "What should you complete before adding extra features?\n\nA) The core loop\nB) The menu\nC) The settings\nD) The credits\n\nSelect the CORRECT answer.",
+    "prompt": "What should you complete before adding extra features?\n\nA) The core loop  \nB) The menu  \nC) The settings  \nD) The credits\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "A"
     },

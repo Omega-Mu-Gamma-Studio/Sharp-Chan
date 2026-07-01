@@ -14,7 +14,7 @@
     "explanation": "The state name is incorrect, so the check never returns true.\n\n**The fix:**\n```csharp\nif (info.IsName(\"Attack\"))  // Make sure the name matches\n{\n    Debug.Log(\"Attacking!\");\n}\n```\n\n**Sharp-chan says:**\n\"State names are case-sensitive. Make sure you use the exact name as in the Animator.\""
   },
   "phase3": {
-    "prompt": "Which property of AnimatorStateInfo gives you the progress of the animation?\n\nA) length\nB) normalizedTime\nC) speed\nD) IsName\n\nSelect the CORRECT answer.",
+    "prompt": "Which property of AnimatorStateInfo gives you the progress of the animation?\n\nA) length  \nB) normalizedTime  \nC) speed  \nD) IsName\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

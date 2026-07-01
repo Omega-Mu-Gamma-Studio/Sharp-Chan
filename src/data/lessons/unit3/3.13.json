@@ -14,7 +14,7 @@
     "explanation": "You're trying to use a health bar that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (healthBar != null)\n    {\n        healthBar.fillAmount = 0.5f;\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always assign UI references in the Inspector.\""
   },
   "phase3": {
-    "prompt": "Which Image property do you use to create a fillable health bar?\n\nA) image.sprite\nB) image.color\nC) image.fillAmount\nD) image.raycastTarget\n\nSelect the CORRECT answer.",
+    "prompt": "Which Image property do you use to create a fillable health bar?\n\nA) image.sprite  \nB) image.color  \nC) image.fillAmount  \nD) image.raycastTarget\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

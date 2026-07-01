@@ -14,7 +14,7 @@
     "explanation": "You're trying to use SFXManager without checking if it exists.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    if (SFXManager.Instance != null)\n    {\n        SFXManager.Instance.PlayCoinSound();\n    }\n    else\n    {\n        Debug.LogWarning(\"SFXManager not found!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always check if the SFXManager exists before using it.\""
   },
   "phase3": {
-    "prompt": "What is the benefit of using a centralized SFX Manager?\n\nA) It makes sounds louder\nB) It centralizes audio control and makes changes easier\nC) It automatically adds reverb\nD) It makes sounds play faster\n\nSelect the CORRECT answer.",
+    "prompt": "What is the benefit of using a centralized SFX Manager?\n\nA) It makes sounds louder  \nB) It centralizes audio control and makes changes easier  \nC) It automatically adds reverb  \nD) It makes sounds play faster\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

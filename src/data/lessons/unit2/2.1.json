@@ -14,7 +14,7 @@
     "explanation": "You tried to create a Player with parameters, but the class doesn't have a constructor that accepts them.\n\n**The fix:**\n```csharp\npublic class Player\n{\n    public string name;\n    public int health;\n    \n    // Add a constructor!\n    public Player(string playerName, int startingHealth)\n    {\n        name = playerName;\n        health = startingHealth;\n    }\n}\n```\n\n**Sharp-chan says:**\n\"If you need to pass data when creating an object, you need a constructor. It's the setup method for your class.\""
   },
   "phase3": {
-    "prompt": "In C#, what is the difference between a Class and an Object?\n\nA) A class is an instance, an object is a blueprint\nB) A class is a blueprint, an object is an instance\nC) They are the same thing\nD) A class can only contain methods, objects can contain data\n\nSelect the CORRECT answer.",
+    "prompt": "In C#, what is the difference between a Class and an Object?\n\nA) A class is an instance, an object is a blueprint  \nB) A class is a blueprint, an object is an instance  \nC) They are the same thing  \nD) A class can only contain methods, objects can contain data\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

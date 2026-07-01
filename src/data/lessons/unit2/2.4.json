@@ -14,7 +14,7 @@
     "explanation": "You declared that `Player` implements `IDamageable`, but you didn't actually write the `TakeDamage` method.\n\n**The fix:**\n```csharp\npublic class Player : IDamageable\n{\n    public int health;\n    \n    public void TakeDamage(int damage)\n    {\n        health -= damage;\n    }\n}\n```\n\n**Sharp-chan says:**\n\"If you say you implement an interface, you must implement every method and property in it. No exceptions.\""
   },
   "phase3": {
-    "prompt": "Which of these is TRUE about interfaces in C#?\n\nA) A class can only implement one interface\nB) Interfaces can contain field definitions\nC) Interfaces define a contract that classes must follow\nD) Interfaces can have method implementations\n\nSelect the CORRECT answer.",
+    "prompt": "Which of these is TRUE about interfaces in C#?\n\nA) A class can only implement one interface  \nB) Interfaces can contain field definitions  \nC) Interfaces define a contract that classes must follow  \nD) Interfaces can have method implementations\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

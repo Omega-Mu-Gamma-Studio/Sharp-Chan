@@ -14,7 +14,7 @@
     "explanation": "For `OnTriggerEnter` to work, at least one of the colliders must be a trigger (`isTrigger = true`).\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    Collider2D col = GetComponent<Collider2D>();\n    if (col != null)\n    {\n        col.isTrigger = true;  // ← Enable trigger!\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Triggers need `isTrigger = true`. Without that, they're just normal colliders.\""
   },
   "phase3": {
-    "prompt": "Which method is called when an object first enters a trigger zone?\n\nA) OnCollisionEnter2D\nB) OnTriggerEnter2D\nC) OnTriggerStay2D\nD) OnCollisionStay2D\n\nSelect the CORRECT answer.",
+    "prompt": "Which method is called when an object first enters a trigger zone?\n\nA) OnCollisionEnter2D  \nB) OnTriggerEnter2D  \nC) OnTriggerStay2D  \nD) OnCollisionStay2D\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

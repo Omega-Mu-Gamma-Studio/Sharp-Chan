@@ -14,7 +14,7 @@
     "explanation": "If you don't provide a constructor, C# gives you a default one — but it doesn't initialize your fields to meaningful values.\n\n**The fix:**\n```csharp\npublic class Enemy\n{\n    public string name;\n    \n    // Add a constructor\n    public Enemy()\n    {\n        name = \"Unknown Enemy\";\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always write constructors to initialize your fields. Don't rely on C# to handle it for you.\""
   },
   "phase3": {
-    "prompt": "What is the name of the method that runs when a new object is created in C#?\n\nA) Start()\nB) Initialize()\nC) Constructor\nD) Awake()\n\nSelect the CORRECT answer.",
+    "prompt": "What is the name of the method that runs when a new object is created in C#?\n\nA) Start()  \nB) Initialize()  \nC) Constructor  \nD) Awake()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

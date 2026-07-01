@@ -14,7 +14,7 @@
     "explanation": "Cinemachine requires a `CinemachineBrain` component on the camera to work.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    // Ensure CinemachineBrain exists\n    Camera mainCamera = Camera.main;\n    if (mainCamera.GetComponent<CinemachineBrain>() == null)\n    {\n        mainCamera.gameObject.AddComponent<CinemachineBrain>();\n    }\n}\n```\n\n**Sharp-chan says:**\n\"CinemachineVirtualCamera needs a CinemachineBrain on the camera.\""
   },
   "phase3": {
-    "prompt": "Which component is required for Cinemachine to work?\n\nA) CinemachineVirtualCamera\nB) CinemachineBrain\nC) CinemachineTransposer\nD) CinemachineComposer\n\nSelect the CORRECT answer.",
+    "prompt": "Which component is required for Cinemachine to work?\n\nA) CinemachineVirtualCamera  \nB) CinemachineBrain  \nC) CinemachineTransposer  \nD) CinemachineComposer\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

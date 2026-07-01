@@ -14,7 +14,7 @@
     "explanation": "`Input` methods only work in `Update()` — they're frame-based.\n\n**The fix:**\n```csharp\nvoid Update()\n{\n    if (Input.GetButtonDown(\"Jump\"))\n    {\n        Debug.Log(\"Jumped!\");\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Input is frame-based. Always use it in `Update()`, not `Start()`.\""
   },
   "phase3": {
-    "prompt": "Which method would you use to get smooth movement input (like from arrow keys or WASD)?\n\nA) Input.GetKey(KeyCode.W)\nB) Input.GetButton(\"Jump\")\nC) Input.GetAxis(\"Horizontal\")\nD) Input.GetMouseButton(0)\n\nSelect the CORRECT answer.",
+    "prompt": "Which method would you use to get smooth movement input (like from arrow keys or WASD)?\n\nA) Input.GetKey(KeyCode.W)  \nB) Input.GetButton(\"Jump\")  \nC) Input.GetAxis(\"Horizontal\")  \nD) Input.GetMouseButton(0)\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

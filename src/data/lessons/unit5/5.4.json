@@ -14,7 +14,7 @@
     "explanation": "NavMeshAgent requires a baked NavMesh to move.\n\n**The fix:**\n1. Open Navigation window (Window → AI → Navigation)\n2. Select objects to include\n3. Click Bake\n\n**Sharp-chan says:**\n\"NavMeshAgent needs a NavMesh. It's like having a GPS without roads.\""
   },
   "phase3": {
-    "prompt": "Which component does an enemy need to navigate around obstacles?\n\nA) Rigidbody\nB) NavMeshAgent\nC) BoxCollider\nD) Animator\n\nSelect the CORRECT answer.",
+    "prompt": "Which component does an enemy need to navigate around obstacles?\n\nA) Rigidbody  \nB) NavMeshAgent  \nC) BoxCollider  \nD) Animator\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

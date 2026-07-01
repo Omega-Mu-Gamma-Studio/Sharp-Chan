@@ -14,7 +14,7 @@
     "explanation": "C# is strongly typed — you can't assign a `float` to an `int` without casting.\n\n**The fix:**\n```csharp\nint health = 100;          // Correct (int)\nfloat speed = 5.5f;        // Correct (float with 'f' suffix)\n```\n\n**Sharp-chan says:**\n\"C# doesn't guess types. You have to be explicit. `5.5f` is a float. `5.5` is a double. Use the right one.\""
   },
   "phase3": {
-    "prompt": "Which data type would you use to store a player's health value (whole number)?\n\nA) float\nB) bool\nC) int\nD) string\n\nSelect the CORRECT answer.",
+    "prompt": "Which data type would you use to store a player's health value (whole number)?\n\nA) float  \nB) bool  \nC) int  \nD) string\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

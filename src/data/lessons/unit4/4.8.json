@@ -14,7 +14,7 @@
     "explanation": "Without a default value, `GetInt` returns 0 if the key doesn't exist.\n\n**The fix:**\n```csharp\nint score = PlayerPrefs.GetInt(\"HighScore\", 100);  // Default 100\n```\n\n**Sharp-chan says:**\n\"Always provide a default value when loading. It prevents unexpected values.\""
   },
   "phase3": {
-    "prompt": "Which method saves a string value to PlayerPrefs?\n\nA) PlayerPrefs.SetValue()\nB) PlayerPrefs.SetString()\nC) PlayerPrefs.SaveString()\nD) PlayerPrefs.StoreString()\n\nSelect the CORRECT answer.",
+    "prompt": "Which method saves a string value to PlayerPrefs?\n\nA) PlayerPrefs.SetValue()  \nB) PlayerPrefs.SetString()  \nC) PlayerPrefs.SaveString()  \nD) PlayerPrefs.StoreString()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

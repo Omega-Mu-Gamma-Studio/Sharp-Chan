@@ -14,7 +14,7 @@
     "explanation": "`First()` throws an exception if the collection is empty. Use `FirstOrDefault()` instead.\n\n**The fix:**\n```csharp\nint result = numbers.FirstOrDefault();  // Returns 0 (default for int)\n```\n\n**Sharp-chan says:**\n\"Use `FirstOrDefault()` when the sequence might be empty.\""
   },
   "phase3": {
-    "prompt": "Which LINQ method would you use to filter a list of enemies by health?\n\nA) Select()\nB) Where()\nC) OrderBy()\nD) Sum()\n\nSelect the CORRECT answer.",
+    "prompt": "Which LINQ method would you use to filter a list of enemies by health?\n\nA) Select()  \nB) Where()  \nC) OrderBy()  \nD) Sum()\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

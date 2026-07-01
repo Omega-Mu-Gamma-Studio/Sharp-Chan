@@ -14,7 +14,7 @@
     "explanation": "Always test your build before publishing.\n\n**The fix:**\n```csharp\n// Test the build on a clean machine\n// Test WebGL in a browser\n// Get someone else to test it\n```\n\n**Sharp-chan says:**\n\"A broken game on launch is worse than a delayed launch.\""
   },
   "phase3": {
-    "prompt": "Which platform is best for publishing your first indie game?\n\nA) Steam\nB) Itch.io\nC) Epic Games Store\nD) Google Play\n\nSelect the CORRECT answer.",
+    "prompt": "Which platform is best for publishing your first indie game?\n\nA) Steam  \nB) Itch.io  \nC) Epic Games Store  \nD) Google Play\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },

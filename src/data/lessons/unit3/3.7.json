@@ -14,7 +14,7 @@
     "explanation": "You're trying to use an Animator that was never assigned.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    animator = GetComponent<Animator>();\n}\n\nvoid Update()\n{\n    if (animator != null)\n    {\n        animator.SetFloat(\"Speed\", 1f);\n    }\n}\n```\n\n**Sharp-chan says:**\n\"Always get the Animator component before using it.\""
   },
   "phase3": {
-    "prompt": "Which Animator method would you use to trigger a one-time action like an attack animation?\n\nA) SetFloat\nB) SetBool\nC) SetTrigger\nD) SetInteger\n\nSelect the CORRECT answer.",
+    "prompt": "Which Animator method would you use to trigger a one-time action like an attack animation?\n\nA) SetFloat  \nB) SetBool  \nC) SetTrigger  \nD) SetInteger\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

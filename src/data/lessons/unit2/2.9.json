@@ -14,7 +14,7 @@
     "explanation": "`myEvent` is null because no one has subscribed to it yet.\n\n**The fix:**\n```csharp\nvoid Start()\n{\n    myEvent?.Invoke();  // Safe invoke — does nothing if null\n}\n```\n\n**Sharp-chan says:**\n\"Always use `?.Invoke()` on events. If no one is listening, nothing happens — that's fine.\""
   },
   "phase3": {
-    "prompt": "Which of these correctly invokes an event in C#?\n\nA) myEvent();\nB) myEvent.Invoke();\nC) myEvent?.Invoke();\nD) myEvent();\n\nSelect the CORRECT answer.",
+    "prompt": "Which of these correctly invokes an event in C#?\n\nA) myEvent();  \nB) myEvent.Invoke();  \nC) myEvent?.Invoke();  \nD) myEvent();\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "C"
     },

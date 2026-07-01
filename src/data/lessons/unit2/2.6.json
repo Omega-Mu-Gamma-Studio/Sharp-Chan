@@ -14,7 +14,7 @@
     "explanation": "You inherited from `MonoBehaviour` instead of `ScriptableObject`.\n\n**The fix:**\n```csharp\npublic class ItemData : ScriptableObject  // ← Correct base class\n{\n    public string itemName;\n    public int value;\n}\n```\n\n**Sharp-chan says:**\n\"ScriptableObjects inherit from `ScriptableObject`, not `MonoBehaviour`. They're data containers, not game objects.\""
   },
   "phase3": {
-    "prompt": "Which base class should you inherit from to create a data container that persists as an asset in Unity?\n\nA) MonoBehaviour\nB) ScriptableObject\nC) Component\nD) Object\n\nSelect the CORRECT answer.",
+    "prompt": "Which base class should you inherit from to create a data container that persists as an asset in Unity?\n\nA) MonoBehaviour  \nB) ScriptableObject  \nC) Component  \nD) Object\n\nSelect the CORRECT answer.",
     "validationPattern": {
       "mcqAnswer": "B"
     },
