@@ -24,11 +24,14 @@ const Home = () => {
   useEffect(() => {
     setExpression('idle');
     const greetings = [
-      "You're back. Good. We have work to do.",
-      "Don't keep me waiting.",
-      "Your code won't write itself.",
-      "Ready when you are. ...Actually I've been ready.",
-    ];
+  "You're back! I was just playtesting your progress.",
+  "I've been waiting. The sprites are getting lonely.",
+  "Ready to build something amazing? I thought so.",
+  "You're here. Good. I was about to start without you. ...Kidding. Mostly.",
+  "I've been sketching ideas. You're going to love this one.",
+  "Welcome back! I saved you a seat — and a bug to fix.",
+  "You're right on time. I was just about to ship something.",
+  ];
     const msg = greetings[Math.floor(Math.random() * greetings.length)];
     setDialogue(msg);
   }, []);
