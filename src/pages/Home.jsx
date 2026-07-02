@@ -17,9 +17,10 @@ const UNITS = [
 const SIBLINGS = [
   { name: 'Java-chan',      lang: 'Java',   glyph: '☕', href: 'https://java-chan.vercel.app',     hue: '#ff8a3d' },
   { name: 'PlusPlus-chan',  lang: 'C++',    glyph: '➕', href: 'https://plusplus-chan.vercel.app', hue: '#6e9bff' },
-  { name: 'Rust-chan',      lang: 'Rust',   glyph: '⚙',  href: 'https://rust-chan.vercel.app',     hue: '#ff6e4a' },
-  { name: 'Go-chan',        lang: 'Go',     glyph: '◈',  href: 'https://go-chan.vercel.app',       hue: '#4ad7ff' },
+  { name: 'Rust-chan',      lang: 'Rust',   glyph: '🦀',  href: 'https://rust-chan.vercel.app',     hue: '#ff6e4a' },
+  { name: 'Go-chan',        lang: 'Go',     glyph: '🐿️',  href: 'https://go-chan.vercel.app',       hue: '#4ad7ff' },
   { name: 'Kotlin-chan',    lang: 'Kotlin', glyph: '◆',  href: 'https://kotlin-chan.vercel.app',   hue: '#b46eff' },
+  { name: 'Python-chan',    lang: 'Python', glyph: '🐍',  href: 'https://python-chan.vercel.app',   hue: '#5ff409' },
   { name: 'Sharp-chan',     lang: 'C#',     glyph: '♯',  href: 'https://sharp-chan.vercel.app',    hue: '#ff2ecb', self: true },
 ];
 
