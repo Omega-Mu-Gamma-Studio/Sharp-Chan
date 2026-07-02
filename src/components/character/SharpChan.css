@@ -103,18 +103,18 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /* Dark bg with orange tint to match her palette */
-  background: rgba(10, 8, 5, 0.93);
+  /* Near-black with a neon magenta/cyan tint to match her palette */
+  background: rgba(6, 4, 12, 0.94);
 }
 
-/* Radial orange-pink glow in center */
+/* Radial magenta-cyan glow in center */
 .domain-glow {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(ellipse 60% 50% at 50% 60%,
-      rgba(255, 120, 20, 0.18) 0%,
-      rgba(255, 80, 160, 0.08) 50%,
+      rgba(255, 46, 203, 0.2) 0%,
+      rgba(100, 210, 255, 0.1) 50%,
       transparent 80%);
   pointer-events: none;
 }
@@ -143,8 +143,8 @@
   height: 100%;
   object-fit: contain;
   object-position: bottom center;
-  filter: drop-shadow(0 0 40px rgba(255, 140, 0, 0.5))
-          drop-shadow(0 0 80px rgba(255, 80, 160, 0.2));
+  filter: drop-shadow(0 0 40px rgba(255, 46, 203, 0.45))
+          drop-shadow(0 0 80px rgba(100, 210, 255, 0.25));
 }
 
 .domain-dialogue {
@@ -152,17 +152,17 @@
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--color-text);
-  background: rgba(20, 16, 10, 0.85);
-  border: 1px solid rgba(255, 140, 0, 0.25);
+  background: rgba(14, 10, 20, 0.85);
+  border: 1px solid rgba(255, 46, 203, 0.25);
   border-radius: var(--radius-lg);
   padding: 18px 26px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 30px rgba(255,120,20,0.1);
+  box-shadow: 0 0 30px rgba(255, 46, 203, 0.1);
 }
 
 .domain-tap-hint {
   font-size: 0.72rem;
-  color: rgba(255, 200, 120, 0.4);
+  color: rgba(180, 220, 255, 0.5);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   animation: domain-blink 1.8s ease-in-out infinite;

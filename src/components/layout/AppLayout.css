@@ -34,12 +34,12 @@
   height: 1px;
   background: linear-gradient(90deg,
     transparent,
+    var(--color-magenta),
     var(--color-primary),
     var(--color-cyan),
-    var(--color-primary),
     transparent
   );
-  opacity: 0.4;
+  opacity: 0.45;
 }
 
 .hamburger-btn {
@@ -85,7 +85,7 @@
 }
 
 .topbar-title-plus {
-  color: var(--color-cyan);
+  color: var(--color-magenta);
   font-size: 1.1rem;
 }
 

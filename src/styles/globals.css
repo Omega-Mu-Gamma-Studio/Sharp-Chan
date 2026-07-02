@@ -15,7 +15,7 @@
   --color-border:        rgba(124, 111, 255, 0.1);
   --color-border-accent: rgba(124, 111, 255, 0.28);
 
-  /* --- Sharp-Chan Brand Colors (electric blue/violet) --- */
+  /* --- Sharp-Chan Brand Colors (neon cyberpunk: violet/cyan/magenta) --- */
   --color-primary:        #7c6fff;
   --color-primary-light:  #a99fff;
   --color-primary-dark:   #5a4fd6;
@@ -28,6 +28,23 @@
   --color-violet:         #b46eff;
   --color-violet-light:   #d4aaff;
   --color-violet-glow:    rgba(180, 110, 255, 0.18);
+
+  /* --- Neon accents (her hair/eye shift colors) --- */
+  --color-magenta:        #ff2ecb;
+  --color-magenta-light:  #ff85e0;
+  --color-magenta-glow:   rgba(255, 46, 203, 0.22);
+
+  --color-pink:           #ff4fa3;
+  --color-pink-light:     #ff8fc4;
+  --color-pink-glow:      rgba(255, 79, 163, 0.2);
+
+  /* --- Signature gradients --- */
+  --gradient-neon:      linear-gradient(135deg, var(--color-magenta) 0%, var(--color-primary) 50%, var(--color-cyan) 100%);
+  --gradient-neon-soft: linear-gradient(135deg, rgba(255,46,203,0.15) 0%, rgba(124,111,255,0.15) 50%, rgba(100,210,255,0.15) 100%);
+  --gradient-hero:      radial-gradient(ellipse 80% 60% at 30% 0%, rgba(180,110,255,0.25) 0%, transparent 60%),
+                        radial-gradient(ellipse 70% 50% at 100% 30%, rgba(100,210,255,0.18) 0%, transparent 60%),
+                        radial-gradient(ellipse 60% 50% at 10% 100%, rgba(255,46,203,0.14) 0%, transparent 60%);
+  --gradient-text:      linear-gradient(90deg, var(--color-magenta-light), var(--color-primary-light) 45%, var(--color-cyan-light));
 
   /* --- Semantic Colors --- */
   --color-success:        #4fffb0;
@@ -76,45 +93,64 @@
 }
 
 /* ============================================
-   THEME OVERRIDES (shop-unlockable)
+   THEME OVERRIDES (shop-unlockable wallpapers)
+   Each is a cyberpunk "district" — swaps the
+   accent + gradient pairing, keeps the neon logic.
    ============================================ */
+
+/* Chrome District — cool chrome/cyan, glassy skyline */
 .theme-steel {
-  --color-primary:        #8fb8d0;
-  --color-primary-light:  #b8d4e8;
-  --color-primary-dark:   #6090aa;
-  --color-primary-glow:   rgba(143, 184, 208, 0.22);
-  --color-border-accent:  rgba(143, 184, 208, 0.28);
-  --color-xp:             #8fb8d0;
+  --color-primary:        #6ee7ff;
+  --color-primary-light:  #a8f2ff;
+  --color-primary-dark:   #2fb8d8;
+  --color-primary-glow:   rgba(110, 231, 255, 0.24);
+  --color-border-accent:  rgba(110, 231, 255, 0.3);
+  --color-xp:             #6ee7ff;
+  --color-magenta:        #8fb8ff;
+  --color-magenta-glow:   rgba(143, 184, 255, 0.2);
+  --gradient-neon:        linear-gradient(135deg, #8fb8ff 0%, #6ee7ff 50%, #b8f4ff 100%);
+  --gradient-text:        linear-gradient(90deg, #a8d4ff, #6ee7ff 50%, #d4faff);
 }
 
+/* Glitch Gold — magenta/gold circuitry, overclocked */
 .theme-indigo-gold {
-  --color-primary:        #9b6fff;
-  --color-primary-light:  #c4a0ff;
-  --color-primary-dark:   #7044dd;
-  --color-primary-glow:   rgba(155, 111, 255, 0.22);
-  --color-border-accent:  rgba(155, 111, 255, 0.28);
-  --color-xp:             #ffd700;
-  --color-cyan:           #ffd700;
-  --color-cyan-light:     #ffe566;
+  --color-primary:        #ffcc4d;
+  --color-primary-light:  #ffe08a;
+  --color-primary-dark:   #dd9a00;
+  --color-primary-glow:   rgba(255, 204, 77, 0.22);
+  --color-border-accent:  rgba(255, 204, 77, 0.3);
+  --color-xp:             #ffcc4d;
+  --color-cyan:           #ff4fd8;
+  --color-cyan-light:     #ff9bec;
+  --gradient-neon:        linear-gradient(135deg, #ff4fd8 0%, #ffcc4d 55%, #fff1b8 100%);
+  --gradient-text:        linear-gradient(90deg, #ff9bec, #ffcc4d 55%, #fff1b8);
 }
 
+/* Neon Alley — hot pink/red, rain-slicked back-street */
 .theme-crimson {
-  --color-primary:        #ff4f7b;
-  --color-primary-light:  #ff8fa8;
-  --color-primary-dark:   #cc2255;
-  --color-primary-glow:   rgba(255, 79, 123, 0.22);
-  --color-border-accent:  rgba(255, 79, 123, 0.28);
-  --color-xp:             #ff4f7b;
+  --color-primary:        #ff2e6e;
+  --color-primary-light:  #ff85ac;
+  --color-primary-dark:   #c9124a;
+  --color-primary-glow:   rgba(255, 46, 110, 0.24);
+  --color-border-accent:  rgba(255, 46, 110, 0.3);
+  --color-xp:             #ff2e6e;
+  --color-magenta:        #ff2ecb;
+  --gradient-neon:        linear-gradient(135deg, #ff2ecb 0%, #ff2e6e 55%, #ffb347 100%);
+  --gradient-text:        linear-gradient(90deg, #ff8fe0, #ff2e6e 55%, #ffb347);
 }
 
+/* Compiled — matrix green terminal, hacker channel */
 .theme-terminal {
-  --color-primary:        #4fffb0;
-  --color-primary-light:  #9fffd8;
-  --color-primary-dark:   #2acc80;
-  --color-primary-glow:   rgba(79, 255, 176, 0.22);
-  --color-border-accent:  rgba(79, 255, 176, 0.28);
-  --color-xp:             #4fffb0;
-  --color-cyan:           #4fffb0;
+  --color-primary:        #39ff8f;
+  --color-primary-light:  #9fffcf;
+  --color-primary-dark:   #12cc63;
+  --color-primary-glow:   rgba(57, 255, 143, 0.24);
+  --color-border-accent:  rgba(57, 255, 143, 0.3);
+  --color-xp:             #39ff8f;
+  --color-cyan:           #39ff8f;
+  --color-magenta:        #64d2ff;
+  --gradient-neon:        linear-gradient(135deg, #64d2ff 0%, #39ff8f 55%, #d4ffe8 100%);
+  --gradient-text:        linear-gradient(90deg, #9fe8ff, #39ff8f 55%, #d4ffe8);
 }
 
 /* ============================================
@@ -165,3 +201,64 @@ body {
 .text-error    { color: var(--color-error); }
 .font-code     { font-family: var(--font-code); }
 .font-display  { font-family: var(--font-display); }
+
+.text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================
+   SPOTLIGHT — cursor-reactive card glow.
+   Pair with a mousemove handler that sets
+   --spot-x / --spot-y (in px, local to the card)
+   on the element itself.
+   ============================================ */
+.spotlight {
+  position: relative;
+  --spot-x: 50%;
+  --spot-y: 50%;
+  --spot-opacity: 0;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--spot-x) var(--spot-y),
+    var(--color-magenta-glow),
+    transparent 65%
+  );
+  opacity: var(--spot-opacity);
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    260px circle at var(--spot-x) var(--spot-y),
+    var(--color-cyan-light),
+    transparent 70%
+  );
+  opacity: var(--spot-opacity);
+  transition: opacity var(--transition-base);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight > * {
+  position: relative;
+  z-index: 2;
+}

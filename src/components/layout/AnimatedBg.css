@@ -41,7 +41,7 @@
 .aurora__blob--3 {
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(180, 110, 255, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 46, 203, 0.32) 0%, transparent 70%);
   bottom: -10%;
   left: 25%;
   animation: aurora-drift-3 18s ease-in-out infinite alternate;
