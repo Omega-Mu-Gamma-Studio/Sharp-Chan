@@ -5,7 +5,7 @@
 [![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)](https://vite.dev/)
 [![Zustand](https://img.shields.io/badge/Zustand-5-orange)](https://zustand-demo.pmnd.rs/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055ff)](https://www.framer.com/motion/)
-[![MIT License](https://img.shields.io/badge/License-MIT-green)](https://github.com/Omega-Mu-Gamma-Studio/Sharp-Chan/blob/main/LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm_Noncommercial-blue)](./LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-sharp--chan.vercel.app-7c6fff?logo=vercel&logoColor=white)](https://sharp-chan.vercel.app)
 
 Built by [Omega Mu Gamma Studio](https://github.com/Omega-Mu-Gamma-Studio) · the team behind [SeeDS](https://see-ds.vercel.app), [KMapX](https://kmapx.vercel.app), [EG Suite](https://eg-suite.vercel.app), [GateLab](https://gatelab.vercel.app), [Java-chan](https://java-chan.vercel.app), and [Sharp-chan](https://sharp-chan.vercel.app).
@@ -370,8 +370,17 @@ Sharp-chan is part of a student-built suite of open-source engineering and CS ed
 
 ## License
 
-The **source code** for this project is released under the [MIT License](https://github.com/Omega-Mu-Gamma-Studio/Sharp-Chan/blob/main/LICENSE).
+This project is licensed under the **[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/)**.
 
-**The character art, sprites, and visual assets for Sharp-chan are proprietary.** They are not covered by the MIT License and may not be reproduced, redistributed, or used outside this project without explicit permission from Omega Mu Gamma Studio.
+You may use, modify, and share this software for **noncommercial purposes** only. This includes:
+- Personal study and hobby projects
+- Educational and research use
+- Use by noncommercial organizations (charities, educational institutions, government bodies)
+
+**Commercial use is prohibited** without a separate commercial license from Omega Mu Gamma Studio.
+
+**The character art, sprites, and visual assets for this project are also proprietary.** They may not be reproduced, redistributed, or used outside this project without explicit permission.
+
+For commercial licensing inquiries, contact Omega Mu Gamma Studio.
 
 © 2026 Omega Mu Gamma Studio
